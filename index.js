@@ -1,17 +1,24 @@
+//?Dependencies
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
 
+//?Configurations
 const PORT = process.env.PORT;
-
+const IP = process.env.IP;
 const MONGO = process.env.MONGODB;
+const DBNAME = process.env.DBNAME;
 
-mongoose.connect(`${MONGO}/PokeMatch`);
+//?Database Connection
+const db = require('./helpers/db');
+const loadGenOne = require('./database/PokeDex/GenOne/loadGenOne');
 
-const db = mongoose.connection;
-db.once('open', () => console.log(`Connected: ${MONGO}/PokeMatch`));
-app.use(express.urlencoded());
+db()
+    .then(()=> {
+        console.log(`Database connected to: ${MONGO}/${DBNAME}`);
+        loadGenOne();
+    })
+    .catch((err)=>console.error(err));
+
 app.use(express.json());
-
-app.listen(PORT, () => console.log(`PokeMatch: ${PORT}`));
+app.listen(PORT, () => console.log(`PokeMatch running on: ${IP}${PORT}`));

@@ -1,0 +1,25 @@
+{ "pokedex": {
+    "Bulbasaur": {
+        "name":"Bulbasaur",
+        "gen": 1,
+        "number": 1,
+        "type": {
+            "primaryType": "Grass",
+            "secondaryType": "Poison"
+        },
+        "entry": "text",
+        "abilities": "text"
+    },
+    "Ivysaur": {
+        "name":"Ivysaur",
+        "gen": 1,
+        "number": 2,
+        "type": {
+            "primaryType": "Grass",
+            "secondaryType": "Poison"
+        },
+        "entry": "text",
+        "abilities": "text"
+    }
+}
+}
