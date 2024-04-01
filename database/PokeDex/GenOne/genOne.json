@@ -8,7 +8,11 @@
             "secondaryType": "Poison"
         },
         "entry": "text",
-        "abilities": "text"
+        "abilities": {
+            "firstAbility":"Overgrow",
+            "secondAbility":"Chlorophyll",
+            "thirdAbility": null
+        }
     },
     "Ivysaur": {
         "name":"Ivysaur",
@@ -19,7 +23,1738 @@
             "secondaryType": "Poison"
         },
         "entry": "text",
-        "abilities": "text"
+        "abilities": {
+            "firstAbility":"Overgrow",
+            "secondAbility":"Chlorophyll",
+            "thirdAbility": null
+        }        
+    },
+    "Venusaur": {
+        "name":"Venusaur",
+        "gen": 1,
+        "number": 3,
+        "type": {
+            "primaryType": "Grass",
+            "secondaryType": "Poison"
+        },
+        "entry": "text",
+        "abilities": {
+            "firstAbility":"Overgrow",
+            "secondAbility":"Chlorophyll",
+            "thirdAbility": null
+        }
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities": {
+            "firstAbility":"Blaze",
+            "secondAbility":"Solar Power",
+            "thirdAbility": null
+        }
+    },
+    "Charmeleon": {
+        "name":"Charmeleon",
+        "gen":1,
+        "number": 5,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities": {
+            "firstAbility":"Blaze",
+            "secondAbility":"Solar Power",
+            "thirdAbility": null
+        }
+    },
+    "Charizard": {
+        "name":"Charizard",
+        "gen":1,
+        "number": 5,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":"Flying"
+        },
+        "entry":"text",
+        "abilities": {
+            "firstAbility":"Blaze",
+            "secondAbility":"Solar Power",
+            "thirdAbility": null
+        }
+    },
+    "Squirtle": {
+        "name":"Squirtle",
+        "gen":1,
+        "number": 6,
+        "type": {
+            "primaryType":"Water",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities": {
+            "firstAbility":"Torrent",
+            "secondAbility":"Rain Dish",
+            "thirdAbility": null
+        }
+    },
+    "Wartortle": {
+        "name":"Wartortle",
+        "gen":1,
+        "number": 8,
+        "type": {
+            "primaryType":"Water",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities": {
+            "firstAbility":"Torrent",
+            "secondAbility":"Rain Dish",
+            "thirdAbility": null
+        }
+    },
+    "Blastoise": {
+        "name":"Blastoise",
+        "gen":1,
+        "number": 9,
+        "type": {
+            "primaryType":"Water",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities": {
+            "firstAbility":"Torrent",
+            "secondAbility":"Rain Dish",
+            "thirdAbility": null
+        }
+    },
+    "Caterpie": {
+        "name":"Caterpie",
+        "gen":1,
+        "number": 10,
+        "type": {
+            "primaryType":"Bug",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities": {
+            "firstAbility":"Shield Dust",
+            "secondAbility":"Run away",
+            "thirdAbility": null
+        }
+    },
+    "Metapod": {
+        "name":"Metapod",
+        "gen":1,
+        "number": 11,
+        "type": {
+            "primaryType":"Bug",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities": {
+            "firstAbility": "Shed Skin",
+            "secondAbility":null,
+            "thirdAbility":null
+        }
+    },
+    "Butterfree": {
+        "name":"Butterfree",
+        "gen":1,
+        "number": 12,
+        "type": {
+            "primaryType":"Bug",
+            "secondaryType":"Flying"
+        },
+        "entry":"text",
+        "abilities": {
+            "firstAbility":"Compoundeyes",
+            "secondAbility":"Tinted Lens",
+            "thirdAbility":null
+        }
+    },
+    "Weedle": {
+        "name":"Weedle",
+        "gen":1,
+        "number": 13,
+        "type": {
+            "primaryType":"Bug",
+            "secondaryType":"Poison"
+        },
+        "entry":"text",
+        "abilities":{
+            "firstAbility":"Shield Dust",
+            "secondAbility":"Run away",
+            "thirdAbility":null
+        }
+    },
+    "Kakuna": {
+        "name":"Kakuna",
+        "gen":1,
+        "number": 14,
+        "type": {
+            "primaryType":"Bug",
+            "secondaryType":"Poison"
+        },
+        "entry":"text",
+        "abilities":{
+            "firstAbility":"Shed Skin",
+            "secondAbility":null,
+            "thirdAbility":null
+        }
+    },
+    "Beedrill": {
+        "name":"Beedrill",
+        "gen":1,
+        "number": 15,
+        "type": {
+            "primaryType":"Bug",
+            "secondaryType":"Poison"
+        },
+        "entry":"text",
+        "abilities":{
+            "firstAbility":"Swarm",
+            "secondAbility":"Sniper",
+            "thirdAbility":null
+        }
+    },
+    "Pidgey": {
+        "name":"Pidgey",
+        "gen":1,
+        "number": 16,
+        "type": {
+            "primaryType":"Normal",
+            "secondaryType":"Flying"
+        },
+        "entry":"text",
+        "abilities":{
+            "firstAbility":"Keen Eye",
+            "secondAbility":"Tangled Feet",
+            "thirdAbility":"Big Pecks"
+        }
+    },
+    "Pidgeotto": {
+        "name":"Pidgeotto",
+        "gen":1,
+        "number": 17,
+        "type": {
+            "primaryType":"Normal",
+            "secondaryType":"Flying"
+        },
+        "entry":"text",
+        "abilities":{
+            "firstAbility":"Keen Eye",
+            "secondAbility":"Tangled Feet",
+            "thirdAbility":"Big Pecks"
+        }
+    },
+    "Pidgeot": {
+        "name":"Pidgeot",
+        "gen":1,
+        "number": 18,
+        "type": {
+            "primaryType":"Normal",
+            "secondaryType":"Flying"
+        },
+        "entry":"text",
+        "abilities":{
+            "firstAbility":"Keen Eye",
+            "secondAbility":"Tangled Feet",
+            "thirdAbility":"Big Pecks"
+        }
+    },
+    "Rattata": {
+        "name":"Rattata",
+        "gen":1,
+        "number": 19,
+        "type": {
+            "primaryType":"Normal",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":{
+            "firstAbility":"Run Away",
+            "secondAbility":"Guts",
+            "thirdAbility":"Hustle"
+        }
+    },
+    "Raticate": {
+        "name":"Raticate",
+        "gen":1,
+        "number": 20,
+        "type": {
+            "primaryType":"Normal",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":{
+            "firstAbility":"Run Away",
+            "secondAbility":"Guts",
+            "thirdAbility":"Hustle"
+        }
+    },
+    "Spearow": {
+        "name":"Spearow",
+        "gen":1,
+        "number": 21,
+        "type": {
+            "primaryType":"Normal",
+            "secondaryType":"Flying"
+        },
+        "entry":"text",
+        "abilities":{
+            "firstAbility":"Keen Eye",
+            "secondAbility":"Sniper",
+            "thirdAbility":null
+        }
+    },
+    "Fearow": {
+        "name":"Fearow",
+        "gen":1,
+        "number": 22,
+        "type": {
+            "primaryType":"Normal",
+            "secondaryType":"Flying"
+        },
+        "entry":"text",
+        "abilities":{
+            "firstAbility":"Keen Eye",
+            "secondAbility":"Sniper",
+            "thirdAbility":null
+        }
+    },
+    "Ekans": {
+        "name":"Ekans",
+        "gen":1,
+        "number": 23,
+        "type": {
+            "primaryType":"Poison",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":{
+            "firstAbility":"Intimidate",
+            "secondAbility":"Shed Skin",
+            "thirdAbility":"Unnerve"
+        }
+    },
+    "Arbok": {
+        "name":"Arbok",
+        "gen":1,
+        "number": 24,
+        "type": {
+            "primaryType":"Poison",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":{
+            "firstAbility":"Intimidate",
+            "secondAbility":"Shed Skin",
+            "thirdAbility":"Unnerve"
+        }
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
+    },
+    "Charmander": {
+        "name":"Charmander",
+        "gen":1,
+        "number": 4,
+        "type": {
+            "primaryType":"Fire",
+            "secondaryType":null
+        },
+        "entry":"text",
+        "abilities":"text"
     }
 }
 }

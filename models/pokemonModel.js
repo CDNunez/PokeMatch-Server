@@ -10,7 +10,12 @@ const PokemonSchema = new Schema({
         secondaryType:String,
     },
     entry:String,
-    abilities:String,
+    abilities: {
+        firstAbility: String,
+        secondAbility: String,
+        thirdAbility: String
+    },
+    
 })
 
 module.exports = mongoose.model('Pokemon', PokemonSchema);
