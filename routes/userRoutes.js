@@ -8,7 +8,10 @@ router.route('/:userId')
     .put(authenticate, UserController.editUser)
     .delete(authenticate, UserController.deleteUser);
 
-router.route('/')
-    .get(authenticate, UserController.getAllUsers);
+router.route('/signup')
+    .post(authenticate, UserController.createUser);
+
+// router.route('/')
+    // .get(authenticate, UserController.getAllUsers); this might not be needed
 
 module.exports = router;
