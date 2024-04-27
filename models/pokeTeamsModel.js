@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const { PokemonSchema } = require('./pokemonModel');
+const PokemonSchema  = require('./pokemonModel');
 
 const PokemonTeamSchema = new Schema({
     teamName: {
@@ -18,13 +18,7 @@ const PokemonTeamSchema = new Schema({
         enum: [null, 1,2,3,4],
         default: null,
         required: true
-    },
-    slotOne: [PokemonSchema],
-    slotTwo: [PokemonSchema],
-    slotThree: [PokemonSchema],
-    slotFour: [PokemonSchema],
-    slotFive: [PokemonSchema],
-    slotSix: [PokemonSchema],
+    }
 })
 
 module.exports = mongoose.model('PokeTeam', PokemonTeamSchema)

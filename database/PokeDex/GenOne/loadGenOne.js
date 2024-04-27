@@ -17,7 +17,7 @@ async function loadGenOne(){
             //convert data into objects
             const pokemon = Object.values(jsonData.pokedex);
             //log for confirm.
-            console.log(pokemon)
+            // console.log(pokemon)
             //await read, parse, object, then insert many to mongodb
             await PokemonSchema.insertMany(pokemon)
             //log confirm.
