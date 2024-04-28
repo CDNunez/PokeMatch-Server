@@ -75,18 +75,21 @@ exports.userLogin = async (req,res) => {
     }
 };
 
-// exports.getOneUser = async (req,res) => {
-//     try {
-//         const user = await User.findById(req.params.userId)
-//         if (!user){
-//             return incomplete(res, 'No User');
-//         }
+//*Get one user by ID - used for account settings page
+exports.getOneUser = async (req,res) => {
+    try {
+        //wait for requested data
+        const user = await User.findById(req.params.userId)
+        //error handling - if id does not match db
+        if (!user){
+            return incomplete(res, 'No User');
+        }
 
-//         success(res, user);
-//     } catch (err) {
-//         error(res,err)
-//     }
-// };
+        success(res, user);
+    } catch (err) {
+        error(res,err)
+    }
+};
 
 // exports.editUser = async (req, res) => {
 //     const {username, email} = req.body;
