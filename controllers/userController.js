@@ -91,39 +91,54 @@ exports.getOneUser = async (req,res) => {
     }
 };
 
-// exports.editUser = async (req, res) => {
-//     const {username, email} = req.body;
-//     const {userId} = req.params;
+//*Edit User
+exports.editUser = async (req, res) => {
+    //requested data from body
+    const {username, email} = req.body;
+    //requested param for filter
+    const {userId} = req.params;
 
-//     try {
-//         const user = await User.findById(userId);
-//         if (!user) {
-//             return incomplete(res, 'No User');
-//         }
+    try {
+        //find user in db with requested userId
+        const user = await User.findById(userId);
+        //error handling - if no userID is found
+        if (!user) {
+            return incomplete(res, 'No User');
+        }
 
-//         user.username = username || user.username;
-//         user.email = email || user.email;
+        //update parameters
+        user.username = username || user.username;
+        user.email = email || user.email;
 
-//         await user.save();
+        //save edited user
+        await user.save();
 
-//         success(res, {message: 'User Edited'});
-//     } catch (err) {
-//         error(res,err)
-//     }
-// };
+        success(res, {message: 'User Edited'});
+    } catch (err) {
+        error(res,err)
+    }
+};
 
-// exports.deleteUser = async (req,res) => {
-//     const {userId} = req.params;
+//*Delete User
+exports.deleteUser = async (req,res) => {
+    try {
+        //requested param
+        const { userId } = req.params;
+        //search for userId in db
+        const userToDelete = await User.findById(userId);
+        //error handling - if userId does not exist
+        if(!userToDelete) {
+            return incomplete(res, "No User Match");
+        }
 
-//     try {
-//         const user = await User.findById(userId);
-//         if(!user) {
-//             return incomplete(res,'No User');
-//         }
+        //print to console userToDelete for confirmation
+        console.log(userToDelete);
+        //delete user
+        await userToDelete.deleteOne();
 
-//         await user.deleteOne();
-//         success(res, { message:'User deleted'});
-//     } catch (err) {
-//         error(res,err)
-//     }
-// };
+        success(res,{message:'User Deleted'});
+
+    } catch (err) {
+        error(res,err);
+    }
+};
