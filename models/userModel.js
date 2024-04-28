@@ -4,26 +4,7 @@ const { PokemonTeamSchema } = require('./pokeTeamsModel');
 
 ////toDo Test in Postman, add JOI validation, add poketeams under user schema
 
-//user model
-// const UserSchema = new mongoose.Schema({
-//     username: {
-//         type: String,
-//         required: true,
-//         unique: true
-//     },
-//     password: {
-//         type: String,
-//         required: true
-//     },
-//     email: {
-//         type: String,
-//         unique: true
-//     },
-//     resetPasswordToken: String,
-//     resetPasswordExpires: Date,
-//     // teams: PokemonTeamSchema
-// });
-
+//*user model used in userController: username, email, password, pokeTeams
 const UserSchema = new mongoose.Schema({
     username: {
         type: String,
@@ -42,4 +23,5 @@ const UserSchema = new mongoose.Schema({
     }
 })
 
+//?exports
 module.exports = mongoose.model('User', UserSchema);
