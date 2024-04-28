@@ -1,6 +1,6 @@
 //?Import dependencies
 const mongoose = require('mongoose');
-const { PokemonTeamSchema } = require('./pokeTeamsModel');
+const PokemonTeamSchema = require('./pokeTeamsModel');
 
 ////toDo Test in Postman, add JOI validation, add poketeams under user schema
 
@@ -20,8 +20,10 @@ const UserSchema = new mongoose.Schema({
     password:{
         type:String,
         required:true,
-    }
-})
+    },
+    //reference to pokemon team schema which models the structure of created teams
+    teams: [{type: mongoose.Schema.Types.ObjectId, ref: PokemonTeamSchema}]
+});
 
 //?exports
 module.exports = mongoose.model('User', UserSchema);

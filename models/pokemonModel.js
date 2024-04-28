@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const PokemonSchema = new Schema({
+const PokemonSchema = new mongoose.Schema({
     name:String,
-    gen:String,
+    gen:Number,
     number:Number,
     type:{
         primaryType:String,

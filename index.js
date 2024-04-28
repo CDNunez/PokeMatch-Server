@@ -9,8 +9,6 @@ const IP = process.env.IP;
 const MONGO = process.env.MONGODB;
 const DBNAME = process.env.DBNAME;
 
-
-////toDo connection to be tested
 //?Routes
 const userRoute = require('./routes/userRoutes')
 
