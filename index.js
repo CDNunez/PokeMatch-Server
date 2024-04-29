@@ -10,7 +10,10 @@ const MONGO = process.env.MONGODB;
 const DBNAME = process.env.DBNAME;
 
 //?Routes
-const userRoute = require('./routes/userRoutes')
+//*User Route
+const userRoute = require('./routes/userRoutes');
+//*Poke Team Route
+const teamRoute = require('./routes/teamRoutes');
 
 //?Database Connection
 const db = require('./helpers/db');
@@ -27,4 +30,9 @@ app.use(express.json());
 app.listen(PORT, () => console.log(`PokeMatch running on: ${IP}${PORT}`));
 
 //?App.Use
-app.use('/user', userRoute)
+//*User Route
+app.use('/user', userRoute);
+
+////toDo: test in Postman -> may need to change
+//*Poke Team Route
+app.use('/poketeam', teamRoute);

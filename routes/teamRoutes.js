@@ -4,9 +4,10 @@ const router = express.Router();
 const teamController = require('../controllers/teamController');
 const validateSession = require('../helpers/auth');
 
-//*Create Team
+//*Create Team - Get All Teams
 router.route('/:userId/pokeTeams')
     .post(validateSession,teamController.createTeam)
+    .get(validateSession,teamController.getAllTeams)
 
 // router.route('/:userId/pokeTeams/')
 //     .get(teamController.getAllTeams)
