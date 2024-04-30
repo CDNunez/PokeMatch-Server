@@ -43,7 +43,10 @@ exports.createTeam = async (req,res) => {
         };
 
         //save team to db
-        const newTeam = await team.save();
+        const newTeam = await PokeTeam.create(team);
+        user.teams.push(newTeam);
+
+        await user.save();
 
         //client response
         success(res,newTeam);
@@ -55,16 +58,16 @@ exports.createTeam = async (req,res) => {
 
 
 ////toDo: WIP
-exports.getAllTeams = async (req,res) => {
-    try {
-        //req user Id from client
-        const { userId } = req.params;
-        //validate user
-        const user = await User.findById(userId);
-    } catch (err) {
-        error(res,err);
-    }
-}
+// exports.getAllTeams = async (req,res) => {
+//     try {
+//         //req user Id from client
+//         const { userId } = req.params;
+//         //validate user
+//         const user = await User.findById(userId);
+//     } catch (err) {
+//         error(res,err);
+//     }
+// }
 
 // exports.getByTeamName = async (res) => {
 //     try {
