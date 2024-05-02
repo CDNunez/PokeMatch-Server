@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const PokemonSchema = new mongoose.Schema({
-    name:String,
+    pokemonName:String,
     gen:Number,
     number:Number,
     type:{
@@ -13,8 +13,7 @@ const PokemonSchema = new mongoose.Schema({
         firstAbility: String,
         secondAbility: String,
         thirdAbility: String
-    },
-    
+    }
 })
 
 module.exports = mongoose.model('Pokemon', PokemonSchema);

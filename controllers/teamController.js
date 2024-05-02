@@ -2,6 +2,7 @@
 const { error,success,incomplete } = require('../helpers/response');
 const PokeTeam = require('../models/pokeTeamsModel');
 const User = require('../models/userModel');
+const Pokemon = require('../models/pokemonModel');
 
 ////toDo test all routes in Postman
  
@@ -33,7 +34,7 @@ exports.createTeam = async (req,res) => {
         if(alreadyExists){
             return incomplete(res, "Team Name Already Exists");
         };
-
+        
         //create team using provided model
         const team = {
             teamName,
@@ -41,7 +42,7 @@ exports.createTeam = async (req,res) => {
             teamGeneration,
             members
         };
-
+        
         //save team to db
         const newTeam = await PokeTeam.create(team);
         user.teams.push(newTeam);

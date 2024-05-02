@@ -20,14 +20,7 @@ const PokemonTeamSchema = new mongoose.Schema({
         required: true
     },
     //members making up the team whose model is linked from the Pokemon Schema
-    members: {
-        slotOne:{type: mongoose.Schema.Types.ObjectId, ref: PokemonSchema},
-        slotTwo:{type: mongoose.Schema.Types.ObjectId, ref: PokemonSchema},
-        slotThree:{type: mongoose.Schema.Types.ObjectId, ref: PokemonSchema},
-        slotFour:{type: mongoose.Schema.Types.ObjectId, ref: PokemonSchema},
-        slotFive:{type: mongoose.Schema.Types.ObjectId, ref: PokemonSchema},
-        slotSix:{type: mongoose.Schema.Types.ObjectId, ref: PokemonSchema}
-    }
+    members: [{type: mongoose.Schema.Types.Object, ref:PokemonSchema}]
 })
 
 //?Exports
