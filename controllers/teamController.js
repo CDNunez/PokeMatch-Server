@@ -26,6 +26,7 @@ exports.createTeam = async (req,res) => {
             return incomplete(res, "User Not Found");
         }
 
+        ////toDo: test error handling
         //error handling - if team already exists in db
         //filter that finds existing teamName in db
         const alreadyExists = user.teams.find(team => team.teamName === teamName);
@@ -58,17 +59,57 @@ exports.createTeam = async (req,res) => {
 };
 
 
-////toDo: WIP
-// exports.getAllTeams = async (req,res) => {
-//     try {
-//         //req user Id from client
-//         const { userId } = req.params;
-//         //validate user
-//         const user = await User.findById(userId);
-//     } catch (err) {
-//         error(res,err);
-//     }
-// }
+////toDo: test in postman
+//*Get all teams associated with user
+exports.getAllTeams = async (req,res) => {
+    try {
+        //req user Id from client and find user in db by userId
+        const { userId } = req.params.userId;        
+        const user = await User.findById(userId);
+
+        //error handling - if user id does not exist
+        if(!user){
+            return incomplete(res,"Profile not found");
+        }
+
+        //find teams in db through model
+
+        const allTeams = await PokeTeam.find();
+
+        //client response
+
+        success(res,allTeams);
+
+    } catch (err) {
+        error(res,err);
+    }
+};
+
+//*Delete all teams associated with user
+exports.deleteAllTeams = async (req,res) => {
+    try {
+        //require ID from user and find user in db
+        const { userId } = req.params.userId;
+        const user = await User.findById(userId);
+
+        //error handling if user does not exist in db
+        if(!user){
+            return incomplete(res,'User not found');
+        }
+
+        const deleteTeams = await User.deleteMany(teams);
+        console.log(deleteTeams);
+
+        //respond to client
+
+        deleteTeams.deletedCount ?
+            success(res,'All teams deleted') :
+            incomplete(res, 'No teams to delete');
+
+    } catch (err) {
+        error(err,res);
+    }
+}
 
 // exports.getByTeamName = async (res) => {
 //     try {

@@ -7,7 +7,8 @@ const validateSession = require('../helpers/auth');
 //*Create Team - Get All Teams
 router.route('/:userId/pokeTeams')
     .post(validateSession,teamController.createTeam)
-    // .get(validateSession,teamController.getAllTeams)
+    .get(validateSession,teamController.getAllTeams)
+    .delete(validateSession,teamController.deleteAllTeams);
 
 // router.route('/:userId/pokeTeams/')
 //     .get(teamController.getAllTeams)
