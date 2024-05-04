@@ -6,7 +6,7 @@ const Pokemon = require('../models/pokemonModel');
 
 ////toDo test all routes in Postman
  
-////toDo: create team, get all get one, edit, delete one, delete all, get by team name, get by gen, get by number of members, get by type, clone team
+////toDo: get one, edit, delete one, get by team name, get by gen, get by number of members, get by type, clone team
 
 //?Exports to teamRoutes
 
@@ -95,18 +95,44 @@ exports.deleteAllTeams = async (req,res) => {
             return incomplete(res,'User not found');
         }
 
+        //deletes all teams associated with user in db
         deleteTeams = await PokeTeam.deleteMany();
+        //clears teams array of user in db
         user.teams = [];
+        //updates user
         await user.save();
-        
+        //test
         console.log(user.teams);
-
         //respond to client
         success(res,'All teams deleted');
     } catch (err) {
         error(res,err);
     }
-}
+};
+
+exports.getOneTeam = async (req,res) => {
+    try {
+        //req user and team ID to find in db
+        const {userId, teamId} = req.params;
+        const user = await User.findById(userId);
+
+        if(!user){
+            return incomplete(res,'User not found');
+        }
+
+        const getTeam = await PokeTeam.findById(teamId);
+
+        if(!getTeam){
+            return incomplete(res,"Team not found");
+        }
+
+        console.log("Team: ",getTeam);
+
+        success(res,getTeam);
+    } catch (err) {
+        error(res,err);
+    }
+};
 
 // exports.getByTeamName = async (res) => {
 //     try {
@@ -140,13 +166,6 @@ exports.deleteAllTeams = async (req,res) => {
 //     }
 // }
 
-// exports.getOneTeam = async (res) => {
-//     try {
-//         const teamId = req.params;
-//     } catch (err) {
-//         error(res,err);
-//     }
-// }
 
 // exports.addTeam = async (res) => {
 //     try {

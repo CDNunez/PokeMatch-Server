@@ -4,11 +4,15 @@ const router = express.Router();
 const teamController = require('../controllers/teamController');
 const validateSession = require('../helpers/auth');
 
-//*Create Team - Get All Teams
+//*Create Team - Get All Teams - Delete All Teams
 router.route('/:userId/pokeTeams')
     .post(validateSession,teamController.createTeam)
     .get(validateSession,teamController.getAllTeams)
     .delete(validateSession,teamController.deleteAllTeams);
+
+//*Get One Team - Delete One Team - Edit One Team - Duplicate Team
+router.route('/:userId/pokeTeams/:teamId')
+    .get(validateSession,teamController.getOneTeam)
 
 // router.route('/:userId/pokeTeams/')
 //     .get(teamController.getAllTeams)
