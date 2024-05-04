@@ -58,13 +58,11 @@ exports.createTeam = async (req,res) => {
     }
 };
 
-
-////toDo: test in postman
 //*Get all teams associated with user
 exports.getAllTeams = async (req,res) => {
     try {
         //req user Id from client and find user in db by userId
-        const { userId } = req.params.userId;        
+        const { userId } = req.params;
         const user = await User.findById(userId);
 
         //error handling - if user id does not exist
@@ -89,7 +87,7 @@ exports.getAllTeams = async (req,res) => {
 exports.deleteAllTeams = async (req,res) => {
     try {
         //require ID from user and find user in db
-        const { userId } = req.params.userId;
+        const { userId } = req.params;
         const user = await User.findById(userId);
 
         //error handling if user does not exist in db
@@ -97,17 +95,16 @@ exports.deleteAllTeams = async (req,res) => {
             return incomplete(res,'User not found');
         }
 
-        const deleteTeams = await User.deleteMany(teams);
-        console.log(deleteTeams);
+        deleteTeams = await PokeTeam.deleteMany();
+        user.teams = [];
+        await user.save();
+        
+        console.log(user.teams);
 
         //respond to client
-
-        deleteTeams.deletedCount ?
-            success(res,'All teams deleted') :
-            incomplete(res, 'No teams to delete');
-
+        success(res,'All teams deleted');
     } catch (err) {
-        error(err,res);
+        error(res,err);
     }
 }
 
