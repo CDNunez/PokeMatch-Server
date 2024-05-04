@@ -13,6 +13,7 @@ router.route('/:userId/pokeTeams')
 //*Get One Team - Delete One Team - Edit One Team - Duplicate Team
 router.route('/:userId/pokeTeams/:teamId')
     .get(validateSession,teamController.getOneTeam)
+    .delete(validateSession,teamController.deleteOneTeam)
 
 // router.route('/:userId/pokeTeams/')
 //     .get(teamController.getAllTeams)
