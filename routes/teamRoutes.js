@@ -14,17 +14,8 @@ router.route('/:userId/pokeTeams')
 router.route('/:userId/pokeTeams/:teamId')
     .get(validateSession,teamController.getOneTeam)
     .delete(validateSession,teamController.deleteOneTeam)
-
-// router.route('/:userId/pokeTeams/')
-//     .get(teamController.getAllTeams)
-//     .post(teamController.addTeam)
-//     .delete(teamController.deleteAllTeams);
-
-// router.route('/:userId/pokeTeams/:pokeTeamId')
-//     .get(teamController.getOneTeam)
-//     .patch(teamController.editTeam)
-//     .post(teamController.cloneTeam)
-//     .delete(teamController.deleteOneTeam);
+    .put(validateSession,teamController.editTeam)
+    .post(validateSession,teamController.duplicateTeam);
 
 // router.route('/:userId/pokeTeams/teamName/:teamName')
 //     .get(teamController.getByTeamName);

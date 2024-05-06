@@ -3,10 +3,11 @@ const { error,success,incomplete } = require('../helpers/response');
 const PokeTeam = require('../models/pokeTeamsModel');
 const User = require('../models/userModel');
 const Pokemon = require('../models/pokemonModel');
+const { default: mongoose } = require('mongoose');
 
 ////toDo test all routes in Postman
  
-////toDo: edit, delete one, get by team name, get by gen, get by number of members, get by type, clone team
+////toDo: get by team name, get by gen, get by number of members, get by type, clone team
 
 //?Exports to teamRoutes
 
@@ -159,6 +160,64 @@ exports.deleteOneTeam = async (req,res) => {
         console.log('Deleted team: ', deleteTeam, 'User Teams: ', user.teams);
         //response to client
         success(res,'Team deleted');
+    } catch (err) {
+        error(res,err);
+    }
+};
+
+////toDo: test in postman
+
+//*Edit one team
+exports.editTeam = async (req,res) => {
+    try {
+        //req params
+        const {userId, teamId} = req.params;
+        const user = await User.findById(userId);
+        //error handling
+        if(!user){
+            return incomplete(res, "No user found");
+        }
+        //requested data from client to update document
+        const info = req.body;
+        //return updated doc.
+        const returnOption = {new: true};
+        //update team
+        teamEdit = await PokeTeam.findOneAndUpdate(teamId,info,returnOption);
+        //respond to client
+        success(res,teamEdit);
+    } catch (err) {
+        error(res,err);
+    }
+};
+
+//*Duplicate selected team
+exports.duplicateTeam = async(req,res) => {
+    try {
+        //req params
+        const {userId, teamId} = req.params;
+        const user = await User.findById(userId);
+        //error handling
+        if(!user){
+            return incomplete(res, "No user found");
+        }
+        const originalTeam = await PokeTeam.findById(teamId);
+        //error handling
+        if(!originalTeam){
+            return incomplete(res,"No team found");
+        }
+        //create copy of original team
+        const duplicatedTeam = new Document({
+            //toDo: error handle dup name
+            teamName: originalTeam.teamName + '(Copy)',
+            amountOfMembers: originalTeam.amountOfMembers,
+            teamGeneration: originalTeam.teamGeneration,
+            members: {...originalTeam.members} //Creates shallow copy of members
+        });
+
+        //save duplicated document to db
+        await duplicatedTeam.save();
+        //respond to client
+        success(res,duplicatedTeam);
     } catch (err) {
         error(res,err);
     }
