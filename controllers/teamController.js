@@ -247,27 +247,29 @@ exports.getByTeamName = async (req,res) => {
     }
 };
 
+
+//!Does not work -- needs fixing
 //*Get By Team Game Generation
-exports.getByGeneration = async (req,res) => {
-    console.log('team gen route');
-    try {
-        //req params
-        const {userId} = req.params;
-        const {propertyValue} = req.query;
-        const user = await User.findById(userId);
-        //error handling
-        if(!user){
-            return incomplete(res,"No user found");
-        }
-        //search for team generation
-        const teams = await PokeTeam.find({teamGeneration:propertyValue});
-        //error handling
-        if(!teams){
-            return incomplete(res,"No teams found");
-        }
-        //respond to client
-        success(res,teams);
-    } catch (err) {
-        error(res,err);
-    }
-}
+// exports.getByGeneration = async (req,res) => {
+//     console.log('team gen route');
+//     try {
+//         //req params
+//         const {userId} = req.params;
+//         const {propertyValue} = req.query;
+//         const user = await User.findById(userId);
+//         //error handling
+//         if(!user){
+//             return incomplete(res,"No user found");
+//         }
+//         //search for team generation
+//         const teams = await PokeTeam.find({teamGeneration:propertyValue});
+//         //error handling
+//         if(!teams){
+//             return incomplete(res,"No teams found");
+//         }
+//         //respond to client
+//         success(res,teams);
+//     } catch (err) {
+//         error(res,err);
+//     }
+// }
