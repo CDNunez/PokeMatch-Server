@@ -14,6 +14,8 @@ const DBNAME = process.env.DBNAME;
 const userRoute = require('./routes/userRoutes');
 //*Poke Team Route
 const teamRoute = require('./routes/teamRoutes');
+//*Pokemon Route
+const pokeRoute = require('./routes/pokemonRoutes');
 
 //?Database Connection
 const db = require('./helpers/db');
@@ -36,3 +38,5 @@ app.use('/user', userRoute);
 ////toDo: test in Postman -> may need to change
 //*Poke Team Route
 app.use('/poketeam', teamRoute);
+//*Pokemon Route
+app.use('/pokemon', pokeRoute);

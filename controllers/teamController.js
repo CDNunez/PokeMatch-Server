@@ -5,9 +5,7 @@ const User = require('../models/userModel');
 const Pokemon = require('../models/pokemonModel');
 const { default: mongoose } = require('mongoose');
 
-////toDo test all routes in Postman
- 
-////toDo:get by gen, get by number of members, get by type, create random team
+////toDo: create random team, add member to team
 
 //?Exports to teamRoutes
 
@@ -165,8 +163,6 @@ exports.deleteOneTeam = async (req,res) => {
     }
 };
 
-////toDo: test in postman
-
 //*Edit one team
 exports.editTeam = async (req,res) => {
     try {
@@ -247,6 +243,7 @@ exports.getByTeamName = async (req,res) => {
     }
 };
 
+////toDo: Test in Postman get by gen , get by amount, get by type
 
 //!Does not work -- needs fixing
 //*Get By Team Game Generation
@@ -273,3 +270,49 @@ exports.getByTeamName = async (req,res) => {
 //         error(res,err);
 //     }
 // }
+
+//*Get By Amount of Members
+exports.getByMemberAmount = async (req,res) => {
+    try {
+        //req params
+        const {userId, amountOfMembers} = req.params;
+        const user = await User.findById(userId);
+        //error handling
+        if(!user){
+            return incomplete(res,'No user found');
+        }
+        //search for key value
+        const memberCount = await PokeTeam.find({amountOfMembers});
+        //error handling
+        if(!memberCount){
+            return incomplete(res, 'No teams found');
+        }
+        //respond to client
+        success(res,memberCount);
+    } catch (err) {
+        error(res,err);
+    }
+};
+
+//*Get By Type
+exports.getByType = async (req,res) => {
+    try {
+        //req params
+        const {userId, type} = req.params;
+        const user = await User.findById(userId);
+        //error handling
+        if(!user){
+            return incomplete(res,'No user found');
+        }
+        //search for key value
+        const memberType = await Pokemon.find({type});
+        //error handling
+        if(!memberType){
+            return incomplete(res, 'No teams found');
+        }
+        //respond to client
+        success(res,memberType);
+    } catch (err) {
+        error(res,err);
+    }
+};
