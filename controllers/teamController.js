@@ -7,7 +7,7 @@ const { default: mongoose } = require('mongoose');
 
 ////toDo test all routes in Postman
  
-////toDo: get by team name, get by gen, get by number of members, get by type, clone team
+////toDo:get by gen, get by number of members, get by type, create random team
 
 //?Exports to teamRoutes
 
@@ -182,7 +182,7 @@ exports.editTeam = async (req,res) => {
         //return updated doc.
         const returnOption = {new: true};
         //update team
-        teamEdit = await PokeTeam.findOneAndUpdate(teamId,info,returnOption);
+        teamEdit = await PokeTeam.findByIdAndUpdate(teamId,info,returnOption);
         //respond to client
         success(res,teamEdit);
     } catch (err) {
@@ -206,7 +206,7 @@ exports.duplicateTeam = async(req,res) => {
             return incomplete(res,"No team found");
         }
         //create copy of original team
-        const duplicatedTeam = new Document({
+        const duplicatedTeam = new PokeTeam({
             //toDo: error handle dup name
             teamName: originalTeam.teamName + '(Copy)',
             amountOfMembers: originalTeam.amountOfMembers,
@@ -222,3 +222,52 @@ exports.duplicateTeam = async(req,res) => {
         error(res,err);
     }
 };
+
+//*Get By Team Name
+exports.getByTeamName = async (req,res) => {
+    // console.log('get by name route');
+    try {
+        //req params
+        const {userId, teamName} = req.params;
+        const user = await User.findById(userId);
+        //error handling
+        if(!user){
+            return incomplete(res,"No user found");
+        }
+        //search for team name
+        const nameResults = await PokeTeam.findOne({teamName});
+        //error handling
+        if(!nameResults){
+            return incomplete(res,"No team found");
+        }
+        //respond to client
+        success(res,nameResults);
+    } catch (err) {
+        error(res,err);
+    }
+};
+
+//*Get By Team Game Generation
+exports.getByGeneration = async (req,res) => {
+    console.log('team gen route');
+    try {
+        //req params
+        const {userId} = req.params;
+        const {propertyValue} = req.query;
+        const user = await User.findById(userId);
+        //error handling
+        if(!user){
+            return incomplete(res,"No user found");
+        }
+        //search for team generation
+        const teams = await PokeTeam.find({teamGeneration:propertyValue});
+        //error handling
+        if(!teams){
+            return incomplete(res,"No teams found");
+        }
+        //respond to client
+        success(res,teams);
+    } catch (err) {
+        error(res,err);
+    }
+}

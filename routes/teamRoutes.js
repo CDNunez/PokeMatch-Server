@@ -17,13 +17,16 @@ router.route('/:userId/pokeTeams/:teamId')
     .put(validateSession,teamController.editTeam)
     .post(validateSession,teamController.duplicateTeam);
 
-// router.route('/:userId/pokeTeams/teamName/:teamName')
-//     .get(teamController.getByTeamName);
+//*Get By Team Name
+router.route('/:userId/pokeTeams/teamName/:teamName')
+    .get(validateSession,teamController.getByTeamName);
+
+//!Needs Fixing
+//*Get By Team Generation
+// router.route('/:userId/pokeTeams/teamGeneration/:teamGeneration')
+//     .get(validateSession,teamController.getByGeneration);
 
 // router.route('/:userId/pokeTeams/amountOfMembers/:amountOfMembers')
 //     .get(teamController.getByNumberOfMembers);
-
-// router.route('/:userId/pokeTeams/teamGeneration/:teamGeneration')
-//     .get(teamController.getByGeneration);
 
 module.exports = router;
