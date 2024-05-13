@@ -1,5 +1,9 @@
 const { error,success,incomplete } = require('../helpers/response');
 const Pokemon = require('../models/pokemonModel');
+const User = require('../models/userModel');
+const PokeTeam = require('../models/pokeTeamsModel');
+
+////toDo: All must be tested. Test individually as to not break the code.
 
 //*Get All Pokemon
 exports.getAllPokemon = async (res) => {
@@ -11,6 +15,7 @@ exports.getAllPokemon = async (res) => {
     }
 };
 
+//*Get By Generation in Game
 exports.getByGeneration = async (req,res) => {
     try {
         //req params
@@ -21,6 +26,7 @@ exports.getByGeneration = async (req,res) => {
     }
 }
 
+//*Get By Pokemon Type : primary or secondary
 exports.getByType = async (res) => {
     try {
         
@@ -29,12 +35,59 @@ exports.getByType = async (res) => {
     }
 }
 
+//*Get Pokemon By Name
 exports.sortByName = async (res) => {
     try {
-        
+        //search for matching name in db
+        const pokemonNameResults = await Pokemon.find({pokemonName});
+        //error handling
+        if(!pokemonNameResults){
+            return incomplete(res,"No pokemon matches that name");
+        }
+        //client response
+        success(res,pokemonNameResults);
+    } catch (err) {
+        error(res,err);
+    }
+};
+
+////toDo: this is incomplete -- also untested
+//*Add Pokemon to team
+exports.addToTeam = async (req,res) => {
+    try {
+        //requested data from the client - data matching pokemon model on db
+        const {pokemonName,gen,number,type,entry,abilities} = req.body;
+        //req params -> user id and team id
+        const {userId, teamId} = req.params;
+        const user = await User.findById(userId);
+        const pokeTeam = await PokeTeam.findById(teamId);
+        //error handling
+        if(!user){
+            return incomplete(res,"User not found");
+        } else if(!pokeTeam){
+            return incomplete(res,"Team not found");
+        } else {
+            return incomplete(res,"User and Team not found");
+        };
+        //pokemon to be created with requested parameters from client
+        const addPokemon = {
+            pokemonName,
+            gen,
+            number,
+            type,
+            entry,
+            abilities
+        };
+        //push to assigned team array of members, save team, and save user
+        pokeTeam.members.push(addPokemon);
+        await pokeTeam.save();
+        await user.save();
+
+        //client response
+        success(res);
+
     } catch (err) {
         error(res,err);
     }
 }
-
 //////toDO: Ideas for controllers: get by type advantage
