@@ -243,37 +243,37 @@ exports.getByTeamName = async (req,res) => {
     }
 };
 
-////toDo: Test in Postman get by gen , get by amount, get by type
+//!error handling for the property value of each function bellow needs to be fixed -- see comment on Get By Team Game Generation Func
 
-//!Does not work -- needs fixing
 //*Get By Team Game Generation
-// exports.getByGeneration = async (req,res) => {
-//     console.log('team gen route');
-//     try {
-//         //req params
-//         const {userId} = req.params;
-//         const {propertyValue} = req.query;
-//         const user = await User.findById(userId);
-//         //error handling
-//         if(!user){
-//             return incomplete(res,"No user found");
-//         }
-//         //search for team generation
-//         const teams = await PokeTeam.find({teamGeneration:propertyValue});
-//         //error handling
-//         if(!teams){
-//             return incomplete(res,"No teams found");
-//         }
-//         //respond to client
-//         success(res,teams);
-//     } catch (err) {
-//         error(res,err);
-//     }
-// }
+exports.getByGeneration = async (req,res) => {
+    console.log('team gen route');
+    try {
+        //req params
+        const {userId, teamGeneration} = req.params;
+        const user = await User.findById(userId);
+        //error handling
+        if(!user){
+            return incomplete(res,"No user found");
+        }
+        //search for team generation
+        const teams = await PokeTeam.find({teamGeneration});
+        //error handling
+        //!Error handling is not working, however the controller does function as intended
+        if(!teams){
+            return incomplete(res,"No teams found");
+        }
+        //respond to client
+        success(res,teams);
+    } catch (err) {
+        error(res,err);
+    }
+}
 
 //*Get By Amount of Members
 exports.getByMemberAmount = async (req,res) => {
     try {
+        console.log('member amount route')
         //req params
         const {userId, amountOfMembers} = req.params;
         const user = await User.findById(userId);
@@ -294,9 +294,12 @@ exports.getByMemberAmount = async (req,res) => {
     }
 };
 
+//!Does not work
+
 //*Get By Type
 exports.getByType = async (req,res) => {
     try {
+        console.log('type route')
         //req params
         const {userId, type} = req.params;
         const user = await User.findById(userId);
@@ -305,11 +308,7 @@ exports.getByType = async (req,res) => {
             return incomplete(res,'No user found');
         }
         //search for key value
-        const memberType = await Pokemon.find({type});
-        //error handling
-        if(!memberType){
-            return incomplete(res, 'No teams found');
-        }
+        const memberType = await Pokemon.find(type.primaryType);
         //respond to client
         success(res,memberType);
     } catch (err) {

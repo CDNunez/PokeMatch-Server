@@ -23,16 +23,15 @@ router.route('/:userId/pokeTeams/teamName/:teamName')
 
 ////toDo: test in postman
 
-//!Needs Fixing
 //*Get By Team Generation
-// router.route('/:userId/pokeTeams/teamGeneration/:teamGeneration')
-//     .get(validateSession,teamController.getByGeneration);
+router.route('/:userId/pokeTeams/teamGeneration/:teamGeneration')
+    .get(validateSession,teamController.getByGeneration);
 
-//*Get By Amount of Members
+// //*Get By Amount of Members
 router.route('/:userId/pokeTeams/amountOfMembers/:amountOfMembers')
     .get(validateSession,teamController.getByMemberAmount);
 
-//*Get By Type
+// //*Get By Type
 router.route('/:userId/pokeTeams/type/:type')
     .get(validateSession,teamController.getByType);
 
