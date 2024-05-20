@@ -20,20 +20,37 @@ exports.getByGeneration = async (req,res) => {
     try {
         //req params
         const { gen } = req.params;
-        //
+        //error handling
+        if(!gen){
+            return incomplete(res,"No gen found");
+        }
+        //search for available pokemon within specified gen
+        const pokeGen = await Pokemon.find({gen});
+        //respond to client
+        success(res,pokeGen);
     } catch (err) {
         error(res,err);
     }
-}
+};
 
+//!This might not actually work
 //*Get By Pokemon Type : primary or secondary
-exports.getByType = async (res) => {
+exports.getByType = async (req,res) => {
     try {
-        
+        //req params
+        const { type } = req.params;
+        //error handling
+        if(!type){
+            return incomplete(res,"No type match found");
+        }
+        //search for type
+        const pokeType = await Pokemon.find({type});
+        //respond to client
+        success(res,pokeType)
     } catch (err) {
         error(res,err);
     }
-}
+};
 
 //*Get Pokemon By Name
 exports.sortByName = async (res) => {
@@ -51,7 +68,7 @@ exports.sortByName = async (res) => {
     }
 };
 
-////toDo: this is incomplete -- also untested
+////toDo: test in postman
 //*Add Pokemon to team
 exports.addToTeam = async (req,res) => {
     try {
@@ -63,11 +80,10 @@ exports.addToTeam = async (req,res) => {
         const pokeTeam = await PokeTeam.findById(teamId);
         //error handling
         if(!user){
-            return incomplete(res,"User not found");
-        } else if(!pokeTeam){
+            return incomplete(res,'User not found');
+        };
+        if(!pokeTeam){
             return incomplete(res,"Team not found");
-        } else {
-            return incomplete(res,"User and Team not found");
         };
         //pokemon to be created with requested parameters from client
         const addPokemon = {
@@ -84,10 +100,10 @@ exports.addToTeam = async (req,res) => {
         await user.save();
 
         //client response
-        success(res);
+        success(res,pokeTeam);
 
     } catch (err) {
         error(res,err);
     }
-}
+};
 //////toDO: Ideas for controllers: get by type advantage
