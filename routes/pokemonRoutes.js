@@ -19,7 +19,8 @@ router.route('/pokemon/type/:primaryType')
 router.route('/pokemon/sortByName/:pokemonName')
     .get(pokemonController.sortByName);
 
-//*Add Pokemon to team
+//*Add Pokemon to team - Delete Pokemon From Team
 router.route('/:userId/pokeTeams/:teamId/pokemon/:pokemonId')
-    .put(validateSession,pokemonController.addToTeam);
+    .put(validateSession,pokemonController.addToTeam)
+    .delete(validateSession,pokemonController.deleteFromTeam);
 module.exports = router;

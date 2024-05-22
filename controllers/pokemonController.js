@@ -109,4 +109,32 @@ exports.addToTeam = async (req,res) => {
         error(res,err);
     }
 };
+
+//!UNTESTED -> Probably does not function as intended
+//*Delete Pokemon From Team
+exports.deleteFromTeam = async (req,res) => {
+    try {
+        const {userId, teamId, pokemonId} = req.params;
+        const user = await User.findById(userId);
+        const team = await PokeTeam.findById(teamId);
+        
+        if(!user){
+            return incomplete(res,"No user found");
+        }
+        if(!team){
+            return incomplete(res,"No team found");
+        }
+        
+        const deletePokemon = await PokeTeam.findByIdAndDelete(pokemonId);
+
+        success(res, 'Pokemon Deleted');
+
+        if(!deletePokemon){
+            return incomplete(res,"No pokemon found");
+        }
+
+    } catch (err) {
+        error(res,err);
+    }
+}
 //////toDO: Ideas for controllers: get by type advantage
