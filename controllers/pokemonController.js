@@ -136,5 +136,46 @@ exports.deleteFromTeam = async (req,res) => {
     } catch (err) {
         error(res,err);
     }
+};
+
+//!UNTESTED -> Probably does not function as intended
+//*Duplicate Selected Pokemon Within Team
+exports.duplicatePokemon = async (req,res) => {
+    try {
+        const {userId,teamId,pokemonId} = req.params;
+        const user = await User.findById(userId);
+        const team = await PokeTeam.findById(teamId);
+
+        if(!user){
+            return incomplete(res,"No user found");
+        }
+        if(!team){
+            return incomplete(res,"No team found");
+        }
+
+        const originalPokemon = await PokeTeam.findById(pokemonId);
+        if(!originalPokemon){
+            return incomplete(res,"No pokemon found");
+        }
+
+        const duplicatedPokemon = new Pokemon({
+            pokemonName: originalPokemon.pokemonName,
+            gen: originalPokemon.gen,
+            number: originalPokemon.number,
+            primaryType: originalPokemon.primaryType,
+            secondaryType: originalPokemon.secondaryType,
+            typesWeakTo: {...originalPokemon.typesWeakTo},
+            typesEffectiveAgainst: {...originalPokemon.typesEffectiveAgainst},
+            entry: originalPokemon.entry,
+            abilities: {...originalPokemon.abilities},
+            baseStats:{...originalPokemon.baseStats}
+        });
+
+        await duplicatedPokemon.save();
+
+        success(res,duplicatedPokemon);
+    } catch (err) {
+        error(res,err);
+    }
 }
 //////toDO: Ideas for controllers: get by type advantage

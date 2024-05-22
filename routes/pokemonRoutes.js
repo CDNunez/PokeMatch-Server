@@ -22,5 +22,6 @@ router.route('/pokemon/sortByName/:pokemonName')
 //*Add Pokemon to team - Delete Pokemon From Team
 router.route('/:userId/pokeTeams/:teamId/pokemon/:pokemonId')
     .put(validateSession,pokemonController.addToTeam)
-    .delete(validateSession,pokemonController.deleteFromTeam);
+    .delete(validateSession,pokemonController.deleteFromTeam)
+    .post(validateSession,pokemonController.duplicatePokemon);
 module.exports = router;
