@@ -12,14 +12,14 @@ router.route('/pokemon/generation/:gen')
     .get(pokemonController.getByGeneration);
 
 //*Get Pokemon By Type
-router.route('/pokemon/type/:type')
+router.route('/pokemon/type/:primaryType')
     .get(pokemonController.getByType);
 
 //*Get By Name
-router.route('/pokemon/sortByName/:name')
+router.route('/pokemon/sortByName/:pokemonName')
     .get(pokemonController.sortByName);
 
 //*Add Pokemon to team
 router.route('/:userId/pokeTeams/:teamId/pokemon/:pokemonId')
-    .post(validateSession,pokemonController.addToTeam);
+    .put(validateSession,pokemonController.addToTeam);
 module.exports = router;

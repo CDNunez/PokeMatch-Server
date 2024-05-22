@@ -4,15 +4,22 @@ const PokemonSchema = new mongoose.Schema({
     pokemonName:String,
     gen:Number,
     number:Number,
-    type:{
-        primaryType:String,
-        secondaryType:String,
-    },
+    primaryType:String,
+    secondaryType:String,
+    typesWeakTo:[String],
+    typesEffectiveAgainst:[String],
     entry:String,
     abilities: {
         firstAbility: String,
         secondAbility: String,
         thirdAbility: String
+    },
+    baseStats:{
+        attack:Number,
+        defense:Number,
+        specialAttack:Number,
+        specialDefense:Number,
+        speed:Number
     }
 })
 

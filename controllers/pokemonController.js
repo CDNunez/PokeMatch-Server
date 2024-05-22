@@ -3,15 +3,15 @@ const Pokemon = require('../models/pokemonModel');
 const User = require('../models/userModel');
 const PokeTeam = require('../models/pokeTeamsModel');
 
-////toDo: All must be tested. Test individually as to not break the code.
+////toDo: All must be tested.
 
 //*Get All Pokemon
-exports.getAllPokemon = async (res) => {
+exports.getAllPokemon = async (req,res) => {
     try {
         const allPokemon = await Pokemon.find();
         success(res,allPokemon);
     } catch (err) {
-        error(res,err);
+        return res.status(500).send(`Error: ${err.message}`);
     }
 };
 
@@ -38,13 +38,13 @@ exports.getByGeneration = async (req,res) => {
 exports.getByType = async (req,res) => {
     try {
         //req params
-        const { type } = req.params;
+        const { primaryType } = req.params;
         //error handling
-        if(!type){
+        if(!primaryType){
             return incomplete(res,"No type match found");
         }
         //search for type
-        const pokeType = await Pokemon.find({type});
+        const pokeType = await Pokemon.find({primaryType});
         //respond to client
         success(res,pokeType)
     } catch (err) {
@@ -53,8 +53,9 @@ exports.getByType = async (req,res) => {
 };
 
 //*Get Pokemon By Name
-exports.sortByName = async (res) => {
+exports.sortByName = async (req,res) => {
     try {
+        const {pokemonName} = req.params;
         //search for matching name in db
         const pokemonNameResults = await Pokemon.find({pokemonName});
         //error handling
@@ -64,7 +65,7 @@ exports.sortByName = async (res) => {
         //client response
         success(res,pokemonNameResults);
     } catch (err) {
-        error(res,err);
+        return res.status(500).send(`Error: ${err.message}`);
     }
 };
 
@@ -73,7 +74,7 @@ exports.sortByName = async (res) => {
 exports.addToTeam = async (req,res) => {
     try {
         //requested data from the client - data matching pokemon model on db
-        const {pokemonName,gen,number,type,entry,abilities} = req.body;
+        const {pokemonName,gen,number,primaryType,secondaryType,typesWeakTo,typesEffectiveAgainst,entry,abilities,baseStats} = req.body;
         //req params -> user id and team id
         const {userId, teamId} = req.params;
         const user = await User.findById(userId);
@@ -90,17 +91,19 @@ exports.addToTeam = async (req,res) => {
             pokemonName,
             gen,
             number,
-            type,
+            primaryType,
+            secondaryType,
+            typesWeakTo,
+            typesEffectiveAgainst,
             entry,
-            abilities
+            abilities,
+            baseStats
         };
         //push to assigned team array of members, save team, and save user
-        pokeTeam.members.push(addPokemon);
-        await pokeTeam.save();
-        await user.save();
-
+        const returnOption = {new:true};
+        const teamAdd = await PokeTeam.findByIdAndUpdate(teamId,addPokemon,returnOption);
         //client response
-        success(res,pokeTeam);
+        success(res,teamAdd);
 
     } catch (err) {
         error(res,err);

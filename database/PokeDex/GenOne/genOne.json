@@ -1,1760 +1,3325 @@
 { "pokedex": {
-    "Bulbasaur": {
-        "pokemonName":"Bulbasaur",
-        "gen": 1,
-        "number": 1,
-        "type": {
-            "primaryType": "Grass",
-            "secondaryType": "Poison"
+        "Bulbasaur":{
+          "pokemonName": "Bulbasaur",
+          "gen": 1,
+          "number": 1,
+          "primaryType": "Grass",
+          "secondaryType": "Poison",
+          "typesWeakTo": ["Fire", "Flying", "Psychic", "Ice"],
+          "typesEffectiveAgainst": ["Water", "Ground", "Rock"],
+          "entry": "A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.",
+          "abilities": {
+            "firstAbility": "Overgrow",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: Chlorophyll"
+          },
+          "baseStats": {
+            "attack": 49,
+            "defense": 49,
+            "specialAttack": 65,
+            "specialDefense": 65,
+            "speed": 45
+          }
         },
-        "entry": "text",
-        "abilities": {
-            "firstAbility":"Overgrow",
-            "secondAbility":"Chlorophyll",
-            "thirdAbility": null
-        }
-    },
-    "Ivysaur": {
-        "pokemonName":"Ivysaur",
-        "gen": 1,
-        "number": 2,
-        "type": {
-            "primaryType": "Grass",
-            "secondaryType": "Poison"
+        "Ivysaur":{
+          "pokemonName": "Ivysaur",
+          "gen": 1,
+          "number": 2,
+          "primaryType": "Grass",
+          "secondaryType": "Poison",
+          "typesWeakTo": ["Fire", "Flying", "Psychic", "Ice"],
+          "typesEffectiveAgainst": ["Water", "Ground", "Rock"],
+          "entry": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
+          "abilities": {
+            "firstAbility": "Overgrow",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: Chlorophyll"
+          },
+          "baseStats": {
+            "attack": 62,
+            "defense": 63,
+            "specialAttack": 80,
+            "specialDefense": 80,
+            "speed": 60
+          }
         },
-        "entry": "text",
-        "abilities": {
-            "firstAbility":"Overgrow",
-            "secondAbility":"Chlorophyll",
-            "thirdAbility": null
-        }        
-    },
-    "Venusaur": {
-        "pokemonName":"Venusaur",
-        "gen": 1,
-        "number": 3,
-        "type": {
-            "primaryType": "Grass",
-            "secondaryType": "Poison"
+        "Venusaur":{
+          "pokemonName": "Venusaur",
+          "gen": 1,
+          "number": 3,
+          "primaryType": "Grass",
+          "secondaryType": "Poison",
+          "typesWeakTo": ["Fire", "Flying", "Psychic", "Ice"],
+          "typesEffectiveAgainst": ["Water", "Ground", "Rock"],
+          "entry": "Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
+          "abilities": {
+            "firstAbility": "Overgrow",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: Chlorophyll"
+          },
+          "baseStats": {
+            "attack": 82,
+            "defense": 83,
+            "specialAttack": 100,
+            "specialDefense": 100,
+            "speed": 80
+          }
         },
-        "entry": "text",
-        "abilities": {
-            "firstAbility":"Overgrow",
-            "secondAbility":"Chlorophyll",
-            "thirdAbility": null
-        }
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
+        "Charmander":{
+          "pokemonName": "Charmander",
+          "gen": 1,
+          "number": 4,
+          "primaryType": "Fire",
+          "secondaryType": null,
+          "typesWeakTo": ["Water", "Ground", "Rock"],
+          "typesEffectiveAgainst": ["Grass", "Ice", "Bug", "Steel"],
+          "entry": "Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail.",
+          "abilities": {
+            "firstAbility": "Blaze",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: Solar Power"
+          },
+          "baseStats": {
+            "attack": 52,
+            "defense": 43,
+            "specialAttack": 60,
+            "specialDefense": 50,
+            "speed": 65
+          }
         },
-        "entry":"text",
-        "abilities": {
-            "firstAbility":"Blaze",
-            "secondAbility":"Solar Power",
-            "thirdAbility": null
-        }
-    },
-    "Charmeleon": {
-        "pokemonName":"Charmeleon",
-        "gen":1,
-        "number": 5,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
+        "Charmeleon":{
+          "pokemonName": "Charmeleon",
+          "gen": 1,
+          "number": 5,
+          "primaryType": "Fire",
+          "secondaryType": null,
+          "typesWeakTo": ["Water", "Ground", "Rock"],
+          "typesEffectiveAgainst": ["Grass", "Ice", "Bug", "Steel"],
+          "entry": "When it swings its burning tail, it elevates the temperature to unbearably high levels.",
+          "abilities": {
+            "firstAbility": "Blaze",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: Solar Power"
+          },
+          "baseStats": {
+            "attack": 64,
+            "defense": 58,
+            "specialAttack": 80,
+            "specialDefense": 65,
+            "speed": 80
+          }
         },
-        "entry":"text",
-        "abilities": {
-            "firstAbility":"Blaze",
-            "secondAbility":"Solar Power",
-            "thirdAbility": null
-        }
-    },
-    "Charizard": {
-        "pokemonName":"Charizard",
-        "gen":1,
-        "number": 5,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":"Flying"
+        "Charizard":{
+          "pokemonName": "Charizard",
+          "gen": 1,
+          "number": 6,
+          "primaryType": "Fire",
+          "secondaryType": "Flying",
+          "typesWeakTo": ["Water", "Electric", "Rock"],
+          "typesEffectiveAgainst": ["Grass", "Bug", "Steel"],
+          "entry": "Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally.",
+          "abilities": {
+            "firstAbility": "Blaze",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: Solar Power"
+          },
+          "baseStats": {
+            "attack": 84,
+            "defense": 78,
+            "specialAttack": 109,
+            "specialDefense": 85,
+            "speed": 100
+          }
         },
-        "entry":"text",
-        "abilities": {
-            "firstAbility":"Blaze",
-            "secondAbility":"Solar Power",
-            "thirdAbility": null
-        }
-    },
-    "Squirtle": {
-        "pokemonName":"Squirtle",
-        "gen":1,
-        "number": 6,
-        "type": {
-            "primaryType":"Water",
-            "secondaryType":null
+        "Squirtle":{
+          "pokemonName": "Squirtle",
+          "gen": 1,
+          "number": 7,
+          "primaryType": "Water",
+          "secondaryType": null,
+          "typesWeakTo": ["Electric", "Grass"],
+          "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+          "entry": "After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth.",
+          "abilities": {
+            "firstAbility": "Torrent",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: Rain Dish"
+          },
+          "baseStats": {
+            "attack": 48,
+            "defense": 65,
+            "specialAttack": 50,
+            "specialDefense": 64,
+            "speed": 43
+          }
         },
-        "entry":"text",
-        "abilities": {
-            "firstAbility":"Torrent",
-            "secondAbility":"Rain Dish",
-            "thirdAbility": null
-        }
-    },
-    "Wartortle": {
-        "pokemonName":"Wartortle",
-        "gen":1,
-        "number": 8,
-        "type": {
-            "primaryType":"Water",
-            "secondaryType":null
+        "Wartortle":{
+          "pokemonName": "Wartortle",
+          "gen": 1,
+          "number": 8,
+          "primaryType": "Water",
+          "secondaryType": null,
+          "typesWeakTo": ["Electric", "Grass"],
+          "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+          "entry": "Often hides in water to stalk unwary prey. For swimming fast, it moves its ears to maintain balance.",
+          "abilities": {
+            "firstAbility": "Torrent",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: Rain Dish"
+          },
+          "baseStats": {
+            "attack": 63,
+            "defense": 80,
+            "specialAttack": 65,
+            "specialDefense": 80,
+            "speed": 58
+          }
         },
-        "entry":"text",
-        "abilities": {
-            "firstAbility":"Torrent",
-            "secondAbility":"Rain Dish",
-            "thirdAbility": null
-        }
-    },
-    "Blastoise": {
-        "pokemonName":"Blastoise",
-        "gen":1,
-        "number": 9,
-        "type": {
-            "primaryType":"Water",
-            "secondaryType":null
+        "Blastoise":{
+          "pokemonName": "Blastoise",
+          "gen": 1,
+          "number": 9,
+          "primaryType": "Water",
+          "secondaryType": null,
+          "typesWeakTo": ["Electric", "Grass"],
+          "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+          "entry": "Once it takes in air, it holds it inside its shell, then releases it with great force using its abdominal muscles.",
+          "abilities": {
+            "firstAbility": "Torrent",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: Rain Dish"
+          },
+          "baseStats": {
+            "attack": 83,
+            "defense": 100,
+            "specialAttack": 85,
+            "specialDefense": 105,
+            "speed": 78
+          }
         },
-        "entry":"text",
-        "abilities": {
-            "firstAbility":"Torrent",
-            "secondAbility":"Rain Dish",
-            "thirdAbility": null
-        }
-    },
-    "Caterpie": {
-        "pokemonName":"Caterpie",
-        "gen":1,
-        "number": 10,
-        "type": {
-            "primaryType":"Bug",
-            "secondaryType":null
+        "Caterpie":{
+          "pokemonName": "Caterpie",
+          "gen": 1,
+          "number": 10,
+          "primaryType": "Bug",
+          "secondaryType": null,
+          "typesWeakTo": ["Fire", "Flying", "Rock"],
+          "typesEffectiveAgainst": ["Grass", "Psychic", "Dark"],
+          "entry": "If you touch the feeler on top of its head, it will release a horrible stink to protect itself.",
+          "abilities": {
+            "firstAbility": "Shield Dust",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: Run Away"
+          },
+          "baseStats": {
+            "attack": 30,
+            "defense": 35,
+            "specialAttack": 20,
+            "specialDefense": 20,
+            "speed": 45
+          }
         },
-        "entry":"text",
-        "abilities": {
-            "firstAbility":"Shield Dust",
-            "secondAbility":"Run away",
-            "thirdAbility": null
-        }
-    },
-    "Metapod": {
-        "pokemonName":"Metapod",
-        "gen":1,
-        "number": 11,
-        "type": {
-            "primaryType":"Bug",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities": {
+        "Metapod":{
+          "pokemonName": "Metapod",
+          "gen": 1,
+          "number": 11,
+          "primaryType": "Bug",
+          "secondaryType": null,
+          "typesWeakTo": ["Fire", "Flying", "Rock"],
+          "typesEffectiveAgainst": ["Grass", "Psychic", "Dark"],
+          "entry": "The shell covering this Pokémon's body is as hard as an iron slab. Metapod does not move very much.",
+          "abilities": {
             "firstAbility": "Shed Skin",
-            "secondAbility":null,
-            "thirdAbility":null
-        }
-    },
-    "Butterfree": {
-        "pokemonName":"Butterfree",
-        "gen":1,
-        "number": 12,
-        "type": {
-            "primaryType":"Bug",
-            "secondaryType":"Flying"
-        },
-        "entry":"text",
-        "abilities": {
-            "firstAbility":"Compoundeyes",
-            "secondAbility":"Tinted Lens",
-            "thirdAbility":null
-        }
-    },
-    "Weedle": {
-        "pokemonName":"Weedle",
-        "gen":1,
-        "number": 13,
-        "type": {
-            "primaryType":"Bug",
-            "secondaryType":"Poison"
-        },
-        "entry":"text",
-        "abilities":{
-            "firstAbility":"Shield Dust",
-            "secondAbility":"Run away",
-            "thirdAbility":null
-        }
-    },
-    "Kakuna": {
-        "pokemonName":"Kakuna",
-        "gen":1,
-        "number": 14,
-        "type": {
-            "primaryType":"Bug",
-            "secondaryType":"Poison"
-        },
-        "entry":"text",
-        "abilities":{
-            "firstAbility":"Shed Skin",
-            "secondAbility":null,
-            "thirdAbility":null
-        }
-    },
-    "Beedrill": {
-        "pokemonName":"Beedrill",
-        "gen":1,
-        "number": 15,
-        "type": {
-            "primaryType":"Bug",
-            "secondaryType":"Poison"
-        },
-        "entry":"text",
-        "abilities":{
-            "firstAbility":"Swarm",
-            "secondAbility":"Sniper",
-            "thirdAbility":null
-        }
-    },
-    "Pidgey": {
-        "pokemonName":"Pidgey",
-        "gen":1,
-        "number": 16,
-        "type": {
-            "primaryType":"Normal",
-            "secondaryType":"Flying"
-        },
-        "entry":"text",
-        "abilities":{
-            "firstAbility":"Keen Eye",
-            "secondAbility":"Tangled Feet",
-            "thirdAbility":"Big Pecks"
-        }
-    },
-    "Pidgeotto": {
-        "pokemonName":"Pidgeotto",
-        "gen":1,
-        "number": 17,
-        "type": {
-            "primaryType":"Normal",
-            "secondaryType":"Flying"
-        },
-        "entry":"text",
-        "abilities":{
-            "firstAbility":"Keen Eye",
-            "secondAbility":"Tangled Feet",
-            "thirdAbility":"Big Pecks"
-        }
-    },
-    "Pidgeot": {
-        "pokemonName":"Pidgeot",
-        "gen":1,
-        "number": 18,
-        "type": {
-            "primaryType":"Normal",
-            "secondaryType":"Flying"
-        },
-        "entry":"text",
-        "abilities":{
-            "firstAbility":"Keen Eye",
-            "secondAbility":"Tangled Feet",
-            "thirdAbility":"Big Pecks"
-        }
-    },
-    "Rattata": {
-        "pokemonName":"Rattata",
-        "gen":1,
-        "number": 19,
-        "type": {
-            "primaryType":"Normal",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":{
-            "firstAbility":"Run Away",
-            "secondAbility":"Guts",
-            "thirdAbility":"Hustle"
-        }
-    },
-    "Raticate": {
-        "pokemonName":"Raticate",
-        "gen":1,
-        "number": 20,
-        "type": {
-            "primaryType":"Normal",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":{
-            "firstAbility":"Run Away",
-            "secondAbility":"Guts",
-            "thirdAbility":"Hustle"
-        }
-    },
-    "Spearow": {
-        "pokemonName":"Spearow",
-        "gen":1,
-        "number": 21,
-        "type": {
-            "primaryType":"Normal",
-            "secondaryType":"Flying"
-        },
-        "entry":"text",
-        "abilities":{
-            "firstAbility":"Keen Eye",
-            "secondAbility":"Sniper",
-            "thirdAbility":null
-        }
-    },
-    "Fearow": {
-        "pokemonName":"Fearow",
-        "gen":1,
-        "number": 22,
-        "type": {
-            "primaryType":"Normal",
-            "secondaryType":"Flying"
-        },
-        "entry":"text",
-        "abilities":{
-            "firstAbility":"Keen Eye",
-            "secondAbility":"Sniper",
-            "thirdAbility":null
-        }
-    },
-    "Ekans": {
-        "pokemonName":"Ekans",
-        "gen":1,
-        "number": 23,
-        "type": {
-            "primaryType":"Poison",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":{
-            "firstAbility":"Intimidate",
-            "secondAbility":"Shed Skin",
-            "thirdAbility":"Unnerve"
-        }
-    },
-    "Arbok": {
-        "pokemonName":"Arbok",
-        "gen":1,
-        "number": 24,
-        "type": {
-            "primaryType":"Poison",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":{
-            "firstAbility":"Intimidate",
-            "secondAbility":"Shed Skin",
-            "thirdAbility":"Unnerve"
-        }
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    },
-    "Charmander": {
-        "pokemonName":"Charmander",
-        "gen":1,
-        "number": 4,
-        "type": {
-            "primaryType":"Fire",
-            "secondaryType":null
-        },
-        "entry":"text",
-        "abilities":"text"
-    }
+            "secondAbility": null,
+            "thirdAbility": "Hidden: None"
+          },
+          "baseStats": {
+            "attack": 20,
+            "defense": 55,
+            "specialAttack": 25,
+            "specialDefense": 25,
+            "speed": 30
+          }
+        },
+        "Butterfree":{
+          "pokemonName": "Butterfree",
+          "gen": 1,
+          "number": 12,
+          "primaryType": "Bug",
+          "secondaryType": "Flying",
+          "typesWeakTo": ["Electric", "Ice", "Flying", "Rock"],
+          "typesEffectiveAgainst": ["Grass", "Fighting", "Bug"],
+          "entry": "In battle, it flaps its wings at great speed to release highly toxic dust into the air.",
+          "abilities": {
+            "firstAbility": "Compound Eyes",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: Tinted Lens"
+          },
+          "baseStats": {
+            "attack": 45,
+            "defense": 50,
+            "specialAttack": 90,
+            "specialDefense": 80,
+            "speed": 70
+          }
+        },
+        "Weedle":{
+          "pokemonName": "Weedle",
+          "gen": 1,
+          "number": 13,
+          "primaryType": "Bug",
+          "secondaryType": "Poison",
+          "typesWeakTo": ["Fire", "Flying", "Psychic", "Rock"],
+          "typesEffectiveAgainst": ["Grass", "Fighting", "Bug", "Fairy"],
+          "entry": "Often found in forests, eating leaves. It has a sharp venomous stinger on its head.",
+          "abilities": {
+            "firstAbility": "Shield Dust",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: Run Away"
+          },
+          "baseStats": {
+            "attack": 35,
+            "defense": 30,
+            "specialAttack": 20,
+            "specialDefense": 20,
+            "speed": 50
+          }
+        },
+        "Kakuna":{
+          "pokemonName": "Kakuna",
+          "gen": 1,
+          "number": 14,
+          "primaryType": "Bug",
+          "secondaryType": "Poison",
+          "typesWeakTo": ["Fire", "Flying", "Psychic", "Rock"],
+          "typesEffectiveAgainst": ["Grass", "Fighting", "Bug", "Fairy"],
+          "entry": "Almost incapable of moving, this Pokémon can only harden its shell to protect itself from predators.",
+          "abilities": {
+            "firstAbility": "Shed Skin",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: None"
+          },
+          "baseStats": {
+            "attack": 25,
+            "defense": 50,
+            "specialAttack": 25,
+            "specialDefense": 25,
+            "speed": 35
+          }
+        },
+        "Beedrill":{
+          "pokemonName": "Beedrill",
+          "gen": 1,
+          "number": 15,
+          "primaryType": "Bug",
+          "secondaryType": "Poison",
+          "typesWeakTo": ["Fire", "Flying", "Psychic", "Rock"],
+          "typesEffectiveAgainst": ["Grass", "Fighting", "Bug", "Fairy"],
+          "entry": "Flies at high speed and attacks using its large venomous stingers on its forelegs and tail.",
+          "abilities": {
+            "firstAbility": "Swarm",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: Sniper"
+          },
+          "baseStats": {
+            "attack": 90,
+            "defense": 40,
+            "specialAttack": 45,
+            "specialDefense": 80,
+            "speed": 75
+          }
+        },
+        "Pidgey":{
+          "pokemonName": "Pidgey",
+          "gen": 1,
+          "number": 16,
+          "primaryType": "Normal",
+          "secondaryType": "Flying",
+          "typesWeakTo": ["Electric", "Ice", "Rock"],
+          "typesEffectiveAgainst": ["Grass", "Bug"],
+          "entry": "Very docile. If attacked, it will often kick up sand to protect itself rather than fight back.",
+          "abilities": {
+            "firstAbility": "Keen Eye",
+            "secondAbility": "Tangled Feet",
+            "thirdAbility": "Hidden: Big Pecks"
+          },
+          "baseStats": {
+            "attack": 45,
+            "defense": 40,
+            "specialAttack": 35,
+            "specialDefense": 35,
+            "speed": 56
+          }
+        },
+        "Pidgeotto":{
+          "pokemonName": "Pidgeotto",
+          "gen": 1,
+          "number": 17,
+          "primaryType": "Normal",
+          "secondaryType": "Flying",
+          "typesWeakTo": ["Electric", "Ice", "Rock"],
+          "typesEffectiveAgainst": ["Grass", "Bug"],
+          "entry": "This Pokémon flies over its wide territory in search of prey, downing it with its highly developed claws.",
+          "abilities": {
+            "firstAbility": "Keen Eye",
+            "secondAbility": "Tangled Feet",
+            "thirdAbility": "Hidden: Big Pecks"
+          },
+          "baseStats": {
+            "attack": 60,
+            "defense": 55,
+            "specialAttack": 50,
+            "specialDefense": 50,
+            "speed": 71
+          }
+        },
+        "Pidgeot":{
+          "pokemonName": "Pidgeot",
+          "gen": 1,
+          "number": 18,
+          "primaryType": "Normal",
+          "secondaryType": "Flying",
+          "typesWeakTo": ["Electric", "Ice", "Rock"],
+          "typesEffectiveAgainst": ["Grass", "Bug"],
+          "entry": "When hunting, it skims the surface of water at high speed to pick off unwary prey such as Magikarp.",
+          "abilities": {
+            "firstAbility": "Keen Eye",
+            "secondAbility": "Tangled Feet",
+            "thirdAbility": "Hidden: Big Pecks"
+          },
+          "baseStats": {
+            "attack": 80,
+            "defense": 75,
+            "specialAttack": 70,
+            "specialDefense": 70,
+            "speed": 101
+          }
+        },
+        "Rattata":{
+          "pokemonName": "Rattata",
+          "gen": 1,
+          "number": 19,
+          "primaryType": "Normal",
+          "secondaryType": null,
+          "typesWeakTo": ["Fighting"],
+          "typesEffectiveAgainst": ["Ghost"],
+          "entry": "Bites anything when it attacks. Small and very quick, it is a common sight in many places.",
+          "abilities": {
+            "firstAbility": "Run Away",
+            "secondAbility": "Guts",
+            "thirdAbility": "Hidden: Hustle"
+          },
+          "baseStats": {
+            "attack": 56,
+            "defense": 35,
+            "specialAttack": 25,
+            "specialDefense": 35,
+            "speed": 72
+          }
+        },
+        "Raticate":{
+          "pokemonName": "Raticate",
+          "gen": 1,
+          "number": 20,
+          "primaryType": "Normal",
+          "secondaryType": null,
+          "typesWeakTo": ["Fighting"],
+          "typesEffectiveAgainst": ["Ghost"],
+          "entry": "It uses its whiskers to maintain its balance. It seems to slow down if they are cut off.",
+          "abilities": {
+            "firstAbility": "Run Away",
+            "secondAbility": "Guts",
+            "thirdAbility": "Hidden: Hustle"
+          },
+          "baseStats": {
+            "attack": 81,
+            "defense": 60,
+            "specialAttack": 50,
+            "specialDefense": 70,
+            "speed": 97
+          }
+        },
+        "Spearow":{
+          "pokemonName": "Spearow",
+          "gen": 1,
+          "number": 21,
+          "primaryType": "Normal",
+          "secondaryType": "Flying",
+          "typesWeakTo": ["Electric", "Ice", "Rock"],
+          "typesEffectiveAgainst": ["Grass", "Bug"],
+          "entry": "Eats bugs in grassy areas. It has to flap its short wings at high speed to stay airborne.",
+          "abilities": {
+            "firstAbility": "Keen Eye",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: Sniper"
+          },
+          "baseStats": {
+            "attack": 60,
+            "defense": 30,
+            "specialAttack": 31,
+            "specialDefense": 31,
+            "speed": 70
+          }
+        },
+        "Fearow":{
+          "pokemonName": "Fearow",
+          "gen": 1,
+          "number": 22,
+          "primaryType": "Normal",
+          "secondaryType": "Flying",
+          "typesWeakTo": ["Electric", "Ice", "Rock"],
+          "typesEffectiveAgainst": ["Grass", "Bug"],
+          "entry": "With its huge and magnificent wings, it can keep aloft without ever having to land for rest.",
+          "abilities": {
+            "firstAbility": "Keen Eye",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: Sniper"
+          },
+          "baseStats": {
+            "attack": 90,
+            "defense": 65,
+            "specialAttack": 61,
+            "specialDefense": 61,
+            "speed": 100
+          }
+        },
+        "Ekans":{
+          "pokemonName": "Ekans",
+          "gen": 1,
+          "number": 23,
+          "primaryType": "Poison",
+          "secondaryType": null,
+          "typesWeakTo": ["Psychic", "Ground"],
+          "typesEffectiveAgainst": ["Grass", "Fairy"],
+          "entry": "The older it gets, the longer it grows. At night, it wraps its long body around tree branches to rest.",
+          "abilities": {
+            "firstAbility": "Intimidate",
+            "secondAbility": "Shed Skin",
+            "thirdAbility": "Hidden: Unnerve"
+          },
+          "baseStats": {
+            "attack": 60,
+            "defense": 44,
+            "specialAttack": 40,
+            "specialDefense": 54,
+            "speed": 55
+          }
+        },
+        "Arbok":{
+          "pokemonName": "Arbok",
+          "gen": 1,
+          "number": 24,
+          "primaryType": "Poison",
+          "secondaryType": null,
+          "typesWeakTo": ["Psychic", "Ground"],
+          "typesEffectiveAgainst": ["Grass", "Fairy"],
+          "entry": "The pattern on its belly appears to be a frightening face. Weak foes will flee just at the sight of the pattern.",
+          "abilities": {
+            "firstAbility": "Intimidate",
+            "secondAbility": "Shed Skin",
+            "thirdAbility": "Hidden: Unnerve"
+          },
+          "baseStats": {
+            "attack": 85,
+            "defense": 69,
+            "specialAttack": 65,
+            "specialDefense": 79,
+            "speed": 80
+          }
+        },
+        "Pikachu":{
+          "pokemonName": "Pikachu",
+          "gen": 1,
+          "number": 25,
+          "primaryType": "Electric",
+          "secondaryType": null,
+          "typesWeakTo": ["Ground"],
+          "typesEffectiveAgainst": ["Water", "Flying"],
+          "entry": "When several of these Pokémon gather, their electricity could build and cause lightning storms.",
+          "abilities": {
+            "firstAbility": "Static",
+            "secondAbility": null,
+            "thirdAbility": "Hidden: Lightning Rod"
+          },
+          "baseStats": {
+            "attack": 55,
+            "defense": 40,
+            "specialAttack": 50,
+            "specialDefense": 50,
+            "speed": 90
+          }
+        },
+        "Raichu":{
+              "pokemonName": "Raichu",
+              "gen": 1,
+              "number": 26,
+              "primaryType": "Electric",
+              "secondaryType": null,
+              "typesWeakTo": ["Ground"],
+              "typesEffectiveAgainst": ["Water", "Flying"],
+              "entry": "Its electric charges can reach even 100,000 volts. Careless contact can cause even an Indian elephant to faint.",
+              "abilities": {
+                "firstAbility": "Static",
+                "secondAbility": null,
+                "thirdAbility": "Hidden: Lightning Rod"
+              },
+              "baseStats": {
+                "attack": 90,
+                "defense": 55,
+                "specialAttack": 90,
+                "specialDefense": 80,
+                "speed": 110
+              }
+            },
+        "Sandshrew":{
+              "pokemonName": "Sandshrew",
+              "gen": 1,
+              "number": 27,
+              "primaryType": "Ground",
+              "secondaryType": null,
+              "typesWeakTo": ["Water", "Grass", "Ice"],
+              "typesEffectiveAgainst": ["Fire", "Electric", "Poison", "Rock", "Steel"],
+              "entry": "It loves to bathe in the grit of dry, sandy areas. By sand bathing, the Pokémon rids itself of dirt and moisture clinging to its body.",
+              "abilities": {
+                "firstAbility": "Sand Veil",
+                "secondAbility": "Sand Rush",
+                "thirdAbility": "Hidden: Sand Force"
+              },
+              "baseStats": {
+                "attack": 75,
+                "defense": 85,
+                "specialAttack": 20,
+                "specialDefense": 30,
+                "speed": 40
+              }
+            },
+        "Sandslash":{
+              "pokemonName": "Sandslash",
+              "gen": 1,
+              "number": 28,
+              "primaryType": "Ground",
+              "secondaryType": null,
+              "typesWeakTo": ["Water", "Grass", "Ice"],
+              "typesEffectiveAgainst": ["Fire", "Electric", "Poison", "Rock", "Steel"],
+              "entry": "In an attempt to hide itself, it will run around at top speed to kick up a blinding dust storm.",
+              "abilities": {
+                "firstAbility": "Sand Veil",
+                "secondAbility": "Sand Rush",
+                "thirdAbility": "Hidden: Sand Force"
+              },
+              "baseStats": {
+                "attack": 100,
+                "defense": 110,
+                "specialAttack": 45,
+                "specialDefense": 55,
+                "speed": 65
+              }
+            },
+        "Nidoran♀":{
+              "pokemonName": "Nidoran♀",
+              "gen": 1,
+              "number": 29,
+              "primaryType": "Poison",
+              "secondaryType": null,
+              "typesWeakTo": ["Psychic", "Ground"],
+              "typesEffectiveAgainst": ["Grass", "Fairy"],
+              "entry": "Although small, its venomous barbs render this Pokémon dangerous. The female has smaller horns.",
+              "abilities": {
+                "firstAbility": "Poison Point",
+                "secondAbility": "Rivalry",
+                "thirdAbility": "Hidden: Hustle"
+              },
+              "baseStats": {
+                "attack": 47,
+                "defense": 52,
+                "specialAttack": 40,
+                "specialDefense": 40,
+                "speed": 41
+              }
+            },
+        "Nidorina":{
+              "pokemonName": "Nidorina",
+              "gen": 1,
+              "number": 30,
+              "primaryType": "Poison",
+              "secondaryType": null,
+              "typesWeakTo": ["Psychic", "Ground"],
+              "typesEffectiveAgainst": ["Grass", "Fairy"],
+              "entry": "The female's horns develop slowly. Prefers physical attacks such as clawing and biting.",
+              "abilities": {
+                "firstAbility": "Poison Point",
+                "secondAbility": "Rivalry",
+                "thirdAbility": "Hidden: Hustle"
+              },
+              "baseStats": {
+                "attack": 62,
+                "defense": 67,
+                "specialAttack": 55,
+                "specialDefense": 55,
+                "speed": 56
+              }
+            },
+        "Nidoqueen":{
+              "pokemonName": "Nidoqueen",
+              "gen": 1,
+              "number": 31,
+              "primaryType": "Poison",
+              "secondaryType": "Ground",
+              "typesWeakTo": ["Water", "Ice", "Ground", "Psychic"],
+              "typesEffectiveAgainst": ["Grass", "Bug", "Poison", "Rock", "Steel", "Fire", "Electric"],
+              "entry": "Its hard scales provide strong protection. It uses its hefty bulk to execute powerful moves.",
+              "abilities": {
+                "firstAbility": "Poison Point",
+                "secondAbility": "Rivalry",
+                "thirdAbility": "Hidden: Sheer Force"
+              },
+              "baseStats": {
+                "attack": 92,
+                "defense": 87,
+                "specialAttack": 75,
+                "specialDefense": 85,
+                "speed": 76
+              }
+            },
+        "Nidoran♂":{
+              "pokemonName": "Nidoran♂",
+              "gen": 1,
+              "number": 32,
+              "primaryType": "Poison",
+              "secondaryType": null,
+              "typesWeakTo": ["Psychic", "Ground"],
+              "typesEffectiveAgainst": ["Grass", "Fairy"],
+              "entry": "Stiffens its ears to sense danger. The larger its horns, the more powerful its secreted venom.",
+              "abilities": {
+                "firstAbility": "Poison Point",
+                "secondAbility": "Rivalry",
+                "thirdAbility": "Hidden: Hustle"
+              },
+              "baseStats": {
+                "attack": 57,
+                "defense": 40,
+                "specialAttack": 40,
+                "specialDefense": 40,
+                "speed": 50
+              }
+            },
+        "Nidorino":{
+              "pokemonName": "Nidorino",
+              "gen": 1,
+              "number": 33,
+              "primaryType": "Poison",
+              "secondaryType": null,
+              "typesWeakTo": ["Psychic", "Ground"],
+              "typesEffectiveAgainst": ["Grass", "Fairy"],
+              "entry": "An aggressive Pokémon that is quick to attack. The horn on its head secretes a powerful venom.",
+              "abilities": {
+                "firstAbility": "Poison Point",
+                "secondAbility": "Rivalry",
+                "thirdAbility": "Hidden: Hustle"
+              },
+              "baseStats": {
+                "attack": 72,
+                "defense": 57,
+                "specialAttack": 55,
+                "specialDefense": 55,
+                "speed": 65
+              }
+            },
+        "Nidoking":{
+              "pokemonName": "Nidoking",
+              "gen": 1,
+              "number": 34,
+              "primaryType": "Poison",
+              "secondaryType": "Ground",
+              "typesWeakTo": ["Water", "Ice", "Ground", "Psychic"],
+              "typesEffectiveAgainst": ["Grass", "Bug", "Poison", "Rock", "Steel", "Fire", "Electric"],
+              "entry": "Its tail is thick and powerful. If it binds an enemy, it can snap the victim's spine quite easily.",
+              "abilities": {
+                "firstAbility": "Poison Point",
+                "secondAbility": "Rivalry",
+                "thirdAbility": "Hidden: Sheer Force"
+              },
+              "baseStats": {
+                "attack": 102,
+                "defense": 77,
+                "specialAttack": 85,
+                "specialDefense": 75,
+                "speed": 85
+              }
+            },
+        "Clefairy":{
+              "pokemonName": "Clefairy",
+              "gen": 1,
+              "number": 35,
+              "primaryType": "Fairy",
+              "secondaryType": null,
+              "typesWeakTo": ["Steel", "Poison"],
+              "typesEffectiveAgainst": ["Fighting", "Dragon", "Dark"],
+              "entry": "Its magical and cute appeal has many admirers. It is rare and found only in certain areas.",
+              "abilities": {
+                "firstAbility": "Cute Charm",
+                "secondAbility": "Magic Guard",
+                "thirdAbility": "Hidden: Friend Guard"
+              },
+              "baseStats": {
+                "attack": 45,
+                "defense": 48,
+                "specialAttack": 60,
+                "specialDefense": 65,
+                "speed": 35
+              }
+            },
+        "Clefable":{
+              "pokemonName": "Clefable",
+              "gen": 1,
+              "number": 36,
+              "primaryType": "Fairy",
+              "secondaryType": null,
+              "typesWeakTo": ["Steel", "Poison"],
+              "typesEffectiveAgainst": ["Fighting", "Dragon", "Dark"],
+              "entry": "A timid fairy Pokémon that is rarely seen. It will run and hide the moment it senses people.",
+              "abilities": {
+                "firstAbility": "Cute Charm",
+                "secondAbility": "Magic Guard",
+                "thirdAbility": "Hidden: Unaware"
+              },
+              "baseStats": {
+                "attack": 70,
+                "defense": 73,
+                "specialAttack": 95,
+                "specialDefense": 90,
+                "speed": 60
+              }
+            },
+        "Vulpix":{
+              "pokemonName": "Vulpix",
+              "gen": 1,
+              "number": 37,
+              "primaryType": "Fire",
+              "secondaryType": null,
+              "typesWeakTo": ["Water", "Ground", "Rock"],
+              "typesEffectiveAgainst": ["Grass", "Ice", "Bug", "Steel"],
+              "entry": "At the time of birth, it has just one tail. The tail splits from its tip as it grows older.",
+              "abilities": {
+                "firstAbility": "Flash Fire",
+                "secondAbility": "Drought",
+                "thirdAbility": "Hidden: Snow Cloak"
+              },
+              "baseStats": {
+                "attack": 41,
+                "defense": 40,
+                "specialAttack": 50,
+                "specialDefense": 65,
+                "speed": 65
+              }
+            },
+        "Ninetales":{
+              "pokemonName": "Ninetales",
+              "gen": 1,
+              "number": 38,
+              "primaryType": "Fire",
+              "secondaryType": null,
+              "typesWeakTo": ["Water", "Ground", "Rock"],
+              "typesEffectiveAgainst": ["Grass", "Ice", "Bug", "Steel"],
+              "entry": "It is said to live 1,000 years, and each of its tails is loaded with supernatural powers.",
+              "abilities": {
+                "firstAbility": "Flash Fire",
+                "secondAbility": "Drought",
+                "thirdAbility": "Hidden: Snow Cloak"
+              },
+              "baseStats": {
+                "attack": 67,
+                "defense": 75,
+                "specialAttack": 81,
+                "specialDefense": 100,
+                "speed": 109
+              }
+            },
+        "Jigglypuff":{
+              "pokemonName": "Jigglypuff",
+              "gen": 1,
+              "number": 39,
+              "primaryType": "Normal",
+              "secondaryType": "Fairy",
+              "typesWeakTo": ["Steel", "Poison"],
+              "typesEffectiveAgainst": ["Fighting", "Dragon", "Dark"],
+              "entry": "Uses its cute round eyes to enrapture its foe. It then sings a pleasing melody that lulls the foe to sleep.",
+              "abilities": {
+                "firstAbility": "Cute Charm",
+                "secondAbility": "Competitive",
+                "thirdAbility": "Hidden: Friend Guard"
+              },
+              "baseStats": {
+                "attack": 45,
+                "defense": 20,
+                "specialAttack": 45,
+                "specialDefense": 25,
+                "speed": 20
+              }
+            },
+        "Wigglytuff":{
+              "pokemonName": "Wigglytuff",
+              "gen": 1,
+              "number": 40,
+              "primaryType": "Normal",
+              "secondaryType": "Fairy",
+              "typesWeakTo": ["Steel", "Poison"],
+              "typesEffectiveAgainst": ["Fighting", "Dragon", "Dark"],
+              "entry": "The body is soft and rubbery. When angered, it will suck in air and inflate itself to an enormous size.",
+              "abilities": {
+                "firstAbility": "Cute Charm",
+                "secondAbility": "Competitive",
+                "thirdAbility": "Hidden: Frisk"
+              },
+              "baseStats": {
+                "attack": 70,
+                "defense": 45,
+                "specialAttack": 85,
+                "specialDefense": 50,
+                "speed": 45
+              }
+            },
+        "Zubat":{
+              "pokemonName": "Zubat",
+              "gen": 1,
+              "number": 41,
+              "primaryType": "Poison",
+              "secondaryType": "Flying",
+              "typesWeakTo": ["Electric", "Ice", "Psychic", "Rock"],
+              "typesEffectiveAgainst": ["Grass", "Fighting", "Bug", "Fairy"],
+              "entry": "Forms colonies in perpetually dark places. Uses ultrasonic waves to identify and approach targets.",
+              "abilities": {
+                "firstAbility": "Inner Focus",
+                "secondAbility": null,
+                "thirdAbility": "Hidden: Infiltrator"
+              },
+              "baseStats": {
+                "attack": 45,
+                "defense": 35,
+                "specialAttack": 30,
+                "specialDefense": 40,
+                "speed": 55
+              }
+            },
+        "Golbat":{
+              "pokemonName": "Golbat",
+              "gen": 1,
+              "number": 42,
+              "primaryType": "Poison",
+              "secondaryType": "Flying",
+              "typesWeakTo": ["Electric", "Ice", "Psychic", "Rock"],
+              "typesEffectiveAgainst": ["Grass", "Fighting", "Bug", "Fairy"],
+              "entry": "Once it strikes, it will not stop draining energy from the victim even if it gets too heavy to fly.",
+              "abilities": {
+                "firstAbility": "Inner Focus",
+                "secondAbility": null,
+                "thirdAbility": "Hidden: Infiltrator"
+              },
+              "baseStats": {
+                "attack": 80,
+                "defense": 70,
+                "specialAttack": 65,
+                "specialDefense": 75,
+                "speed": 90
+              }
+            },
+        "Oddish":{
+              "pokemonName": "Oddish",
+              "gen": 1,
+              "number": 43,
+              "primaryType": "Grass",
+              "secondaryType": "Poison",
+              "typesWeakTo": ["Fire", "Flying", "Psychic", "Ice"],
+              "typesEffectiveAgainst": ["Water", "Ground", "Rock"],
+              "entry": "During the day, it keeps its face buried in the ground. At night, it wanders around sowing its seeds.",
+              "abilities": {
+                "firstAbility": "Chlorophyll",
+                "secondAbility": null,
+                "thirdAbility": "Hidden: Run Away"
+              },
+              "baseStats": {
+                "attack": 50,
+                "defense": 55,
+                "specialAttack": 75,
+                "specialDefense": 65,
+                "speed": 30
+              }
+            },
+        "Gloom":{
+              "pokemonName": "Gloom",
+              "gen": 1,
+              "number": 44,
+              "primaryType": "Grass",
+              "secondaryType": "Poison",
+              "typesWeakTo": ["Fire", "Flying", "Psychic", "Ice"],
+              "typesEffectiveAgainst": ["Water", "Ground", "Rock"],
+              "entry": "The smell from its drool-like syrup and the pollen on its petals is so bad, it may make opponents faint.",
+              "abilities": {
+                "firstAbility": "Chlorophyll",
+                "secondAbility": null,
+                "thirdAbility": "Hidden: Stench"
+              },
+              "baseStats": {
+                "attack": 65,
+                "defense": 70,
+                "specialAttack": 85,
+                "specialDefense": 75,
+                "speed": 40
+              }
+            },
+        "Vileplume":{
+              "pokemonName": "Vileplume",
+              "gen": 1,
+              "number": 45,
+              "primaryType": "Grass",
+              "secondaryType": "Poison",
+              "typesWeakTo": ["Fire", "Flying", "Psychic", "Ice"],
+              "typesEffectiveAgainst": ["Water", "Ground", "Rock"],
+              "entry": "The larger its petals, the more toxic pollen it contains. Its big head is heavy and hard to hold up.",
+              "abilities": {
+                "firstAbility": "Chlorophyll",
+                "secondAbility": null,
+                "thirdAbility": "Hidden: Effect Spore"
+              },
+              "baseStats": {
+                "attack": 80,
+                "defense": 85,
+                "specialAttack": 110,
+                "specialDefense": 90,
+                "speed": 50
+              }
+            },
+        "Paras":{
+              "pokemonName": "Paras",
+              "gen": 1,
+              "number": 46,
+              "primaryType": "Bug",
+              "secondaryType": "Grass",
+              "typesWeakTo": ["Fire", "Flying", "Poison", "Rock", "Bug"],
+              "typesEffectiveAgainst": ["Water", "Ground", "Rock"],
+              "entry": "Burrows to suck tree roots. The mushrooms on its back grow by drawing nutrients from the bug host.",
+              "abilities": {
+                "firstAbility": "Effect Spore",
+                "secondAbility": "Dry Skin",
+                "thirdAbility": "Hidden: Damp"
+              },
+              "baseStats": {
+                "attack": 70,
+                "defense": 55,
+                "specialAttack": 45,
+                "specialDefense": 55,
+                "speed": 25
+              }
+            },
+        "Parasect":{
+              "pokemonName": "Parasect",
+              "gen": 1,
+              "number": 47,
+              "primaryType": "Bug",
+              "secondaryType": "Grass",
+              "typesWeakTo": ["Fire", "Flying", "Poison", "Rock", "Bug"],
+              "typesEffectiveAgainst": ["Water", "Ground", "Rock"],
+              "entry": "A host-parasite pair in which the parasite mushroom has taken over the host bug. Prefers damp places.",
+              "abilities": {
+                "firstAbility": "Effect Spore",
+                "secondAbility": "Dry Skin",
+                "thirdAbility": "Hidden: Damp"
+              },
+              "baseStats": {
+                "attack": 95,
+                "defense": 80,
+                "specialAttack": 60,
+                "specialDefense": 80,
+                "speed": 30
+              }
+            },
+        "Venonat":{
+              "pokemonName": "Venonat",
+              "gen": 1,
+              "number": 48,
+              "primaryType": "Bug",
+              "secondaryType": "Poison",
+              "typesWeakTo": ["Fire", "Flying", "Psychic", "Rock"],
+              "typesEffectiveAgainst": ["Grass", "Fairy"],
+              "entry": "Lives in the shadows of tall trees where it eats bugs. It is attracted by light at night.",
+              "abilities": {
+                "firstAbility": "Compound Eyes",
+                "secondAbility": "Tinted Lens",
+                "thirdAbility": "Hidden: Run Away"
+              },
+              "baseStats": {
+                "attack": 55,
+                "defense": 50,
+                "specialAttack": 40,
+                "specialDefense": 55,
+                "speed": 45
+              }
+            },
+        "Venomoth":{
+              "pokemonName": "Venomoth",
+              "gen": 1,
+              "number": 49,
+              "primaryType": "Bug",
+              "secondaryType": "Poison",
+              "typesWeakTo": ["Fire", "Flying", "Psychic", "Rock"],
+              "typesEffectiveAgainst": ["Grass", "Fairy"],
+              "entry": "The powder on its wings is poisonous if it is dark in color. If it is light, it causes paralysis.",
+              "abilities": {
+                "firstAbility": "Shield Dust",
+                "secondAbility": "Tinted Lens",
+                "thirdAbility": "Hidden: Wonder Skin"
+              },
+              "baseStats": {
+                "attack": 65,
+                "defense": 60,
+                "specialAttack": 90,
+                "specialDefense": 75,
+                "speed": 90
+              }
+            },
+        "Diglett":{
+              "pokemonName": "Diglett",
+              "gen": 1,
+              "number": 50,
+              "primaryType": "Ground",
+              "secondaryType": null,
+              "typesWeakTo": ["Water", "Grass", "Ice"],
+              "typesEffectiveAgainst": ["Fire", "Electric", "Poison", "Rock", "Steel"],
+              "entry": "Lives about one yard underground where it feeds on plant roots. It sometimes appears aboveground.",
+              "abilities": {
+                "firstAbility": "Sand Veil",
+                "secondAbility": "Arena Trap",
+                "thirdAbility": "Hidden: Sand Force"
+              },
+              "baseStats": {
+                "attack": 55,
+                "defense": 25,
+                "specialAttack": 35,
+                "specialDefense": 45,
+                "speed": 95
+              }
+            },
+        "Dugtrio":{
+                  "pokemonName": "Dugtrio",
+                  "gen": 1,
+                  "number": 51,
+                  "primaryType": "Ground",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Water", "Grass", "Ice"],
+                  "typesEffectiveAgainst": ["Fire", "Electric", "Poison", "Rock", "Steel"],
+                  "entry": "A team of Diglett triplets. It triggers huge earthquakes by burrowing 60 miles underground.",
+                  "abilities": {
+                    "firstAbility": "Sand Veil",
+                    "secondAbility": "Arena Trap",
+                    "thirdAbility": "Hidden: Sand Force"
+                  },
+                  "baseStats": {
+                    "attack": 80,
+                    "defense": 50,
+                    "specialAttack": 50,
+                    "specialDefense": 70,
+                    "speed": 120
+                  }
+                },
+        "Meowth":{
+                  "pokemonName": "Meowth",
+                  "gen": 1,
+                  "number": 52,
+                  "primaryType": "Normal",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Fighting"],
+                  "typesEffectiveAgainst": ["Ghost"],
+                  "entry": "Adores circular objects. Wanders the streets on a nightly basis to look for dropped loose change.",
+                  "abilities": {
+                    "firstAbility": "Pickup",
+                    "secondAbility": "Technician",
+                    "thirdAbility": "Hidden: Unnerve"
+                  },
+                  "baseStats": {
+                    "attack": 45,
+                    "defense": 35,
+                    "specialAttack": 40,
+                    "specialDefense": 40,
+                    "speed": 90
+                  }
+                },
+        "Persian":{
+                  "pokemonName": "Persian",
+                  "gen": 1,
+                  "number": 53,
+                  "primaryType": "Normal",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Fighting"],
+                  "typesEffectiveAgainst": ["Ghost"],
+                  "entry": "Although its fur has many admirers, it is tough to raise as a pet because of its fickle meanness.",
+                  "abilities": {
+                    "firstAbility": "Limber",
+                    "secondAbility": "Technician",
+                    "thirdAbility": "Hidden: Unnerve"
+                  },
+                  "baseStats": {
+                    "attack": 70,
+                    "defense": 60,
+                    "specialAttack": 65,
+                    "specialDefense": 65,
+                    "speed": 115
+                  }
+                },
+        "Psyduck":{
+                  "pokemonName": "Psyduck",
+                  "gen": 1,
+                  "number": 54,
+                  "primaryType": "Water",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Electric", "Grass"],
+                  "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+                  "entry": "Always tormented by headaches. It uses psychic powers, but whether it intends to do so is not known.",
+                  "abilities": {
+                    "firstAbility": "Damp",
+                    "secondAbility": "Cloud Nine",
+                    "thirdAbility": "Hidden: Swift Swim"
+                  },
+                  "baseStats": {
+                    "attack": 52,
+                    "defense": 48,
+                    "specialAttack": 65,
+                    "specialDefense": 50,
+                    "speed": 55
+                  }
+                },
+        "Golduck":{
+                  "pokemonName": "Golduck",
+                  "gen": 1,
+                  "number": 55,
+                  "primaryType": "Water",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Electric", "Grass"],
+                  "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+                  "entry": "Often seen swimming elegantly by lakeshores. It is often mistaken for the Japanese monster Kappa.",
+                  "abilities": {
+                    "firstAbility": "Damp",
+                    "secondAbility": "Cloud Nine",
+                    "thirdAbility": "Hidden: Swift Swim"
+                  },
+                  "baseStats": {
+                    "attack": 82,
+                    "defense": 78,
+                    "specialAttack": 95,
+                    "specialDefense": 80,
+                    "speed": 85
+                  }
+                },
+        "Mankey":{
+                  "pokemonName": "Mankey",
+                  "gen": 1,
+                  "number": 56,
+                  "primaryType": "Fighting",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Flying", "Psychic", "Fairy"],
+                  "typesEffectiveAgainst": ["Normal", "Ice", "Rock", "Dark", "Steel"],
+                  "entry": "Extremely quick to anger. It could be docile one moment then thrashing away the next instant.",
+                  "abilities": {
+                    "firstAbility": "Vital Spirit",
+                    "secondAbility": "Anger Point",
+                    "thirdAbility": "Hidden: Defiant"
+                  },
+                  "baseStats": {
+                    "attack": 80,
+                    "defense": 35,
+                    "specialAttack": 35,
+                    "specialDefense": 45,
+                    "speed": 70
+                  }
+                },
+        "Primeape":{
+                  "pokemonName": "Primeape",
+                  "gen": 1,
+                  "number": 57,
+                  "primaryType": "Fighting",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Flying", "Psychic", "Fairy"],
+                  "typesEffectiveAgainst": ["Normal", "Ice", "Rock", "Dark", "Steel"],
+                  "entry": "Always furious and tenacious to boot. It will not abandon chasing its quarry until it catches up.",
+                  "abilities": {
+                    "firstAbility": "Vital Spirit",
+                    "secondAbility": "Anger Point",
+                    "thirdAbility": "Hidden: Defiant"
+                  },
+                  "baseStats": {
+                    "attack": 105,
+                    "defense": 60,
+                    "specialAttack": 60,
+                    "specialDefense": 70,
+                    "speed": 95
+                  }
+                },
+        "Growlithe":{
+                  "pokemonName": "Growlithe",
+                  "gen": 1,
+                  "number": 58,
+                  "primaryType": "Fire",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Water", "Ground", "Rock"],
+                  "typesEffectiveAgainst": ["Grass", "Ice", "Bug", "Steel"],
+                  "entry": "Very friendly and faithful to people. It will try to repel enemies by barking and biting.",
+                  "abilities": {
+                    "firstAbility": "Intimidate",
+                    "secondAbility": "Flash Fire",
+                    "thirdAbility": "Hidden: Justified"
+                  },
+                  "baseStats": {
+                    "attack": 70,
+                    "defense": 45,
+                    "specialAttack": 70,
+                    "specialDefense": 50,
+                    "speed": 60
+                  }
+                },
+        "Arcanine":{
+                  "pokemonName": "Arcanine",
+                  "gen": 1,
+                  "number": 59,
+                  "primaryType": "Fire",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Water", "Ground", "Rock"],
+                  "typesEffectiveAgainst": ["Grass", "Ice", "Bug", "Steel"],
+                  "entry": "A Pokémon that has been admired since the past for its beauty. It runs agilely as if on wings.",
+                  "abilities": {
+                    "firstAbility": "Intimidate",
+                    "secondAbility": "Flash Fire",
+                    "thirdAbility": "Hidden: Justified"
+                  },
+                  "baseStats": {
+                    "attack": 110,
+                    "defense": 80,
+                    "specialAttack": 100,
+                    "specialDefense": 80,
+                    "speed": 95
+                  }
+                },
+        "Poliwag":{
+                  "pokemonName": "Poliwag",
+                  "gen": 1,
+                  "number": 60,
+                  "primaryType": "Water",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Electric", "Grass"],
+                  "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+                  "entry": "Its newly grown legs prevent it from running. It appears to prefer swimming than trying to stand.",
+                  "abilities": {
+                    "firstAbility": "Water Absorb",
+                    "secondAbility": "Damp",
+                    "thirdAbility": "Hidden: Swift Swim"
+                  },
+                  "baseStats": {
+                    "attack": 50,
+                    "defense": 40,
+                    "specialAttack": 40,
+                    "specialDefense": 40,
+                    "speed": 90
+                  }
+                },
+        "Poliwhirl":{
+                  "pokemonName": "Poliwhirl",
+                  "gen": 1,
+                  "number": 61,
+                  "primaryType": "Water",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Electric", "Grass"],
+                  "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+                  "entry": "Capable of living in or out of water. When out of water, it sweats to keep its body slimy.",
+                  "abilities": {
+                    "firstAbility": "Water Absorb",
+                    "secondAbility": "Damp",
+                    "thirdAbility": "Hidden: Swift Swim"
+                  },
+                  "baseStats": {
+                    "attack": 65,
+                    "defense": 65,
+                    "specialAttack": 50,
+                    "specialDefense": 50,
+                    "speed": 90
+                  }
+                },
+        "Poliwrath":{
+                  "pokemonName": "Poliwrath",
+                  "gen": 1,
+                  "number": 62,
+                  "primaryType": "Water",
+                  "secondaryType": "Fighting",
+                  "typesWeakTo": ["Electric", "Grass", "Flying", "Psychic", "Fairy"],
+                  "typesEffectiveAgainst": ["Normal", "Ice", "Rock", "Dark", "Steel"],
+                  "entry": "An adept swimmer at both the front crawl and breaststroke. Easily overtakes the best human swimmers.",
+                  "abilities": {
+                    "firstAbility": "Water Absorb",
+                    "secondAbility": "Damp",
+                    "thirdAbility": "Hidden: Swift Swim"
+                  },
+                  "baseStats": {
+                    "attack": 95,
+                    "defense": 95,
+                    "specialAttack": 70,
+                    "specialDefense": 90,
+                    "speed": 70
+                  }
+                },
+        "Abra":{
+                  "pokemonName": "Abra",
+                  "gen": 1,
+                  "number": 63,
+                  "primaryType": "Psychic",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Bug", "Ghost", "Dark"],
+                  "typesEffectiveAgainst": ["Fighting", "Poison"],
+                  "entry": "Sleeps 18 hours a day. If it senses danger, it will teleport itself to safety even as it sleeps.",
+                  "abilities": {
+                    "firstAbility": "Synchronize",
+                    "secondAbility": "Inner Focus",
+                    "thirdAbility": "Hidden: Magic Guard"
+                  },
+                  "baseStats": {
+                    "attack": 20,
+                    "defense": 15,
+                    "specialAttack": 105,
+                    "specialDefense": 55,
+                    "speed": 90
+                  }
+                },
+        "Kadabra":{
+                  "pokemonName": "Kadabra",
+                  "gen": 1,
+                  "number": 64,
+                  "primaryType": "Psychic",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Bug", "Ghost", "Dark"],
+                  "typesEffectiveAgainst": ["Fighting", "Poison"],
+                  "entry": "It emits special alpha waves from its body that induce headaches just by being close by.",
+                  "abilities": {
+                    "firstAbility": "Synchronize",
+                    "secondAbility": "Inner Focus",
+                    "thirdAbility": "Hidden: Magic Guard"
+                  },
+                  "baseStats": {
+                    "attack": 35,
+                    "defense": 30,
+                    "specialAttack": 120,
+                    "specialDefense": 70,
+                    "speed": 105
+                  }
+                },
+        "Alakazam":{
+                  "pokemonName": "Alakazam",
+                  "gen": 1,
+                  "number": 65,
+                  "primaryType": "Psychic",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Bug", "Ghost", "Dark"],
+                  "typesEffectiveAgainst": ["Fighting", "Poison"],
+                  "entry": "Its brain can outperform a supercomputer. Its intelligence quotient is said to be 5,000.",
+                  "abilities": {
+                    "firstAbility": "Synchronize",
+                    "secondAbility": "Inner Focus",
+                    "thirdAbility": "Hidden: Magic Guard"
+                  },
+                  "baseStats": {
+                    "attack": 50,
+                    "defense": 45,
+                    "specialAttack": 135,
+                    "specialDefense": 95,
+                    "speed": 120
+                  }
+                },
+        "Machop":{
+                  "pokemonName": "Machop",
+                  "gen": 1,
+                  "number": 66,
+                  "primaryType": "Fighting",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Flying", "Psychic", "Fairy"],
+                  "typesEffectiveAgainst": ["Normal", "Ice", "Rock", "Dark", "Steel"],
+                  "entry": "It hefts a Graveler repeatedly to strengthen its entire body. It uses every type of martial arts.",
+                  "abilities": {
+                    "firstAbility": "Guts",
+                    "secondAbility": "No Guard",
+                    "thirdAbility": "Hidden: Steadfast"
+                  },
+                  "baseStats": {
+                    "attack": 80,
+                    "defense": 50,
+                    "specialAttack": 35,
+                    "specialDefense": 35,
+                    "speed": 35
+                  }
+                },
+        "Machoke":{
+                  "pokemonName": "Machoke",
+                  "gen": 1,
+                  "number": 67,
+                  "primaryType": "Fighting",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Flying", "Psychic", "Fairy"],
+                  "typesEffectiveAgainst": ["Normal", "Ice", "Rock", "Dark", "Steel"],
+                  "entry": "Its muscular body is so powerful, it must wear a power-save belt to be able to regulate its motions.",
+                  "abilities": {
+                    "firstAbility": "Guts",
+                    "secondAbility": "No Guard",
+                    "thirdAbility": "Hidden: Steadfast"
+                  },
+                  "baseStats": {
+                    "attack": 100,
+                    "defense": 70,
+                    "specialAttack": 50,
+                    "specialDefense": 60,
+                    "speed": 45
+                  }
+                },
+        "Machamp":{
+                  "pokemonName": "Machamp",
+                  "gen": 1,
+                  "number": 68,
+                  "primaryType": "Fighting",
+                  "secondaryType": null,
+                  "typesWeakTo": ["Flying", "Psychic", "Fairy"],
+                  "typesEffectiveAgainst": ["Normal", "Ice", "Rock", "Dark", "Steel"],
+                  "entry": "Using its heavy muscles, it throws powerful punches that can send the victim clear over the horizon.",
+                  "abilities": {
+                    "firstAbility": "Guts",
+                    "secondAbility": "No Guard",
+                    "thirdAbility": "Hidden: Steadfast"
+                  },
+                  "baseStats": {
+                    "attack": 130,
+                    "defense": 80,
+                    "specialAttack": 65,
+                    "specialDefense": 85,
+                    "speed": 55
+                  }
+                },
+        "Bellsprout":{
+                  "pokemonName": "Bellsprout",
+                  "gen": 1,
+                  "number": 69,
+                  "primaryType": "Grass",
+                  "secondaryType": "Poison",
+                  "typesWeakTo": ["Fire", "Flying", "Psychic", "Ice"],
+                  "typesEffectiveAgainst": ["Water", "Ground", "Rock"],
+                  "entry": "A carnivorous Pokémon that traps and eats bugs. It appears to use its root feet to replenish moisture.",
+                  "abilities": {
+                    "firstAbility": "Chlorophyll",
+                    "secondAbility": null,
+                    "thirdAbility": "Hidden: Gluttony"
+                  },
+                  "baseStats": {
+                    "attack": 75,
+                    "defense": 35,
+                    "specialAttack": 70,
+                    "specialDefense": 30,
+                    "speed": 40
+                  }
+                },
+        "Weepinbell":{
+                  "pokemonName": "Weepinbell",
+                  "gen": 1,
+                  "number": 70,
+                  "primaryType": "Grass",
+                  "secondaryType": "Poison",
+                  "typesWeakTo": ["Fire", "Flying", "Psychic", "Ice"],
+                  "typesEffectiveAgainst": ["Water", "Ground", "Rock"],
+                  "entry": "When hungry, it swallows anything that moves. Its hapless prey is dissolved by strong acids.",
+                  "abilities": {
+                    "firstAbility": "Chlorophyll",
+                    "secondAbility": null,
+                    "thirdAbility": "Hidden: Gluttony"
+                  },
+                  "baseStats": {
+                    "attack": 90,
+                    "defense": 50,
+                    "specialAttack": 85,
+                    "specialDefense": 45,
+                    "speed": 55
+                  }
+                },
+        "Victreebel":{
+                  "pokemonName": "Victreebel",
+                  "gen": 1,
+                  "number": 71,
+                  "primaryType": "Grass",
+                  "secondaryType": "Poison",
+                  "typesWeakTo": ["Fire", "Flying", "Psychic", "Ice"],
+                  "typesEffectiveAgainst": ["Water", "Ground", "Rock"],
+                  "entry": "Lures prey with the sweet aroma of honey. Swallowed whole, the prey is dissolved in a day, bones and all.",
+                  "abilities": {
+                    "firstAbility": "Chlorophyll",
+                    "secondAbility": null,
+                    "thirdAbility": "Hidden: Gluttony"
+                  },
+                  "baseStats": {
+                    "attack": 105,
+                    "defense": 65,
+                    "specialAttack": 100,
+                    "specialDefense": 70,
+                    "speed": 70
+                  }
+                },
+        "Tentacool":{
+                  "pokemonName": "Tentacool",
+                  "gen": 1,
+                  "number": 72,
+                  "primaryType": "Water",
+                  "secondaryType": "Poison",
+                  "typesWeakTo": ["Electric", "Ground", "Psychic"],
+                  "typesEffectiveAgainst": ["Grass", "Fairy"],
+                  "entry": "Drifts in shallow seas. Anglers who hook them by accident are often punished by their stingers.",
+                  "abilities": {
+                    "firstAbility": "Clear Body",
+                    "secondAbility": "Liquid Ooze",
+                    "thirdAbility": "Hidden: Rain Dish"
+                  },
+                  "baseStats": {
+                    "attack": 40,
+                    "defense": 35,
+                    "specialAttack": 50,
+                    "specialDefense": 100,
+                    "speed": 70
+                  }
+                },
+        "Tentacruel":{
+                  "pokemonName": "Tentacruel",
+                  "gen": 1,
+                  "number": 73,
+                  "primaryType": "Water",
+                  "secondaryType": "Poison",
+                  "typesWeakTo": ["Electric", "Ground", "Psychic"],
+                  "typesEffectiveAgainst": ["Grass", "Fairy"],
+                  "entry": "Its 80 tentacles can stretch and contract freely. They wrap around prey and weaken it with poison.",
+                  "abilities": {
+                    "firstAbility": "Clear Body",
+                    "secondAbility": "Liquid Ooze",
+                    "thirdAbility": "Hidden: Rain Dish"
+                  },
+                  "baseStats": {
+                    "attack": 70,
+                    "defense": 65,
+                    "specialAttack": 80,
+                    "specialDefense": 120,
+                    "speed": 100
+                  }
+                },
+        "Geodude":{
+                  "pokemonName": "Geodude",
+                  "gen": 1,
+                  "number": 74,
+                  "primaryType": "Rock",
+                  "secondaryType": "Ground",
+                  "typesWeakTo": ["Water", "Grass", "Ice", "Fighting", "Ground", "Steel"],
+                  "typesEffectiveAgainst": ["Fire", "Flying", "Bug"],
+                  "entry": "Found in fields and mountains. Mistaking them for boulders, people often step or trip on them.",
+                  "abilities": {
+                    "firstAbility": "Rock Head",
+                    "secondAbility": "Sturdy",
+                    "thirdAbility": "Hidden: Sand Veil"
+                  },
+                  "baseStats": {
+                    "attack": 80,
+                    "defense": 100,
+                    "specialAttack": 30,
+                    "specialDefense": 30,
+                    "speed": 20
+                  }
+                },
+        "Graveler":{
+                  "pokemonName": "Graveler",
+                  "gen": 1,
+                  "number": 75,
+                  "primaryType": "Rock",
+                  "secondaryType": "Ground",
+                  "typesWeakTo": ["Water", "Grass", "Ice", "Fighting", "Ground", "Steel"],
+                  "typesEffectiveAgainst": ["Fire", "Flying", "Bug"],
+                  "entry": "Rolls down slopes to move. It rolls over any obstacle without slowing or changing its direction.",
+                  "abilities": {
+                    "firstAbility": "Rock Head",
+                    "secondAbility": "Sturdy",
+                    "thirdAbility": "Hidden: Sand Veil"
+                  },
+                  "baseStats": {
+                    "attack": 95,
+                    "defense": 115,
+                    "specialAttack": 45,
+                    "specialDefense": 45,
+                    "speed": 35
+                  }
+                },
+        "Golem":{
+                      "pokemonName": "Golem",
+                      "gen": 1,
+                      "number": 76,
+                      "primaryType": "Rock",
+                      "secondaryType": "Ground",
+                      "typesWeakTo": ["Water", "Grass", "Ice", "Fighting", "Ground", "Steel"],
+                      "typesEffectiveAgainst": ["Fire", "Flying", "Bug"],
+                      "entry": "Its boulder-like body is extremely hard. It can easily withstand dynamite blasts without damage.",
+                      "abilities": {
+                        "firstAbility": "Rock Head",
+                        "secondAbility": "Sturdy",
+                        "thirdAbility": "Hidden: Sand Veil"
+                      },
+                      "baseStats": {
+                        "attack": 120,
+                        "defense": 130,
+                        "specialAttack": 55,
+                        "specialDefense": 65,
+                        "speed": 45
+                      }
+                    },
+        "Ponyta":{
+                      "pokemonName": "Ponyta",
+                      "gen": 1,
+                      "number": 77,
+                      "primaryType": "Fire",
+                      "secondaryType": null,
+                      "typesWeakTo": ["Water", "Ground", "Rock"],
+                      "typesEffectiveAgainst": ["Grass", "Ice", "Bug", "Steel"],
+                      "entry": "Capable of jumping incredibly high. Its hooves and sturdy legs absorb the impact of a hard landing.",
+                      "abilities": {
+                        "firstAbility": "Run Away",
+                        "secondAbility": "Flash Fire",
+                        "thirdAbility": "Hidden: Flame Body"
+                      },
+                      "baseStats": {
+                        "attack": 85,
+                        "defense": 55,
+                        "specialAttack": 65,
+                        "specialDefense": 65,
+                        "speed": 90
+                      }
+                    },
+        "Rapidash":{
+                      "pokemonName": "Rapidash",
+                      "gen": 1,
+                      "number": 78,
+                      "primaryType": "Fire",
+                      "secondaryType": null,
+                      "typesWeakTo": ["Water", "Ground", "Rock"],
+                      "typesEffectiveAgainst": ["Grass", "Ice", "Bug", "Steel"],
+                      "entry": "Just loves to run. If it sees something faster than itself, it will give chase at top speed.",
+                      "abilities": {
+                        "firstAbility": "Run Away",
+                        "secondAbility": "Flash Fire",
+                        "thirdAbility": "Hidden: Flame Body"
+                      },
+                      "baseStats": {
+                        "attack": 100,
+                        "defense": 70,
+                        "specialAttack": 80,
+                        "specialDefense": 80,
+                        "speed": 105
+                      }
+                    },
+        "Slowpoke":{
+                      "pokemonName": "Slowpoke",
+                      "gen": 1,
+                      "number": 79,
+                      "primaryType": "Water",
+                      "secondaryType": "Psychic",
+                      "typesWeakTo": ["Electric", "Grass", "Bug", "Ghost", "Dark"],
+                      "typesEffectiveAgainst": ["Fighting", "Poison"],
+                      "entry": "Incredibly slow and sluggish. It is quite content to loll about without worrying about the time.",
+                      "abilities": {
+                        "firstAbility": "Oblivious",
+                        "secondAbility": "Own Tempo",
+                        "thirdAbility": "Hidden: Regenerator"
+                      },
+                      "baseStats": {
+                        "attack": 65,
+                        "defense": 65,
+                        "specialAttack": 40,
+                        "specialDefense": 40,
+                        "speed": 15
+                      }
+                    },
+        "Slowbro":{
+                      "pokemonName": "Slowbro",
+                      "gen": 1,
+                      "number": 80,
+                      "primaryType": "Water",
+                      "secondaryType": "Psychic",
+                      "typesWeakTo": ["Electric", "Grass", "Bug", "Ghost", "Dark"],
+                      "typesEffectiveAgainst": ["Fighting", "Poison"],
+                      "entry": "The Shellder that latches onto Slowbro's tail is said to feed on the host's leftover scraps.",
+                      "abilities": {
+                        "firstAbility": "Oblivious",
+                        "secondAbility": "Own Tempo",
+                        "thirdAbility": "Hidden: Regenerator"
+                      },
+                      "baseStats": {
+                        "attack": 75,
+                        "defense": 110,
+                        "specialAttack": 100,
+                        "specialDefense": 80,
+                        "speed": 30
+                      }
+                    },
+        "Magnemite":{
+                      "pokemonName": "Magnemite",
+                      "gen": 1,
+                      "number": 81,
+                      "primaryType": "Electric",
+                      "secondaryType": "Steel",
+                      "typesWeakTo": ["Fire", "Fighting", "Ground"],
+                      "typesEffectiveAgainst": ["Flying", "Water", "Electric", "Steel"],
+                      "entry": "Uses antigravity to stay suspended. Appears without warning and uses Thunder Wave and similar moves.",
+                      "abilities": {
+                        "firstAbility": "Magnet Pull",
+                        "secondAbility": "Sturdy",
+                        "thirdAbility": "Hidden: Analytic"
+                      },
+                      "baseStats": {
+                        "attack": 35,
+                        "defense": 70,
+                        "specialAttack": 95,
+                        "specialDefense": 55,
+                        "speed": 45
+                      }
+                    },
+        "Magneton":{
+                      "pokemonName": "Magneton",
+                      "gen": 1,
+                      "number": 82,
+                      "primaryType": "Electric",
+                      "secondaryType": "Steel",
+                      "typesWeakTo": ["Fire", "Fighting", "Ground"],
+                      "typesEffectiveAgainst": ["Flying", "Water", "Electric", "Steel"],
+                      "entry": "Generates strange radio signals. It raises the temperature by 3.6F degrees within 3,300 feet.",
+                      "abilities": {
+                        "firstAbility": "Magnet Pull",
+                        "secondAbility": "Sturdy",
+                        "thirdAbility": "Hidden: Analytic"
+                      },
+                      "baseStats": {
+                        "attack": 60,
+                        "defense": 95,
+                        "specialAttack": 120,
+                        "specialDefense": 70,
+                        "speed": 70
+                      }
+                    },
+        "Farfetch'd":{
+                      "pokemonName": "Farfetch'd",
+                      "gen": 1,
+                      "number": 83,
+                      "primaryType": "Normal",
+                      "secondaryType": "Flying",
+                      "typesWeakTo": ["Electric", "Ice", "Rock"],
+                      "typesEffectiveAgainst": ["Fighting", "Bug", "Grass"],
+                      "entry": "The sprig of green onions it holds is its weapon. It is used much like a metal sword.",
+                      "abilities": {
+                        "firstAbility": "Keen Eye",
+                        "secondAbility": "Inner Focus",
+                        "thirdAbility": "Hidden: Defiant"
+                      },
+                      "baseStats": {
+                        "attack": 65,
+                        "defense": 55,
+                        "specialAttack": 58,
+                        "specialDefense": 62,
+                        "speed": 60
+                      }
+                    },
+        "Doduo":{
+                      "pokemonName": "Doduo",
+                      "gen": 1,
+                      "number": 84,
+                      "primaryType": "Normal",
+                      "secondaryType": "Flying",
+                      "typesWeakTo": ["Electric", "Ice", "Rock"],
+                      "typesEffectiveAgainst": ["Fighting", "Bug", "Grass"],
+                      "entry": "Its short wings make flying difficult. Instead, this Pokémon runs at high speed on developed legs.",
+                      "abilities": {
+                        "firstAbility": "Run Away",
+                        "secondAbility": "Early Bird",
+                        "thirdAbility": "Hidden: Tangled Feet"
+                      },
+                      "baseStats": {
+                        "attack": 85,
+                        "defense": 45,
+                        "specialAttack": 35,
+                        "specialDefense": 35,
+                        "speed": 75
+                      }
+                    },
+        "Dodrio":{
+                      "pokemonName": "Dodrio",
+                      "gen": 1,
+                      "number": 85,
+                      "primaryType": "Normal",
+                      "secondaryType": "Flying",
+                      "typesWeakTo": ["Electric", "Ice", "Rock"],
+                      "typesEffectiveAgainst": ["Fighting", "Bug", "Grass"],
+                      "entry": "Uses its three brains to execute complex plans. While two heads sleep, one head stays awake.",
+                      "abilities": {
+                        "firstAbility": "Run Away",
+                        "secondAbility": "Early Bird",
+                        "thirdAbility": "Hidden: Tangled Feet"
+                      },
+                      "baseStats": {
+                        "attack": 110,
+                        "defense": 70,
+                        "specialAttack": 60,
+                        "specialDefense": 60,
+                        "speed": 100
+                      }
+                    },
+        "Seel":{
+                      "pokemonName": "Seel",
+                      "gen": 1,
+                      "number": 86,
+                      "primaryType": "Water",
+                      "secondaryType": null,
+                      "typesWeakTo": ["Electric", "Grass"],
+                      "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+                      "entry": "The protruding horn on its head is very hard. It is used for bashing through thick ice.",
+                      "abilities": {
+                        "firstAbility": "Thick Fat",
+                        "secondAbility": "Hydration",
+                        "thirdAbility": "Hidden: Ice Body"
+                      },
+                      "baseStats": {
+                        "attack": 45,
+                        "defense": 55,
+                        "specialAttack": 45,
+                        "specialDefense": 70,
+                        "speed": 45
+                      }
+                    },
+        "Dewgong":{
+                      "pokemonName": "Dewgong",
+                      "gen": 1,
+                      "number": 87,
+                      "primaryType": "Water",
+                      "secondaryType": "Ice",
+                      "typesWeakTo": ["Electric", "Grass", "Fighting", "Rock"],
+                      "typesEffectiveAgainst": ["Fire", "Ground", "Rock", "Flying", "Dragon"],
+                      "entry": "Stores thermal energy in its body. Swims at a steady 8 knots even in intensely cold waters.",
+                      "abilities": {
+                        "firstAbility": "Thick Fat",
+                        "secondAbility": "Hydration",
+                        "thirdAbility": "Hidden: Ice Body"
+                      },
+                      "baseStats": {
+                        "attack": 70,
+                        "defense": 80,
+                        "specialAttack": 70,
+                        "specialDefense": 95,
+                        "speed": 70
+                      }
+                    },
+        "Grimer":{
+                      "pokemonName": "Grimer",
+                      "gen": 1,
+                      "number": 88,
+                      "primaryType": "Poison",
+                      "secondaryType": null,
+                      "typesWeakTo": ["Ground", "Psychic"],
+                      "typesEffectiveAgainst": ["Grass", "Fairy"],
+                      "entry": "Made of hardened sludge. It smells too putrid to touch. Even weeds won't grow in its path.",
+                      "abilities": {
+                        "firstAbility": "Stench",
+                        "secondAbility": "Sticky Hold",
+                        "thirdAbility": "Hidden: Poison Touch"
+                      },
+                      "baseStats": {
+                        "attack": 80,
+                        "defense": 50,
+                        "specialAttack": 40,
+                        "specialDefense": 50,
+                        "speed": 25
+                      }
+                    },
+        "Muk":{
+                      "pokemonName": "Muk",
+                      "gen": 1,
+                      "number": 89,
+                      "primaryType": "Poison",
+                      "secondaryType": null,
+                      "typesWeakTo": ["Ground", "Psychic"],
+                      "typesEffectiveAgainst": ["Grass", "Fairy"],
+                      "entry": "Thickly covered with a filthy, vile sludge. It is so toxic, even its footprints contain poison.",
+                      "abilities": {
+                        "firstAbility": "Stench",
+                        "secondAbility": "Sticky Hold",
+                        "thirdAbility": "Hidden: Poison Touch"
+                      },
+                      "baseStats": {
+                        "attack": 105,
+                        "defense": 75,
+                        "specialAttack": 65,
+                        "specialDefense": 100,
+                        "speed": 50
+                      }
+                    },
+        "Shellder":{
+                      "pokemonName": "Shellder",
+                      "gen": 1,
+                      "number": 90,
+                      "primaryType": "Water",
+                      "secondaryType": null,
+                      "typesWeakTo": ["Electric", "Grass"],
+                      "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+                      "entry": "Its hard shell repels any kind of attack. It is vulnerable only when its shell is open.",
+                      "abilities": {
+                        "firstAbility": "Shell Armor",
+                        "secondAbility": "Skill Link",
+                        "thirdAbility": "Hidden: Overcoat"
+                      },
+                      "baseStats": {
+                        "attack": 65,
+                        "defense": 100,
+                        "specialAttack": 45,
+                        "specialDefense": 25,
+                        "speed": 40
+                      }
+                    },
+        "Cloyster":{
+                      "pokemonName": "Cloyster",
+                      "gen": 1,
+                      "number": 91,
+                      "primaryType": "Water",
+                      "secondaryType": "Ice",
+                      "typesWeakTo": ["Electric", "Grass", "Fighting", "Rock"],
+                      "typesEffectiveAgainst": ["Fire", "Ground", "Rock", "Flying", "Dragon"],
+                      "entry": "For protection, it uses its harder-than-diamonds shell. It also shoots spikes from the shell.",
+                      "abilities": {
+                        "firstAbility": "Shell Armor",
+                        "secondAbility": "Skill Link",
+                        "thirdAbility": "Hidden: Overcoat"
+                      },
+                      "baseStats": {
+                        "attack": 95,
+                        "defense": 180,
+                        "specialAttack": 85,
+                        "specialDefense": 45,
+                        "speed": 70
+                      }
+                    },
+        "Gastly":{
+                      "pokemonName": "Gastly",
+                      "gen": 1,
+                      "number": 92,
+                      "primaryType": "Ghost",
+                      "secondaryType": "Poison",
+                      "typesWeakTo": ["Ghost", "Dark"],
+                      "typesEffectiveAgainst": ["Psychic", "Ghost"],
+                      "entry": "Almost invisible, this gaseous Pokémon cloaks the target and puts it to sleep without notice.",
+                      "abilities": {
+                        "firstAbility": "Levitate",
+                        "secondAbility": null,
+                        "thirdAbility": "Hidden: Curse Body"
+                      },
+                      "baseStats": {
+                        "attack": 35,
+                        "defense": 30,
+                        "specialAttack": 100,
+                        "specialDefense": 35,
+                        "speed": 80
+                      }
+                    },
+        "Haunter":{
+                      "pokemonName": "Haunter",
+                      "gen": 1,
+                      "number": 93,
+                      "primaryType": "Ghost",
+                      "secondaryType": "Poison",
+                      "typesWeakTo": ["Ghost", "Dark"],
+                      "typesEffectiveAgainst": ["Psychic", "Ghost"],
+                      "entry": "Because of its ability to slip through block walls, it is said to be from another dimension.",
+                      "abilities": {
+                        "firstAbility": "Levitate",
+                        "secondAbility": null,
+                        "thirdAbility": "Hidden: Curse Body"
+                      },
+                      "baseStats": {
+                        "attack": 50,
+                        "defense": 45,
+                        "specialAttack": 115,
+                        "specialDefense": 55,
+                        "speed": 95
+                      }
+                    },
+        "Gengar":{
+                      "pokemonName": "Gengar",
+                      "gen": 1,
+                      "number": 94,
+                      "primaryType": "Ghost",
+                      "secondaryType": "Poison",
+                      "typesWeakTo": ["Ghost", "Dark", "Psychic"],
+                      "typesEffectiveAgainst": ["Psychic", "Ghost"],
+                      "entry": "Under a full moon, this Pokémon likes to mimic the shadows of people and laugh at their fright.",
+                      "abilities": {
+                        "firstAbility": "Cursed Body",
+                        "secondAbility": null,
+                        "thirdAbility": "Hidden: Shadow Tag"
+                      },
+                      "baseStats": {
+                        "attack": 65,
+                        "defense": 60,
+                        "specialAttack": 130,
+                        "specialDefense": 75,
+                        "speed": 110
+                      }
+                    },
+        "Onix":{
+                      "pokemonName": "Onix",
+                      "gen": 1,
+                      "number": 95,
+                      "primaryType": "Rock",
+                      "secondaryType": "Ground",
+                      "typesWeakTo": ["Water", "Grass", "Ice", "Fighting", "Ground", "Steel"],
+                      "typesEffectiveAgainst": ["Fire", "Flying", "Bug"],
+                      "entry": "Burrows at high speed in search of food. The tunnels it leaves are used as homes by Diglett.",
+                      "abilities": {
+                        "firstAbility": "Rock Head",
+                        "secondAbility": "Sturdy",
+                        "thirdAbility": "Hidden: Weak Armor"
+                      },
+                      "baseStats": {
+                        "attack": 45,
+                        "defense": 160,
+                        "specialAttack": 30,
+                        "specialDefense": 45,
+                        "speed": 70
+                      }
+                    },
+        "Drowzee":{
+                      "pokemonName": "Drowzee",
+                      "gen": 1,
+                      "number": 96,
+                      "primaryType": "Psychic",
+                      "secondaryType": null,
+                      "typesWeakTo": ["Bug", "Ghost", "Dark"],
+                      "typesEffectiveAgainst": ["Fighting", "Poison"],
+                      "entry": "Puts enemies to sleep, then eats their dreams. Occasionally gets sick from eating bad dreams.",
+                      "abilities": {
+                        "firstAbility": "Insomnia",
+                        "secondAbility": "Forewarn",
+                        "thirdAbility": "Hidden: Inner Focus"
+                      },
+                      "baseStats": {
+                        "attack": 48,
+                        "defense": 45,
+                        "specialAttack": 43,
+                        "specialDefense": 90,
+                        "speed": 42
+                      }
+                    },
+        "Hypno":{
+                      "pokemonName": "Hypno",
+                      "gen": 1,
+                      "number": 97,
+                      "primaryType": "Psychic",
+                      "secondaryType": null,
+                      "typesWeakTo": ["Bug", "Ghost", "Dark"],
+                      "typesEffectiveAgainst": ["Fighting", "Poison"],
+                      "entry": "When it locks eyes with an enemy, it will use a mix of PSI moves such as Hypnosis and Confusion.",
+                      "abilities": {
+                        "firstAbility": "Insomnia",
+                        "secondAbility": "Forewarn",
+                        "thirdAbility": "Hidden: Inner Focus"
+                      },
+                      "baseStats": {
+                        "attack": 73,
+                        "defense": 70,
+                        "specialAttack": 73,
+                        "specialDefense": 115,
+                        "speed": 67
+                      }
+                    },
+        "Krabby":{
+                      "pokemonName": "Krabby",
+                      "gen": 1,
+                      "number": 98,
+                      "primaryType": "Water",
+                      "secondaryType": null,
+                      "typesWeakTo": ["Electric", "Grass"],
+                      "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+                      "entry": "Its pincers are superb weapons. They sometimes break off during battle, but they grow back fast.",
+                      "abilities": {
+                        "firstAbility": "Hyper Cutter",
+                        "secondAbility": "Shell Armor",
+                        "thirdAbility": "Hidden: Sheer Force"
+                      },
+                      "baseStats": {
+                        "attack": 105,
+                        "defense": 90,
+                        "specialAttack": 25,
+                        "specialDefense": 25,
+                        "speed": 50
+                      }
+                    },
+        "Kingler":{
+                      "pokemonName": "Kingler",
+                      "gen": 1,
+                      "number": 99,
+                      "primaryType": "Water",
+                      "secondaryType": null,
+                      "typesWeakTo": ["Electric", "Grass"],
+                      "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+                      "entry": "The large pincer has 10,000-horsepower crushing force. However, its huge size makes it unwieldy to use.",
+                      "abilities": {
+                        "firstAbility": "Hyper Cutter",
+                        "secondAbility": "Shell Armor",
+                        "thirdAbility": "Hidden: Sheer Force"
+                      },
+                      "baseStats": {
+                        "attack": 130,
+                        "defense": 115,
+                        "specialAttack": 50,
+                        "specialDefense": 50,
+                        "speed": 75
+                      }
+                    },
+        "Voltorb":{
+                      "pokemonName": "Voltorb",
+                      "gen": 1,
+                      "number": 100,
+                      "primaryType": "Electric",
+                      "secondaryType": null,
+                      "typesWeakTo": ["Ground"],
+                      "typesEffectiveAgainst": ["Flying", "Water", "Electric", "Steel"],
+                      "entry": "It rolls to move. If the ground is uneven, a sudden jolt from hitting a bump can cause it to explode.",
+                      "abilities": {
+                        "firstAbility": "Soundproof",
+                        "secondAbility": "Static",
+                        "thirdAbility": "Hidden: Aftermath"
+                      },
+                      "baseStats": {
+                        "attack": 30,
+                        "defense": 50,
+                        "specialAttack": 55,
+                        "specialDefense": 55,
+                        "speed": 100
+                      }
+                    },
+        "Electrode":{
+                          "pokemonName": "Electrode",
+                          "gen": 1,
+                          "number": 101,
+                          "primaryType": "Electric",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Ground"],
+                          "typesEffectiveAgainst": ["Flying", "Water", "Electric", "Steel"],
+                          "entry": "It stores electric energy under very high pressure. It often explodes with little or no provocation.",
+                          "abilities": {
+                            "firstAbility": "Soundproof",
+                            "secondAbility": "Static",
+                            "thirdAbility": "Hidden: Aftermath"
+                          },
+                          "baseStats": {
+                            "attack": 50,
+                            "defense": 70,
+                            "specialAttack": 80,
+                            "specialDefense": 80,
+                            "speed": 140
+                          }
+                        },
+        "Exeggcute":{
+                          "pokemonName": "Exeggcute",
+                          "gen": 1,
+                          "number": 102,
+                          "primaryType": "Grass",
+                          "secondaryType": "Psychic",
+                          "typesWeakTo": ["Fire", "Ice", "Poison", "Flying", "Bug", "Ghost", "Dark"],
+                          "typesEffectiveAgainst": ["Water", "Ground", "Rock"],
+                          "entry": "The heads attract each other and spin around. There must be 6 heads for it to maintain balance.",
+                          "abilities": {
+                            "firstAbility": "Chlorophyll",
+                            "secondAbility": "Harvest",
+                            "thirdAbility": "Hidden: Frisk"
+                          },
+                          "baseStats": {
+                            "attack": 40,
+                            "defense": 80,
+                            "specialAttack": 60,
+                            "specialDefense": 45,
+                            "speed": 40
+                          }
+                        },
+        "Exeggutor":{
+                          "pokemonName": "Exeggutor",
+                          "gen": 1,
+                          "number": 103,
+                          "primaryType": "Grass",
+                          "secondaryType": "Psychic",
+                          "typesWeakTo": ["Fire", "Ice", "Poison", "Flying", "Bug", "Ghost", "Dark"],
+                          "typesEffectiveAgainst": ["Water", "Ground", "Rock"],
+                          "entry": "Legend has it that on rare occasions, one of its heads will drop off and continue on as an Exeggcute.",
+                          "abilities": {
+                            "firstAbility": "Chlorophyll",
+                            "secondAbility": "Harvest",
+                            "thirdAbility": "Hidden: Frisk"
+                          },
+                          "baseStats": {
+                            "attack": 95,
+                            "defense": 85,
+                            "specialAttack": 125,
+                            "specialDefense": 65,
+                            "speed": 55
+                          }
+                        },
+        "Cubone":{
+                          "pokemonName": "Cubone",
+                          "gen": 1,
+                          "number": 104,
+                          "primaryType": "Ground",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Water", "Grass", "Ice"],
+                          "typesEffectiveAgainst": ["Fire", "Electric", "Poison", "Rock", "Steel"],
+                          "entry": "Wears the skull of its deceased mother. Its cries echo inside the skull and come out as a sad melody.",
+                          "abilities": {
+                            "firstAbility": "Rock Head",
+                            "secondAbility": "Lightning Rod",
+                            "thirdAbility": "Hidden: Battle Armor"
+                          },
+                          "baseStats": {
+                            "attack": 50,
+                            "defense": 95,
+                            "specialAttack": 40,
+                            "specialDefense": 50,
+                            "speed": 35
+                          }
+                        },
+        "Marowak":{
+                          "pokemonName": "Marowak",
+                          "gen": 1,
+                          "number": 105,
+                          "primaryType": "Ground",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Water", "Grass", "Ice"],
+                          "typesEffectiveAgainst": ["Fire", "Electric", "Poison", "Rock", "Steel"],
+                          "entry": "The bone it holds is its key weapon. It throws the bone skillfully like a boomerang to KO targets.",
+                          "abilities": {
+                            "firstAbility": "Rock Head",
+                            "secondAbility": "Lightning Rod",
+                            "thirdAbility": "Hidden: Battle Armor"
+                          },
+                          "baseStats": {
+                            "attack": 80,
+                            "defense": 110,
+                            "specialAttack": 50,
+                            "specialDefense": 80,
+                            "speed": 45
+                          }
+                        },
+        "Hitmonlee":{
+                          "pokemonName": "Hitmonlee",
+                          "gen": 1,
+                          "number": 106,
+                          "primaryType": "Fighting",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Flying", "Psychic", "Fairy"],
+                          "typesEffectiveAgainst": ["Normal", "Rock", "Steel", "Ice", "Dark"],
+                          "entry": "When kicking, the sole of its foot turns as hard as a diamond on impact and destroys its enemy.",
+                          "abilities": {
+                            "firstAbility": "Limber",
+                            "secondAbility": "Reckless",
+                            "thirdAbility": "Hidden: Unburden"
+                          },
+                          "baseStats": {
+                            "attack": 120,
+                            "defense": 53,
+                            "specialAttack": 35,
+                            "specialDefense": 110,
+                            "speed": 87
+                          }
+                        },
+        "Hitmonchan":{
+                          "pokemonName": "Hitmonchan",
+                          "gen": 1,
+                          "number": 107,
+                          "primaryType": "Fighting",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Flying", "Psychic", "Fairy"],
+                          "typesEffectiveAgainst": ["Normal", "Rock", "Steel", "Ice", "Dark"],
+                          "entry": "While apparently doing nothing, it fires punches in lightning-fast volleys that are impossible to see.",
+                          "abilities": {
+                            "firstAbility": "Keen Eye",
+                            "secondAbility": "Iron Fist",
+                            "thirdAbility": "Hidden: Inner Focus"
+                          },
+                          "baseStats": {
+                            "attack": 105,
+                            "defense": 79,
+                            "specialAttack": 35,
+                            "specialDefense": 110,
+                            "speed": 76
+                          }
+                        },
+        "Lickitung":{
+                          "pokemonName": "Lickitung",
+                          "gen": 1,
+                          "number": 108,
+                          "primaryType": "Normal",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Fighting"],
+                          "typesEffectiveAgainst": ["Ghost"],
+                          "entry": "Its tongue spans almost 7 feet and moves more freely than its forelegs. Its licks can cause paralysis.",
+                          "abilities": {
+                            "firstAbility": "Own Tempo",
+                            "secondAbility": "Oblivious",
+                            "thirdAbility": "Hidden: Cloud Nine"
+                          },
+                          "baseStats": {
+                            "attack": 55,
+                            "defense": 75,
+                            "specialAttack": 60,
+                            "specialDefense": 75,
+                            "speed": 30
+                          }
+                        },
+        "Koffing":{
+                          "pokemonName": "Koffing",
+                          "gen": 1,
+                          "number": 109,
+                          "primaryType": "Poison",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Ground", "Psychic"],
+                          "typesEffectiveAgainst": ["Grass", "Fairy"],
+                          "entry": "Because it stores several kinds of toxic gases in its body, it is prone to exploding without warning.",
+                          "abilities": {
+                            "firstAbility": "Levitate",
+                            "secondAbility": null,
+                            "thirdAbility": "Hidden: Aftermath"
+                          },
+                          "baseStats": {
+                            "attack": 65,
+                            "defense": 95,
+                            "specialAttack": 60,
+                            "specialDefense": 45,
+                            "speed": 35
+                          }
+                        },
+        "Weezing":{
+                          "pokemonName": "Weezing",
+                          "gen": 1,
+                          "number": 110,
+                          "primaryType": "Poison",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Ground", "Psychic"],
+                          "typesEffectiveAgainst": ["Grass", "Fairy"],
+                          "entry": "When it inhales poisonous gases from garbage, its body expands, and its insides smell much worse.",
+                          "abilities": {
+                            "firstAbility": "Levitate",
+                            "secondAbility": null,
+                            "thirdAbility": "Hidden: Aftermath"
+                          },
+                          "baseStats": {
+                            "attack": 90,
+                            "defense": 120,
+                            "specialAttack": 85,
+                            "specialDefense": 70,
+                            "speed": 60
+                          }
+                        },
+        "Rhyhorn":{
+                          "pokemonName": "Rhyhorn",
+                          "gen": 1,
+                          "number": 111,
+                          "primaryType": "Ground",
+                          "secondaryType": "Rock",
+                          "typesWeakTo": ["Water", "Grass", "Ice", "Fighting", "Ground", "Steel"],
+                          "typesEffectiveAgainst": ["Fire", "Flying", "Bug", "Normal", "Poison", "Rock"],
+                          "entry": "Its massive bones are 1000 times harder than human bones. It can easily knock a trailer flying.",
+                          "abilities": {
+                            "firstAbility": "Lightning Rod",
+                            "secondAbility": "Rock Head",
+                            "thirdAbility": "Hidden: Reckless"
+                          },
+                          "baseStats": {
+                            "attack": 85,
+                            "defense": 95,
+                            "specialAttack": 30,
+                            "specialDefense": 30,
+                            "speed": 25
+                          }
+                        },
+        "Rhydon":{
+                          "pokemonName": "Rhydon",
+                          "gen": 1,
+                          "number": 112,
+                          "primaryType": "Ground",
+                          "secondaryType": "Rock",
+                          "typesWeakTo": ["Water", "Grass", "Ice", "Fighting", "Ground", "Steel"],
+                          "typesEffectiveAgainst": ["Fire", "Flying", "Bug", "Normal", "Poison", "Rock"],
+                          "entry": "Protected by an armor-like hide, it is capable of living in molten lava of 3,600 degrees Fahrenheit.",
+                          "abilities": {
+                            "firstAbility": "Lightning Rod",
+                            "secondAbility": "Rock Head",
+                            "thirdAbility": "Hidden: Reckless"
+                          },
+                          "baseStats": {
+                            "attack": 130,
+                            "defense": 120,
+                            "specialAttack": 45,
+                            "specialDefense": 45,
+                            "speed": 40
+                          }
+                        },
+        "Chansey":{
+                          "pokemonName": "Chansey",
+                          "gen": 1,
+                          "number": 113,
+                          "primaryType": "Normal",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Fighting"],
+                          "typesEffectiveAgainst": ["Ghost"],
+                          "entry": "It walks carefully to prevent its egg from breaking. However, it is extremely fast at running away.",
+                          "abilities": {
+                            "firstAbility": "Natural Cure",
+                            "secondAbility": "Serene Grace",
+                            "thirdAbility": "Hidden: Healer"
+                          },
+                          "baseStats": {
+                            "attack": 5,
+                            "defense": 5,
+                            "specialAttack": 35,
+                            "specialDefense": 105,
+                            "speed": 50
+                          }
+                        },
+        "Tangela":{
+                          "pokemonName": "Tangela",
+                          "gen": 1,
+                          "number": 114,
+                          "primaryType": "Grass",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Fire", "Ice", "Poison", "Flying", "Bug"],
+                          "typesEffectiveAgainst": ["Water", "Ground", "Rock"],
+                          "entry": "Hidden beneath a tangle of vines that grows nonstop even if they are torn off, making it tough to escape.",
+                          "abilities": {
+                            "firstAbility": "Chlorophyll",
+                            "secondAbility": "Leaf Guard",
+                            "thirdAbility": "Hidden: Regenerator"
+                          },
+                          "baseStats": {
+                            "attack": 55,
+                            "defense": 115,
+                            "specialAttack": 100,
+                            "specialDefense": 40,
+                            "speed": 60
+                          }
+                        },
+        "Kangaskhan":{
+                          "pokemonName": "Kangaskhan",
+                          "gen": 1,
+                          "number": 115,
+                          "primaryType": "Normal",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Fighting"],
+                          "typesEffectiveAgainst": ["Ghost"],
+                          "entry": "Raises its young in its belly pouch. Won't run from any fight to keep its young protected.",
+                          "abilities": {
+                            "firstAbility": "Early Bird",
+                            "secondAbility": "Scrappy",
+                            "thirdAbility": "Hidden: Inner Focus"
+                          },
+                          "baseStats": {
+                            "attack": 95,
+                            "defense": 80,
+                            "specialAttack": 40,
+                            "specialDefense": 80,
+                            "speed": 90
+                          }
+                        },
+        "Horsea":{
+                          "pokemonName": "Horsea",
+                          "gen": 1,
+                          "number": 116,
+                          "primaryType": "Water",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Electric", "Grass"],
+                          "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+                          "entry": "If it senses any danger, it will vigorously spray water or a special type of ink from its mouth.",
+                          "abilities": {
+                            "firstAbility": "Swift Swim",
+                            "secondAbility": "Sniper",
+                            "thirdAbility": "Hidden: Damp"
+                          },
+                          "baseStats": {
+                            "attack": 40,
+                            "defense": 70,
+                            "specialAttack": 70,
+                            "specialDefense": 25,
+                            "speed": 60
+                          }
+                        },
+        "Seadra":{
+                          "pokemonName": "Seadra",
+                          "gen": 1,
+                          "number": 117,
+                          "primaryType": "Water",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Electric", "Grass"],
+                          "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+                          "entry": "Touching the back fin causes numbness. It hooks its tail to coral to stay in place while sleeping.",
+                          "abilities": {
+                            "firstAbility": "Poison Point",
+                            "secondAbility": "Sniper",
+                            "thirdAbility": "Hidden: Damp"
+                          },
+                          "baseStats": {
+                            "attack": 65,
+                            "defense": 95,
+                            "specialAttack": 95,
+                            "specialDefense": 45,
+                            "speed": 85
+                          }
+                        },
+        "Goldeen":{
+                          "pokemonName": "Goldeen",
+                          "gen": 1,
+                          "number": 118,
+                          "primaryType": "Water",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Electric", "Grass"],
+                          "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+                          "entry": "When it is time for them to lay eggs, they can be seen swimming up rivers and falls in large groups.",
+                          "abilities": {
+                            "firstAbility": "Swift Swim",
+                            "secondAbility": "Water Veil",
+                            "thirdAbility": "Hidden: Lightning Rod"
+                          },
+                          "baseStats": {
+                            "attack": 67,
+                            "defense": 60,
+                            "specialAttack": 35,
+                            "specialDefense": 50,
+                            "speed": 63
+                          }
+                        },
+        "Seaking":{
+                          "pokemonName": "Seaking",
+                          "gen": 1,
+                          "number": 119,
+                          "primaryType": "Water",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Electric", "Grass"],
+                          "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+                          "entry": "In the autumn spawning season, they can be seen swimming powerfully up rivers and creeks.",
+                          "abilities": {
+                            "firstAbility": "Swift Swim",
+                            "secondAbility": "Water Veil",
+                            "thirdAbility": "Hidden: Lightning Rod"
+                          },
+                          "baseStats": {
+                            "attack": 92,
+                            "defense": 65,
+                            "specialAttack": 65,
+                            "specialDefense": 80,
+                            "speed": 68
+                          }
+                        },
+        "Staryu":{
+                          "pokemonName": "Staryu",
+                          "gen": 1,
+                          "number": 120,
+                          "primaryType": "Water",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Electric", "Grass"],
+                          "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+                          "entry": "When the stars twinkle at night, it floats up from the sea floor, and its body's center core flickers.",
+                          "abilities": {
+                            "firstAbility": "Illuminate",
+                            "secondAbility": "Natural Cure",
+                            "thirdAbility": "Hidden: Analytic"
+                          },
+                          "baseStats": {
+                            "attack": 45,
+                            "defense": 55,
+                            "specialAttack": 70,
+                            "specialDefense": 55,
+                            "speed": 85
+                          }
+                        },
+        "Starmie":{
+                          "pokemonName": "Starmie",
+                          "gen": 1,
+                          "number": 121,
+                          "primaryType": "Water",
+                          "secondaryType": "Psychic",
+                          "typesWeakTo": ["Electric", "Grass", "Bug", "Ghost", "Dark"],
+                          "typesEffectiveAgainst": ["Fire", "Ground", "Rock", "Fighting", "Poison"],
+                          "entry": "Its central core glows with the seven colors of the rainbow. Some people value this core as a gem.",
+                          "abilities": {
+                            "firstAbility": "Illuminate",
+                            "secondAbility": "Natural Cure",
+                            "thirdAbility": "Hidden: Analytic"
+                          },
+                          "baseStats": {
+                            "attack": 75,
+                            "defense": 85,
+                            "specialAttack": 100,
+                            "specialDefense": 85,
+                            "speed": 115
+                          }
+                        },
+        "Mr. Mime":{
+                          "pokemonName": "Mr. Mime",
+                          "gen": 1,
+                          "number": 122,
+                          "primaryType": "Psychic",
+                          "secondaryType": "Fairy",
+                          "typesWeakTo": ["Ghost", "Steel", "Poison"],
+                          "typesEffectiveAgainst": ["Fighting", "Poison"],
+                          "entry": "If interrupted while it is miming, it will slap around the offender with its broad hands.",
+                          "abilities": {
+                            "firstAbility": "Soundproof",
+                            "secondAbility": "Filter",
+                            "thirdAbility": "Hidden: Technician"
+                          },
+                          "baseStats": {
+                            "attack": 45,
+                            "defense": 65,
+                            "specialAttack": 100,
+                            "specialDefense": 120,
+                            "speed": 90
+                          }
+                        },
+        "Scyther":{
+                          "pokemonName": "Scyther",
+                          "gen": 1,
+                          "number": 123,
+                          "primaryType": "Bug",
+                          "secondaryType": "Flying",
+                          "typesWeakTo": ["Rock", "Electric", "Ice"],
+                          "typesEffectiveAgainst": ["Grass", "Fighting", "Bug"],
+                          "entry": "With ninja-like agility and speed, it can create the illusion that there is more than one.",
+                          "abilities": {
+                            "firstAbility": "Swarm",
+                            "secondAbility": "Technician",
+                            "thirdAbility": "Hidden: Steadfast"
+                          },
+                          "baseStats": {
+                            "attack": 110,
+                            "defense": 80,
+                            "specialAttack": 55,
+                            "specialDefense": 80,
+                            "speed": 105
+                          }
+                        },
+        "Jynx":{
+                          "pokemonName": "Jynx",
+                          "gen": 1,
+                          "number": 124,
+                          "primaryType": "Ice",
+                          "secondaryType": "Psychic",
+                          "typesWeakTo": ["Steel", "Fire", "Rock", "Ghost", "Dark"],
+                          "typesEffectiveAgainst": ["Dragon", "Fighting", "Flying", "Grass", "Ground"],
+                          "entry": "It seductively wiggles its hips as it walks. It can cause people to dance in unison with it.",
+                          "abilities": {
+                            "firstAbility": "Oblivious",
+                            "secondAbility": "Forewarn",
+                            "thirdAbility": "Hidden: Dry Skin"
+                          },
+                          "baseStats": {
+                            "attack": 50,
+                            "defense": 35,
+                            "specialAttack": 115,
+                            "specialDefense": 95,
+                            "speed": 95
+                          }
+                        },
+        "Electabuzz":{
+                          "pokemonName": "Electabuzz",
+                          "gen": 1,
+                          "number": 125,
+                          "primaryType": "Electric",
+                          "secondaryType": null,
+                          "typesWeakTo": ["Ground"],
+                          "typesEffectiveAgainst": ["Flying", "Water", "Electric", "Steel"],
+                          "entry": "Electricity runs across the surface of its body. In darkness, its entire body glows a whitish-blue.",
+                          "abilities": {
+                            "firstAbility": "Static",
+                            "secondAbility": null,
+                            "thirdAbility": "Hidden: Vital Spirit"
+                          },
+                          "baseStats": {
+                            "attack": 83,
+                            "defense": 57,
+                            "specialAttack": 95,
+                            "specialDefense": 85,
+                            "speed": 105
+                          }
+                        },
+        "Magmar":{
+                              "pokemonName": "Magmar",
+                              "gen": 1,
+                              "number": 126,
+                              "primaryType": "Fire",
+                              "secondaryType": null,
+                              "typesWeakTo": ["Water", "Rock", "Ground"],
+                              "typesEffectiveAgainst": ["Bug", "Steel", "Grass", "Ice"],
+                              "entry": "In battle, it blows out intense flames from all over its body to intimidate its opponent. This Pokémon's fiery bursts create heat waves that ignite grass and trees in its surroundings.",
+                              "abilities": {
+                                "firstAbility": "Flame Body",
+                                "secondAbility": null,
+                                "thirdAbility": "Hidden: Vital Spirit"
+                              },
+                              "baseStats": {
+                                "attack": 95,
+                                "defense": 57,
+                                "specialAttack": 100,
+                                "specialDefense": 85,
+                                "speed": 93
+                              }
+                            },
+        "Pinsir":{
+                              "pokemonName": "Pinsir",
+                              "gen": 1,
+                              "number": 127,
+                              "primaryType": "Bug",
+                              "secondaryType": null,
+                              "typesWeakTo": ["Flying", "Rock", "Fire"],
+                              "typesEffectiveAgainst": ["Grass", "Psychic", "Dark"],
+                              "entry": "If it fails to crush the foe in its pincers, it will swing around and toss the opponent.",
+                              "abilities": {
+                                "firstAbility": "Hyper Cutter",
+                                "secondAbility": "Mold Breaker",
+                                "thirdAbility": "Hidden: Moxie"
+                              },
+                              "baseStats": {
+                                "attack": 125,
+                                "defense": 100,
+                                "specialAttack": 55,
+                                "specialDefense": 70,
+                                "speed": 85
+                              }
+                            },
+        "Tauros":{
+                              "pokemonName": "Tauros",
+                              "gen": 1,
+                              "number": 128,
+                              "primaryType": "Normal",
+                              "secondaryType": null,
+                              "typesWeakTo": ["Fighting"],
+                              "typesEffectiveAgainst": ["Ghost"],
+                              "entry": "After heightening its will to fight by whipping itself with its three tails, it charges at full speed.",
+                              "abilities": {
+                                "firstAbility": "Intimidate",
+                                "secondAbility": "Anger Point",
+                                "thirdAbility": "Hidden: Sheer Force"
+                              },
+                              "baseStats": {
+                                "attack": 100,
+                                "defense": 95,
+                                "specialAttack": 40,
+                                "specialDefense": 70,
+                                "speed": 110
+                              }
+                            },
+        "Magikarp":{
+                              "pokemonName": "Magikarp",
+                              "gen": 1,
+                              "number": 129,
+                              "primaryType": "Water",
+                              "secondaryType": null,
+                              "typesWeakTo": ["Electric", "Grass"],
+                              "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+                              "entry": "A Magikarp living for many years can leap a mountain using Splash. The move remains useless, though.",
+                              "abilities": {
+                                "firstAbility": "Swift Swim",
+                                "secondAbility": null,
+                                "thirdAbility": "Hidden: Rattled"
+                              },
+                              "baseStats": {
+                                "attack": 10,
+                                "defense": 55,
+                                "specialAttack": 15,
+                                "specialDefense": 20,
+                                "speed": 80
+                              }
+                            },
+        "Gyarados":{
+                              "pokemonName": "Gyarados",
+                              "gen": 1,
+                              "number": 130,
+                              "primaryType": "Water",
+                              "secondaryType": "Flying",
+                              "typesWeakTo": ["Electric", "Rock"],
+                              "typesEffectiveAgainst": ["Fire", "Ground", "Rock", "Fighting", "Bug", "Grass"],
+                              "entry": "In ancient literature, there is a record of a Gyarados that razed a village when violence flared.",
+                              "abilities": {
+                                "firstAbility": "Intimidate",
+                                "secondAbility": null,
+                                "thirdAbility": "Hidden: Moxie"
+                              },
+                              "baseStats": {
+                                "attack": 125,
+                                "defense": 79,
+                                "specialAttack": 60,
+                                "specialDefense": 100,
+                                "speed": 81
+                              }
+                            },
+        "Lapras":{
+                              "pokemonName": "Lapras",
+                              "gen": 1,
+                              "number": 131,
+                              "primaryType": "Water",
+                              "secondaryType": "Ice",
+                              "typesWeakTo": ["Electric", "Fighting", "Rock", "Grass"],
+                              "typesEffectiveAgainst": ["Fire", "Ground", "Rock", "Flying", "Dragon"],
+                              "entry": "Its high intelligence enables it to understand human speech. It likes to ferry people on its back.",
+                              "abilities": {
+                                "firstAbility": "Water Absorb",
+                                "secondAbility": "Shell Armor",
+                                "thirdAbility": "Hidden: Hydration"
+                              },
+                              "baseStats": {
+                                "attack": 85,
+                                "defense": 80,
+                                "specialAttack": 85,
+                                "specialDefense": 95,
+                                "speed": 60
+                              }
+                            },
+        "Ditto":{
+                              "pokemonName": "Ditto",
+                              "gen": 1,
+                              "number": 132,
+                              "primaryType": "Normal",
+                              "secondaryType": null,
+                              "typesWeakTo": ["Fighting"],
+                              "typesEffectiveAgainst": ["Ghost"],
+                              "entry": "When it spots an enemy, its body transfigures into an almost perfect copy of its opponent.",
+                              "abilities": {
+                                "firstAbility": "Limber",
+                                "secondAbility": "Imposter",
+                                "thirdAbility": "Hidden: Imposter"
+                              },
+                              "baseStats": {
+                                "attack": 48,
+                                "defense": 48,
+                                "specialAttack": 48,
+                                "specialDefense": 48,
+                                "speed": 48
+                              }
+                            },
+        "Eevee":{
+                              "pokemonName": "Eevee",
+                              "gen": 1,
+                              "number": 133,
+                              "primaryType": "Normal",
+                              "secondaryType": null,
+                              "typesWeakTo": ["Fighting"],
+                              "typesEffectiveAgainst": ["Ghost"],
+                              "entry": "It has the ability to alter the composition of its body to suit its surrounding environment.",
+                              "abilities": {
+                                "firstAbility": "Run Away",
+                                "secondAbility": "Adaptability",
+                                "thirdAbility": "Hidden: Anticipation"
+                              },
+                              "baseStats": {
+                                "attack": 55,
+                                "defense": 50,
+                                "specialAttack": 45,
+                                "specialDefense": 65,
+                                "speed": 55
+                              }
+                            },
+        "Vaporeon":{
+                              "pokemonName": "Vaporeon",
+                              "gen": 1,
+                              "number": 134,
+                              "primaryType": "Water",
+                              "secondaryType": null,
+                              "typesWeakTo": ["Electric", "Grass"],
+                              "typesEffectiveAgainst": ["Fire", "Ground", "Rock"],
+                              "entry": "It prefers beautiful shores. With cells similar to water molecules, it could melt in water.",
+                              "abilities": {
+                                "firstAbility": "Water Absorb",
+                                "secondAbility": null,
+                                "thirdAbility": "Hidden: Hydration"
+                              },
+                              "baseStats": {
+                                "attack": 65,
+                                "defense": 60,
+                                "specialAttack": 110,
+                                "specialDefense": 95,
+                                "speed": 65
+                              }
+                            },
+        "Jolteon":{
+                              "pokemonName": "Jolteon",
+                              "gen": 1,
+                              "number": 135,
+                              "primaryType": "Electric",
+                              "secondaryType": null,
+                              "typesWeakTo": ["Ground"],
+                              "typesEffectiveAgainst": ["Flying", "Water", "Electric", "Steel"],
+                              "entry": "Every hair on its body starts to stand sharply on end if it becomes charged with electricity.",
+                              "abilities": {
+                                "firstAbility": "Volt Absorb",
+                                "secondAbility": null,
+                                "thirdAbility": "Hidden: Quick Feet"
+                              },
+                              "baseStats": {
+                                "attack": 65,
+                                "defense": 60,
+                                "specialAttack": 110,
+                                "specialDefense": 95,
+                                "speed": 130
+                              }
+                            },
+        "Flareon":{
+                              "pokemonName": "Flareon",
+                              "gen": 1,
+                              "number": 136,
+                              "primaryType": "Fire",
+                              "secondaryType": null,
+                              "typesWeakTo": ["Water", "Rock", "Ground"],
+                              "typesEffectiveAgainst": ["Bug", "Steel", "Grass", "Ice"],
+                              "entry": "It stores some of the air it inhales in its internal flame pouch, which heats its body to over 1700 degrees Fahrenheit.",
+                              "abilities": {
+                                "firstAbility": "Flash Fire",
+                                "secondAbility": null,
+                                "thirdAbility": "Hidden: Guts"
+                              },
+                              "baseStats": {
+                                "attack": 130,
+                                "defense": 60,
+                                "specialAttack": 95,
+                                "specialDefense": 110,
+                                "speed": 65
+                              }
+                            },
+        "Porygon":{
+                              "pokemonName": "Porygon",
+                              "gen": 1,
+                              "number": 137,
+                              "primaryType": "Normal",
+                              "secondaryType": null,
+                              "typesWeakTo": ["Fighting"],
+                              "typesEffectiveAgainst": ["Ghost"],
+                              "entry": "A Pokémon that consists entirely of programming code. Capable of moving freely in cyberspace.",
+                              "abilities": {
+                                "firstAbility": "Trace",
+                                "secondAbility": "Download",
+                                "thirdAbility": "Hidden: Analytic"
+                              },
+                              "baseStats": {
+                                "attack": 60,
+                                "defense": 70,
+                                "specialAttack": 85,
+                                "specialDefense": 75,
+                                "speed": 40
+                              }
+                            },
+        "Omanyte":{
+                              "pokemonName": "Omanyte",
+                              "gen": 1,
+                              "number": 138,
+                              "primaryType": "Rock",
+                              "secondaryType": "Water",
+                              "typesWeakTo": ["Grass", "Electric", "Fighting", "Ground"],
+                              "typesEffectiveAgainst": ["Fire", "Flying", "Bug", "Normal", "Poison"],
+                              "entry": "An ancient Pokémon that was recovered from a fossil. It swims by cleverly twisting its 10 tentacles about.",
+                              "abilities": {
+                                "firstAbility": "Swift Swim",
+                                "secondAbility": "Shell Armor",
+                                "thirdAbility": "Hidden: Weak Armor"
+                              },
+                              "baseStats": {
+                                "attack": 40,
+                                "defense": 100,
+                                "specialAttack": 90,
+                                "specialDefense": 55,
+                                "speed": 35
+                              }
+                            },
+        "Omastar":{
+                              "pokemonName": "Omastar",
+                              "gen": 1,
+                              "number": 139,
+                              "primaryType": "Rock",
+                              "secondaryType": "Water",
+                              "typesWeakTo": ["Grass", "Electric", "Fighting", "Ground"],
+                              "typesEffectiveAgainst": ["Fire", "Flying", "Bug", "Normal", "Poison"],
+                              "entry": "A prehistoric Pokémon that died out when its heavy shell made it impossible to catch prey.",
+                              "abilities": {
+                                "firstAbility": "Swift Swim",
+                                "secondAbility": "Shell Armor",
+                                "thirdAbility": "Hidden: Weak Armor"
+                              },
+                              "baseStats": {
+                                "attack": 60,
+                                "defense": 125,
+                                "specialAttack": 115,
+                                "specialDefense": 70,
+                                "speed": 55
+                              }
+                            },
+        "Kabuto":{
+                              "pokemonName": "Kabuto",
+                              "gen": 1,
+                              "number": 140,
+                              "primaryType": "Rock",
+                              "secondaryType": "Water",
+                              "typesWeakTo": ["Grass", "Electric", "Fighting", "Ground"],
+                              "typesEffectiveAgainst": ["Fire", "Flying", "Bug", "Normal", "Poison"],
+                              "entry": "This Pokémon was regenerated from the fossil of an ancient creature. It protects itself with a hard shell.",
+                              "abilities": {
+                                "firstAbility": "Swift Swim",
+                                "secondAbility": "Battle Armor",
+                                "thirdAbility": "Hidden: Weak Armor"
+                              },
+                              "baseStats": {
+                                "attack": 80,
+                                "defense": 90,
+                                "specialAttack": 55,
+                                "specialDefense": 45,
+                                "speed": 55
+                              }
+                            },
+        "Kabutops":{
+                              "pokemonName": "Kabutops",
+                              "gen": 1,
+                              "number": 141,
+                              "primaryType": "Rock",
+                              "secondaryType": "Water",
+                              "typesWeakTo": ["Grass", "Electric", "Fighting", "Ground"],
+                              "typesEffectiveAgainst": ["Fire", "Flying", "Bug", "Normal", "Poison"],
+                              "entry": "Its sleek shape is perfect for swimming. It slashes prey with its claws that can cut steel.",
+                              "abilities": {
+                                "firstAbility": "Swift Swim",
+                                "secondAbility": "Battle Armor",
+                                "thirdAbility": "Hidden: Weak Armor"
+                              },
+                              "baseStats": {
+                                "attack": 115,
+                                "defense": 105,
+                                "specialAttack": 65,
+                                "specialDefense": 70,
+                                "speed": 80
+                              }
+                            },
+        "Aerodactyl":{
+                              "pokemonName": "Aerodactyl",
+                              "gen": 1,
+                              "number": 142,
+                              "primaryType": "Rock",
+                              "secondaryType": "Flying",
+                              "typesWeakTo": ["Water", "Electric", "Ice", "Rock", "Steel"],
+                              "typesEffectiveAgainst": ["Fire", "Bug", "Flying"],
+                              "entry": "It was regenerated from a dinosaur's genetic matter that was found in amber. It flies with high-pitched cries.",
+                              "abilities": {
+                                "firstAbility": "Rock Head",
+                                "secondAbility": "Pressure",
+                                "thirdAbility": "Hidden: Unnerve"
+                              },
+                              "baseStats": {
+                                "attack": 105,
+                                "defense": 65,
+                                "specialAttack": 60,
+                                "specialDefense": 75,
+                                "speed": 130
+                              }
+                            },
+        "Snorlax":{
+                              "pokemonName": "Snorlax",
+                              "gen": 1,
+                              "number": 143,
+                              "primaryType": "Normal",
+                              "secondaryType": null,
+                              "typesWeakTo": ["Fighting"],
+                              "typesEffectiveAgainst": ["Ghost"],
+                              "entry": "It is not satisfied unless it eats over 880 pounds of food every day. When it is done eating, it goes promptly to sleep.",
+                              "abilities": {
+                                "firstAbility": "Immunity",
+                                "secondAbility": "Thick Fat",
+                                "thirdAbility": "Hidden: Gluttony"
+                              },
+                              "baseStats": {
+                                "attack": 110,
+                                "defense": 65,
+                                "specialAttack": 65,
+                                "specialDefense": 110,
+                                "speed": 30
+                              }
+                            },
+        "Articuno":{
+                              "pokemonName": "Articuno",
+                              "gen": 1,
+                              "number": 144,
+                              "primaryType": "Ice",
+                              "secondaryType": "Flying",
+                              "typesWeakTo": ["Electric", "Rock", "Steel", "Fire"],
+                              "typesEffectiveAgainst": ["Grass", "Ground", "Flying", "Dragon"],
+                              "entry": "A legendary bird Pokémon that is said to appear to doomed people who are lost in icy mountains.",
+                              "abilities": {
+                                "firstAbility": "Pressure",
+                                "secondAbility": null,
+                                "thirdAbility": "Hidden: Snow Cloak"
+                              },
+                              "baseStats": {
+                                "attack": 85,
+                                "defense": 100,
+                                "specialAttack": 95,
+                                "specialDefense": 125,
+                                "speed": 85
+                              }
+                            },
+        "Zapdos":{
+                              "pokemonName": "Zapdos",
+                              "gen": 1,
+                              "number": 145,
+                              "primaryType": "Electric",
+                              "secondaryType": "Flying",
+                              "typesWeakTo": ["Ice", "Rock"],
+                              "typesEffectiveAgainst": ["Flying", "Water"],
+                              "entry": "This legendary bird Pokémon is said to appear when the sky turns dark and lightning showers down.",
+                              "abilities": {
+                                "firstAbility": "Pressure",
+                                "secondAbility": null,
+                                "thirdAbility": "Hidden: Static"
+                              },
+                              "baseStats": {
+                                "attack": 90,
+                                "defense": 85,
+                                "specialAttack": 125,
+                                "specialDefense": 90,
+                                "speed": 100
+                              }
+                            },
+        "Moltres":{
+                              "pokemonName": "Moltres",
+                              "gen": 1,
+                              "number": 146,
+                              "primaryType": "Fire",
+                              "secondaryType": "Flying",
+                              "typesWeakTo": ["Water", "Electric", "Rock"],
+                              "typesEffectiveAgainst": ["Bug", "Grass", "Steel"],
+                              "entry": "One of the legendary bird Pokémon. It is said that its appearance indicates the coming of spring.",
+                              "abilities": {
+                                "firstAbility": "Pressure",
+                                "secondAbility": null,
+                                "thirdAbility": "Hidden: Flame Body"
+                              },
+                              "baseStats": {
+                                "attack": 100,
+                                "defense": 90,
+                                "specialAttack": 125,
+                                "specialDefense": 85,
+                                "speed": 90
+                              }
+                            },
+        "Dratini":{
+                              "pokemonName": "Dratini",
+                              "gen": 1,
+                              "number": 147,
+                              "primaryType": "Dragon",
+                              "secondaryType": null,
+                              "typesWeakTo": ["Dragon", "Fairy", "Ice"],
+                              "typesEffectiveAgainst": ["Dragon"],
+                              "entry": "A mythical Pokémon of Chinese mythology. It is found swimming in seas and lakes. Its body shines in rainbow colors.",
+                              "abilities": {
+                                "firstAbility": "Shed Skin",
+                                "secondAbility": null,
+                                "thirdAbility": "Hidden: Marvel Scale"
+                              },
+                              "baseStats": {
+                                "attack": 64,
+                                "defense": 45,
+                                "specialAttack": 50,
+                                "specialDefense": 50,
+                                "speed": 50
+                              }
+                            },
+        "Dragonair":{
+                              "pokemonName": "Dragonair",
+                              "gen": 1,
+                              "number": 148,
+                              "primaryType": "Dragon",
+                              "secondaryType": null,
+                              "typesWeakTo": ["Dragon", "Fairy", "Ice"],
+                              "typesEffectiveAgainst": ["Dragon"],
+                              "entry": "A Pokémon that is said to live in seas and lakes. Even though it has no wings, it has been seen flying occasionally.",
+                              "abilities": {
+                                "firstAbility": "Shed Skin",
+                                "secondAbility": null,
+                                "thirdAbility": "Hidden: Marvel Scale"
+                              },
+                              "baseStats": {
+                                "attack": 84,
+                                "defense": 65,
+                                "specialAttack": 70,
+                                "specialDefense": 70,
+                                "speed": 70
+                              }
+                            },
+        "Dragonite":{
+                              "pokemonName": "Dragonite",
+                              "gen": 1,
+                              "number": 149,
+                              "primaryType": "Dragon",
+                              "secondaryType": "Flying",
+                              "typesWeakTo": ["Dragon", "Fairy", "Rock", "Ice"],
+                              "typesEffectiveAgainst": ["Dragon", "Grass", "Fighting", "Bug"],
+                              "entry": "It is said that this Pokémon lives somewhere in the sea and that it flies. However, it is only a rumor.",
+                              "abilities": {
+                                "firstAbility": "Inner Focus",
+                                "secondAbility": null,
+                                "thirdAbility": "Hidden: Multiscale"
+                              },
+                              "baseStats": {
+                                "attack": 134,
+                                "defense": 95,
+                                "specialAttack": 100,
+                                "specialDefense": 100,
+                                "speed": 80
+                              }
+                            },
+        "Mewtwo":{
+                              "pokemonName": "Mewtwo",
+                              "gen": 1,
+                              "number": 150,
+                              "primaryType": "Psychic",
+                              "secondaryType": null,
+                              "typesWeakTo": ["Bug", "Ghost", "Dark"],
+                              "typesEffectiveAgainst": ["Fighting", "Poison"],
+                              "entry": "A Pokémon created by recombining Mew's genes. It's said to have the most savage heart among Pokémon.",
+                              "abilities": {
+                                "firstAbility": "Pressure",
+                                "secondAbility": null,
+                                "thirdAbility": "Hidden: Unnerve"
+                              },
+                              "baseStats": {
+                                "attack": 110,
+                                "defense": 90,
+                                "specialAttack": 154,
+                                "specialDefense": 90,
+                                "speed": 130
+                              }
+                            },
+        "Mew":{
+                              "pokemonName": "Mew",
+                              "gen": 1,
+                              "number": 151,
+                              "primaryType": "Psychic",
+                              "secondaryType": null,
+                              "typesWeakTo": ["Bug", "Ghost", "Dark"],
+                              "typesEffectiveAgainst": ["Fighting", "Poison"],
+                              "entry": "So rare that it is still said to be a mirage by many experts. Only a few people have seen it worldwide.",
+                              "abilities": {
+                                "firstAbility": "Synchronize",
+                                "secondAbility": null,
+                                "thirdAbility": null
+                              },
+                              "baseStats": {
+                                "attack": 100,
+                                "defense": 100,
+                                "specialAttack": 100,
+                                "specialDefense": 100,
+                                "speed": 100
+                              }
+                            }                                             
 }
 }
