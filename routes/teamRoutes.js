@@ -31,6 +31,10 @@ router.route('/:userId/pokeTeams/teamGeneration/:teamGeneration')
 router.route('/:userId/pokeTeams/amountOfMembers/:amountOfMembers')
     .get(validateSession,teamController.getByMemberAmount);
 
+//*Create Random Team
+router.route('/:userId/pokeTeams/randomize')
+    .post(validateSession,teamController.createRandomTeam);
+
 // //*Get By Type
 // router.route('/:userId/pokeTeams/type/:type')
 //     .get(validateSession,teamController.getByType);
