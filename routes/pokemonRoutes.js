@@ -11,9 +11,13 @@ router.route('/pokemon')
 router.route('/pokemon/generation/:gen')
     .get(pokemonController.getByGeneration);
 
-//*Get Pokemon By Type
+//*Get All Pokemon By Type
 router.route('/pokemon/type/:primaryType')
     .get(pokemonController.getByType);
+
+//*Get All Pokemon By Type Advantage
+router.route('/pokemon/advantage/:typesEffectiveAgainst')
+    .get(pokemonController.getByAdvantage);
 
 //*Get By Name
 router.route('/pokemon/sortByName/:pokemonName')

@@ -3,7 +3,7 @@ const Pokemon = require('../models/pokemonModel');
 const User = require('../models/userModel');
 const PokeTeam = require('../models/pokeTeamsModel');
 
-////toDo: All must be tested.
+////toDo: test duplicate route.
 
 //*Get All Pokemon
 exports.getAllPokemon = async (req,res) => {
@@ -33,7 +33,6 @@ exports.getByGeneration = async (req,res) => {
     }
 };
 
-//!This might not actually work
 //*Get By Pokemon Type : primary or secondary
 exports.getByType = async (req,res) => {
     try {
@@ -52,6 +51,20 @@ exports.getByType = async (req,res) => {
     }
 };
 
+//*Get Pokemon By Type Advantage
+exports.getByAdvantage = async (req,res) => {
+    try {
+        const { typesEffectiveAgainst } = req.params;
+        if(!typesEffectiveAgainst){
+            return incomplete(res,"No type match found");
+        }
+        const pokeType = await Pokemon.find({typesEffectiveAgainst});
+        success(res,pokeType);
+    } catch (err) {
+        error(res,err);
+    }
+}
+
 //*Get Pokemon By Name
 exports.sortByName = async (req,res) => {
     try {
@@ -69,16 +82,15 @@ exports.sortByName = async (req,res) => {
     }
 };
 
-////toDo: test in postman
 //*Add Pokemon to team
 exports.addToTeam = async (req,res) => {
     try {
-        //requested data from the client - data matching pokemon model on db
-        const {pokemonName,gen,number,primaryType,secondaryType,typesWeakTo,typesEffectiveAgainst,entry,abilities,baseStats} = req.body;
-        //req params -> user id and team id
-        const {userId, teamId} = req.params;
+        console.log('add pokemon route');
+        //req params -> user id, team id, pokemon id
+        const {userId, teamId,pokemonId} = req.params;
         const user = await User.findById(userId);
         const pokeTeam = await PokeTeam.findById(teamId);
+        const pokemon = await Pokemon.findById(pokemonId);
         //error handling
         if(!user){
             return incomplete(res,'User not found');
@@ -86,52 +98,44 @@ exports.addToTeam = async (req,res) => {
         if(!pokeTeam){
             return incomplete(res,"Team not found");
         };
-        //pokemon to be created with requested parameters from client
-        const addPokemon = {
-            pokemonName,
-            gen,
-            number,
-            primaryType,
-            secondaryType,
-            typesWeakTo,
-            typesEffectiveAgainst,
-            entry,
-            abilities,
-            baseStats
+        if(!pokemon){
+            return incomplete(res,"Pokemon not found");
         };
-        //push to assigned team array of members, save team, and save user
-        const returnOption = {new:true};
-        const teamAdd = await PokeTeam.findByIdAndUpdate(teamId,addPokemon,returnOption);
+
+        pokeTeam.members.push(pokemon);
+        await pokeTeam.save();
+
         //client response
-        success(res,teamAdd);
+        success(res,pokeTeam);
 
     } catch (err) {
         error(res,err);
     }
 };
 
-//!UNTESTED -> Probably does not function as intended
 //*Delete Pokemon From Team
 exports.deleteFromTeam = async (req,res) => {
     try {
+        console.log('delete pokemon from team route');
         const {userId, teamId, pokemonId} = req.params;
         const user = await User.findById(userId);
-        const team = await PokeTeam.findById(teamId);
+        const pokeTeam = await PokeTeam.findById(teamId);
+        const pokemon = await Pokemon.findById(pokemonId);
         
         if(!user){
             return incomplete(res,"No user found");
         }
-        if(!team){
+        if(!pokeTeam){
             return incomplete(res,"No team found");
         }
-        
-        const deletePokemon = await PokeTeam.findByIdAndDelete(pokemonId);
-
-        success(res, 'Pokemon Deleted');
-
-        if(!deletePokemon){
+        if(!pokemon){
             return incomplete(res,"No pokemon found");
         }
+
+        pokeTeam.members.pull(pokemon);
+        pokeTeam.save();
+
+        success(res, "Member Deleted");
 
     } catch (err) {
         error(res,err);
@@ -177,5 +181,4 @@ exports.duplicatePokemon = async (req,res) => {
     } catch (err) {
         error(res,err);
     }
-}
-//////toDO: Ideas for controllers: get by type advantage
+};
