@@ -340,35 +340,25 @@ exports.createRandomTeam = async (req,res) => {
 };
 
 //!Does not work
-
+//I might need to update the team model in order to make a route like this work
 //*Get By Type
-// exports.getByType = async (req,res) => {
-//     try {
-//         console.log('type route')
-//         //req params
-//         const {userId, type, primaryType} = req.params;
-//         const user = await User.findById(userId);
-//         //error handling
-//         if(!user){
-//             return incomplete(res,'No user found');
-//         }
-//         //search for key value
-//         const teamType = await PokeTeam.find({type: primaryType});
-    
-//         //error handling
-//         if(!teamType){
-//             return incomplete(res,"No matching type");
-//         }
-        
-//         if(primaryType == type){
-//             return success(res,teamType)
-//         } else {
-//             return incomplete(res, "no match")
-//         }
-//         //respond to client
-//         // console.log(type);
-//         // success(res,teamType);
-//     } catch (err) {
-//         error(res,err);
-//     }
-// };
+exports.getByType = async (req,res) => {
+    try {
+        console.log('type route')
+        //req params
+        const {userId, primaryType} = req.params;
+        const user = await User.findById(userId);
+        //error handling
+        if(!user){
+            return incomplete(res,'No user found');
+        }
+        const teamType = await PokeTeam.find({primaryType});
+        if(!teamType){
+            return incomplete(res,"No teams found");
+        }
+        //respond to client
+        success(res,teamType);
+    } catch (err) {
+        error(res,err);
+    }
+};

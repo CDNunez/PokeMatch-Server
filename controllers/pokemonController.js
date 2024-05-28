@@ -143,6 +143,7 @@ exports.deleteFromTeam = async (req,res) => {
 };
 
 //!UNTESTED -> Probably does not function as intended
+//WIP
 //*Duplicate Selected Pokemon Within Team
 exports.duplicatePokemon = async (req,res) => {
     try {
@@ -178,6 +179,45 @@ exports.duplicatePokemon = async (req,res) => {
         await duplicatedPokemon.save();
 
         success(res,duplicatedPokemon);
+    } catch (err) {
+        error(res,err);
+    }
+};
+
+//WIP
+/* 
+route will add pokemon to team by finding pokemon by the pokemon's assigned number
+random number generator will be implemented in the front end
+    -click on "add random" button
+    -onClick run randomNumberGenerator function
+    function randomNumberGenerator(){
+        return Math.floor(Math.random()*151)+1;
+    }
+    const randomNumber  = randomNumberGenerator();
+    -pass randomly generated number as the requested number parameter for the route
+*/
+//*Add Random Pokemon to Team
+exports.addOneRandom = async (req,res) => {
+    try {
+        const {userId, teamId, number} = req.params;
+        const user = await User.findById(userId);
+        const pokeTeam = await PokeTeam.findById(teamId);
+        const pokemon = await Pokemon.find(number);
+        if(!user){
+            return incomplete(res,"No user found");
+        }
+        if(!pokeTeam){
+            return incomplete(res,"No team found");
+        }
+        if(!pokemon){
+            return incomplete(res,"No pokemon found");
+        }
+
+        pokeTeam.members.push(pokemon);
+        await pokeTeam.save();
+
+        //client response
+        success(res,pokeTeam);
     } catch (err) {
         error(res,err);
     }

@@ -36,7 +36,7 @@ router.route('/:userId/pokeTeams/randomize')
     .post(validateSession,teamController.createRandomTeam);
 
 // //*Get By Type
-// router.route('/:userId/pokeTeams/type/:type')
-//     .get(validateSession,teamController.getByType);
+router.route('/:userId/pokeTeams/type/:type')
+    .get(validateSession,teamController.getByType);
 
 module.exports = router;
