@@ -5,7 +5,7 @@ const User = require('../models/userModel');
 const Pokemon = require('../models/pokemonModel');
 const { default: mongoose } = require('mongoose');
 
-////toDo: create random team, add member to team
+////toDo: create random team
 
 //?Exports to teamRoutes
 
@@ -15,7 +15,7 @@ exports.createTeam = async (req,res) => {
         //test
         console.log(req.body);
         //data requested from client (body)
-        const {teamName, amountOfMembers, teamGeneration, members} = req.body;
+        const {teamName, amountOfMembers, teamGeneration, members,teamTypes,typesTeamIsWeakTo,typesTeamIsStrongAgainst} = req.body;
 
         //request user id match in db
         const userId = req.params.userId
@@ -40,7 +40,10 @@ exports.createTeam = async (req,res) => {
             teamName,
             amountOfMembers,
             teamGeneration,
-            members
+            members,
+            teamTypes,
+            typesTeamIsWeakTo,
+            typesTeamIsStrongAgainst
         };
         
         //save team to db
@@ -207,7 +210,10 @@ exports.duplicateTeam = async(req,res) => {
             teamName: originalTeam.teamName + '(Copy)',
             amountOfMembers: originalTeam.amountOfMembers,
             teamGeneration: originalTeam.teamGeneration,
-            members: {...originalTeam.members} //Creates shallow copy of members
+            members: {...originalTeam.members}, //Creates shallow copy of members
+            teamTypes: originalTeam.teamTypes,
+            typesTeamIsWeakTo: originalTeam.typesTeamIsWeakTo,
+            typesTeamIsStrongAgainst: originalTeam.typesTeamIsStrongAgainst
         });
 
         //save duplicated document to db
@@ -327,8 +333,8 @@ exports.createRandomTeam = async (req,res) => {
             let number = randomPokemonGenerator();
             const pokemon = await Pokemon.findOne({number});
             newTeam.members.push(pokemon);
-            return newTeam
-        };
+            // return newTeam
+        }; //try running with return commented out
         
         await newTeam.save();
         await user.save();

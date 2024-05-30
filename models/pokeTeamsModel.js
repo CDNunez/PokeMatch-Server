@@ -20,7 +20,10 @@ const PokemonTeamSchema = new mongoose.Schema({
         required: true
     },
     //members making up the team whose model is linked from the Pokemon Schema
-    members: [{type: mongoose.Schema.Types.Object, ref:PokemonSchema}]
+    members: [{type: mongoose.Schema.Types.Object, ref:PokemonSchema}],
+    teamTypes:[String],
+    typesTeamIsWeakTo:[String],
+    typesTeamIsStrongAgainst:[String]
 })
 
 //?Exports

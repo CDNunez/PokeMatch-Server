@@ -80,6 +80,7 @@ exports.sortByName = async (req,res) => {
     }
 };
 
+//toDo:Test due to type changes
 //*Add Pokemon to team
 exports.addToTeam = async (req,res) => {
     try {
@@ -99,6 +100,12 @@ exports.addToTeam = async (req,res) => {
         if(!pokemon){
             return incomplete(res,"Pokemon not found");
         };
+
+        //WIP
+        // if(pokemon.primaryType){
+        //     let type = pokemon.primaryType;
+            
+        // }
 
         pokeTeam.members.push(pokemon);
         await pokeTeam.save();
@@ -168,33 +175,44 @@ exports.duplicatePokemon = async (req,res) => {
     }
 };
 
-/* 
-route will add pokemon to team by finding pokemon by the pokemon's assigned number
-random number generator will be implemented in the front end
-    -click on "add random" button
-    -onClick run randomNumberGenerator function
-    function randomNumberGenerator(){
-        return Math.floor(Math.random()*151)+1;
-    }
-    const randomNumber  = randomNumberGenerator();
-    -pass randomly generated number as the requested number parameter for the route
-*/
+// /* //ToDo: Test -> disregard comment if it works
+// route will add pokemon to team by finding pokemon by the pokemon's assigned number
+// random number generator will be implemented in the front end
+//     -click on "add random" button
+//     -onClick run randomNumberGenerator function
+//     function randomNumberGenerator(){
+//         return Math.floor(Math.random()*151)+1;
+//     }
+//     const randomNumber  = randomNumberGenerator();
+//     -pass randomly generated number as the requested number parameter for the route
+// */
 //*Add Random Pokemon to Team
 exports.addOneRandom = async (req,res) => {
     try {
-        const {userId, teamId, number} = req.params;
+        const {userId, teamId} = req.params;
         const user = await User.findById(userId);
         const pokeTeam = await PokeTeam.findById(teamId);
-        const pokemon = await Pokemon.findOne({number});
         if(!user){
             return incomplete(res,"No user found");
         }
         if(!pokeTeam){
             return incomplete(res,"No team found");
         }
+        
+        function randomNumberGenerator(){
+            return Math.floor(Math.random()*151)+1;
+        }
+
+        const randomNumber = randomNumberGenerator();
+
+        let number = randomNumber
+
+        const pokemon = await Pokemon.findOne({number});
+
         if(!pokemon){
             return incomplete(res,"No pokemon found");
         }
+
 
         pokeTeam.members.push(pokemon);
         await pokeTeam.save();

@@ -33,7 +33,7 @@ router.route('/:userId/pokeTeams/:teamId/duplicate/:pokemonId')
     .put(validateSession,pokemonController.duplicatePokemon);
 
 //*Add One Random Pokemon to team
-router.route('/:userId/pokeTeams/:teamId/random/:number')
+router.route('/:userId/pokeTeams/:teamId/random/')
     .put(validateSession,pokemonController.addOneRandom);
 
 module.exports = router;
