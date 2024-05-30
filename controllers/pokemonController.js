@@ -3,8 +3,6 @@ const Pokemon = require('../models/pokemonModel');
 const User = require('../models/userModel');
 const PokeTeam = require('../models/pokeTeamsModel');
 
-////toDo: test duplicate route.
-
 //*Get All Pokemon
 exports.getAllPokemon = async (req,res) => {
     try {
@@ -142,14 +140,14 @@ exports.deleteFromTeam = async (req,res) => {
     }
 };
 
-//!UNTESTED -> Probably does not function as intended
-//WIP
+//client side -> onClick of Duplicate button will supply server with to-be-duplicated pokemonId
 //*Duplicate Selected Pokemon Within Team
 exports.duplicatePokemon = async (req,res) => {
     try {
         const {userId,teamId,pokemonId} = req.params;
         const user = await User.findById(userId);
         const team = await PokeTeam.findById(teamId);
+        const duplicatedPokemon = await Pokemon.findById(pokemonId);
 
         if(!user){
             return incomplete(res,"No user found");
@@ -157,34 +155,19 @@ exports.duplicatePokemon = async (req,res) => {
         if(!team){
             return incomplete(res,"No team found");
         }
-
-        const originalPokemon = await PokeTeam.findById(pokemonId);
-        if(!originalPokemon){
-            return incomplete(res,"No pokemon found");
+        if(!duplicatedPokemon){
+            return incomplete(res,'No pokemon found');
         }
 
-        const duplicatedPokemon = new Pokemon({
-            pokemonName: originalPokemon.pokemonName,
-            gen: originalPokemon.gen,
-            number: originalPokemon.number,
-            primaryType: originalPokemon.primaryType,
-            secondaryType: originalPokemon.secondaryType,
-            typesWeakTo: {...originalPokemon.typesWeakTo},
-            typesEffectiveAgainst: {...originalPokemon.typesEffectiveAgainst},
-            entry: originalPokemon.entry,
-            abilities: {...originalPokemon.abilities},
-            baseStats:{...originalPokemon.baseStats}
-        });
+        team.members.push(duplicatedPokemon);
+        await team.save();
 
-        await duplicatedPokemon.save();
-
-        success(res,duplicatedPokemon);
+        success(res,team);
     } catch (err) {
         error(res,err);
     }
 };
 
-//WIP
 /* 
 route will add pokemon to team by finding pokemon by the pokemon's assigned number
 random number generator will be implemented in the front end
@@ -202,7 +185,7 @@ exports.addOneRandom = async (req,res) => {
         const {userId, teamId, number} = req.params;
         const user = await User.findById(userId);
         const pokeTeam = await PokeTeam.findById(teamId);
-        const pokemon = await Pokemon.find(number);
+        const pokemon = await Pokemon.findOne({number});
         if(!user){
             return incomplete(res,"No user found");
         }

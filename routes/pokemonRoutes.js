@@ -27,11 +27,13 @@ router.route('/pokemon/sortByName/:pokemonName')
 router.route('/:userId/pokeTeams/:teamId/pokemon/:pokemonId')
     .put(validateSession,pokemonController.addToTeam)
     .delete(validateSession,pokemonController.deleteFromTeam)
-    .post(validateSession,pokemonController.duplicatePokemon);
 
-////toDo: WIP -> test
+//*Duplicate Pokemon in team
+router.route('/:userId/pokeTeams/:teamId/duplicate/:pokemonId')
+    .put(validateSession,pokemonController.duplicatePokemon);
+
 //*Add One Random Pokemon to team
-router.route('/:userId/pokeTeams/:teamId/pokemon/:number')
+router.route('/:userId/pokeTeams/:teamId/random/:number')
     .put(validateSession,pokemonController.addOneRandom);
 
 module.exports = router;

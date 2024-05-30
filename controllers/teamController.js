@@ -294,45 +294,46 @@ exports.getByMemberAmount = async (req,res) => {
     }
 };
 
-//!This is untested
+//!This does not work as intended
 //*Create Randomized Team
 exports.createRandomTeam = async (req,res) => {
     try {
         const {userId} = req.params;
-        const {teamName, amountOfMembers, teamGeneration, members, number} = req.body;
+        const {teamName, amountOfMembers, teamGeneration, members} = req.body;
         const user = await User.findById(userId);
         if(!user){
             return incomplete(res,'User not found');
         }
 
-        const team = {
+        let team = {
             teamName,
             amountOfMembers,
             teamGeneration,
             members
         };
 
-        const newTeam = await PokeTeam.create(team);
-
+        let newTeam = await PokeTeam.create(team);
+        
         user.teams.push(newTeam);
 
-        await user.save();
-
+        
         function randomPokemonGenerator() {
             const randomNumber = Math.random();
             const scaledNum = Math.floor(randomNumber*151)+1;
             return scaledNum;
         }
-
+        
         for(i = 0; i <= newTeam.amountOfMembers;i++){
-            number = randomPokemonGenerator();
+            let number = randomPokemonGenerator();
             const pokemon = await Pokemon.findOne({number});
-            const returnOption = {new:true};
-            const teamAdd = await PokeTeam.findOneAndUpdate(newTeam,pokemon,returnOption);
-            return teamAdd
+            newTeam.members.push(pokemon);
+            return newTeam
         };
-
-        success(res,teamAdd);
+        
+        await newTeam.save();
+        await user.save();
+        
+        success(res,newTeam);
 
     } catch (err) {
         error(res,err);

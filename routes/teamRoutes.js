@@ -32,7 +32,7 @@ router.route('/:userId/pokeTeams/amountOfMembers/:amountOfMembers')
     .get(validateSession,teamController.getByMemberAmount);
 
 //*Create Random Team
-router.route('/:userId/pokeTeams/randomize')
+router.route('/:userId/randomize')
     .post(validateSession,teamController.createRandomTeam);
 
 // //*Get By Type
