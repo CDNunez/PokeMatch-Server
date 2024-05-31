@@ -305,7 +305,7 @@ exports.getByMemberAmount = async (req,res) => {
 exports.createRandomTeam = async (req,res) => {
     try {
         const {userId} = req.params;
-        const {teamName, amountOfMembers, teamGeneration, members} = req.body;
+        const {teamName, amountOfMembers, teamGeneration, members, teamType, typesTeamIsWeakTo, typesTeamIsStrongAgainst} = req.body;
         const user = await User.findById(userId);
         if(!user){
             return incomplete(res,'User not found');
@@ -315,7 +315,10 @@ exports.createRandomTeam = async (req,res) => {
             teamName,
             amountOfMembers,
             teamGeneration,
-            members
+            members,
+            teamType,
+            typesTeamIsWeakTo,
+            typesTeamIsStrongAgainst
         };
 
         let newTeam = await PokeTeam.create(team);
@@ -329,7 +332,7 @@ exports.createRandomTeam = async (req,res) => {
             return scaledNum;
         }
         
-        for(i = 0; i <= newTeam.amountOfMembers;i++){
+        for(i = 0; i < newTeam.amountOfMembers;i++){
             let number = randomPokemonGenerator();
             const pokemon = await Pokemon.findOne({number});
             newTeam.members.push(pokemon);

@@ -102,15 +102,36 @@ exports.addToTeam = async (req,res) => {
         };
 
         //WIP
-        // if(pokemon.primaryType){
-        //     let type = pokemon.primaryType;
-            
-        // }
+        let primary = pokemon.primaryType;
+        let secondary = pokemon.secondaryType;
+        let weak = pokemon.typesWeakTo;
+        let strong = pokemon.typesEffectiveAgainst;
+        // let testContainer = [];
+
+        if(primary === pokeTeam.teamTypes){
+            console.log('not added');
+        } else {
+            pokeTeam.teamTypes.push(primary);
+        }
+        if(secondary !== pokeTeam.teamTypes && secondary !== null){
+            pokeTeam.teamTypes.push(secondary);
+        } else{
+            console.log('not added');
+        }
+        weak.map((type) => {
+            if(type !== pokeTeam.typesTeamIsWeakTo){
+                pokeTeam.typesTeamIsWeakTo.push(type);
+            }
+        });
+        strong.map((type)=>{
+            if(type !== pokeTeam.typesTeamIsStrongAgainst){
+                pokeTeam.typesTeamIsStrongAgainst.push(type);
+            }
+    })
 
         pokeTeam.members.push(pokemon);
         await pokeTeam.save();
 
-        //client response
         success(res,pokeTeam);
 
     } catch (err) {
