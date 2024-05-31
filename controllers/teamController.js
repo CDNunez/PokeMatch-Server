@@ -5,8 +5,6 @@ const User = require('../models/userModel');
 const Pokemon = require('../models/pokemonModel');
 const { default: mongoose } = require('mongoose');
 
-////toDo: create random team
-
 //?Exports to teamRoutes
 
 //*Create Team
@@ -25,7 +23,7 @@ exports.createTeam = async (req,res) => {
             return incomplete(res, "User Not Found");
         }
 
-        ////toDo: test error handling
+        //! Error handling for duplicate or already existing name in db does not function
         //error handling - if team already exists in db
         //filter that finds existing teamName in db
         const alreadyExists = user.teams.find(team => team.teamName === teamName);
@@ -74,6 +72,9 @@ exports.getAllTeams = async (req,res) => {
 
         //find teams in db through model
 
+        //could be replaced by:
+        //const allTeams = user.teams;
+
         const allTeams = await PokeTeam.find();
 
         //client response
@@ -97,6 +98,7 @@ exports.deleteAllTeams = async (req,res) => {
             return incomplete(res,'User not found');
         }
 
+        //!Currently wipes db -- could be fixed by taking out deleteTeams
         //deletes all teams associated with user in db
         deleteTeams = await PokeTeam.deleteMany();
         //clears teams array of user in db
@@ -112,6 +114,7 @@ exports.deleteAllTeams = async (req,res) => {
     }
 };
 
+//!Currently finds/deletes/duplicates/edits team regardless of associated user
 //* Get one team associated with user
 exports.getOneTeam = async (req,res) => {
     try {
@@ -249,7 +252,7 @@ exports.getByTeamName = async (req,res) => {
     }
 };
 
-//!error handling for the property value of each function bellow needs to be fixed -- see comment on Get By Team Game Generation Func
+//!error handling for the property value of each function bellow needs to be fixed -- however the controllers do work
 
 //*Get By Team Game Generation
 exports.getByGeneration = async (req,res) => {
@@ -265,7 +268,6 @@ exports.getByGeneration = async (req,res) => {
         //search for team generation
         const teams = await PokeTeam.find({teamGeneration});
         //error handling
-        //!Error handling is not working, however the controller does function as intended
         if(!teams){
             return incomplete(res,"No teams found");
         }
@@ -300,10 +302,10 @@ exports.getByMemberAmount = async (req,res) => {
     }
 };
 
-//!This does not work as intended
 //*Create Randomized Team
 exports.createRandomTeam = async (req,res) => {
     try {
+        //req user, req create team
         const {userId} = req.params;
         const {teamName, amountOfMembers, teamGeneration, members, teamType, typesTeamIsWeakTo, typesTeamIsStrongAgainst} = req.body;
         const user = await User.findById(userId);
@@ -320,28 +322,35 @@ exports.createRandomTeam = async (req,res) => {
             typesTeamIsWeakTo,
             typesTeamIsStrongAgainst
         };
-
+        //create team and push to user model
         let newTeam = await PokeTeam.create(team);
         
         user.teams.push(newTeam);
 
-        
+        //random number generator function
         function randomPokemonGenerator() {
+            //generates random number
             const randomNumber = Math.random();
+            //rounds down
             const scaledNum = Math.floor(randomNumber*151)+1;
+            //returns randomly generated number
             return scaledNum;
         }
-        
+        //for loop to add members to newly created team
         for(i = 0; i < newTeam.amountOfMembers;i++){
+            //randomly generated number to be used to search db
             let number = randomPokemonGenerator();
+            //search db for pokemon utilizing randomly generated number
             const pokemon = await Pokemon.findOne({number});
+            //toDo: Update teamTypes, typesTeamIsWeakTo, typesTeamIsStrongAgainst
+            //add pokemon to pokeTeam members array
             newTeam.members.push(pokemon);
-            // return newTeam
-        }; //try running with return commented out
+        };
         
+        //save newly created team in db -> update user
         await newTeam.save();
         await user.save();
-        
+        //response
         success(res,newTeam);
 
     } catch (err) {
@@ -349,25 +358,25 @@ exports.createRandomTeam = async (req,res) => {
     }
 };
 
-//!Does not work
-//I might need to update the team model in order to make a route like this work
+//toDo: Testing needed
 //*Get By Type
 exports.getByType = async (req,res) => {
     try {
+        //test route
         console.log('type route')
         //req params
-        const {userId, primaryType} = req.params;
+        const {userId, teamTypes} = req.params;
         const user = await User.findById(userId);
         //error handling
         if(!user){
             return incomplete(res,'No user found');
         }
-        const teamType = await PokeTeam.find({primaryType});
-        if(!teamType){
+        const types = await PokeTeam.find({teamTypes});
+        if(!types){
             return incomplete(res,"No teams found");
         }
         //respond to client
-        success(res,teamType);
+        success(res,types);
     } catch (err) {
         error(res,err);
     }

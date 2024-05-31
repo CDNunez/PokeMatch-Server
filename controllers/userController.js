@@ -35,7 +35,7 @@ exports.createUser = async (req,res) => {
         });
         //save to db
         const newUser = await createUser.save();
-        //create token
+        //create token -> //!might not need to be here
         const token = jwt.sign({id: newUser._id}, SECRET, {expiresIn:"1 day"});
 
         res.status(200).json({

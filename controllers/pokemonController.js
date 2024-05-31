@@ -1,3 +1,4 @@
+//?Imports
 const { error,success,incomplete } = require('../helpers/response');
 const Pokemon = require('../models/pokemonModel');
 const User = require('../models/userModel');
@@ -22,7 +23,7 @@ exports.getByGeneration = async (req,res) => {
         if(!gen){
             return incomplete(res,"No gen found");
         }
-        //search for available pokemon within specified gen
+        //search for available pokemon within specified generation
         const pokeGen = await Pokemon.find({gen});
         //respond to client
         success(res,pokeGen);
@@ -31,7 +32,7 @@ exports.getByGeneration = async (req,res) => {
     }
 };
 
-//*Get By Pokemon Type : primary or secondary
+//*Get By Pokemon By Primary Type
 exports.getByType = async (req,res) => {
     try {
         //req params
@@ -49,14 +50,20 @@ exports.getByType = async (req,res) => {
     }
 };
 
+////toDo: Get Pokemon By Primary Type or Secondary Type -- could repurpose above controller
+
 //*Get Pokemon By Type Advantage
 exports.getByAdvantage = async (req,res) => {
     try {
+        //req params
         const { typesEffectiveAgainst } = req.params;
+        //error handling
         if(!typesEffectiveAgainst){
             return incomplete(res,"No type match found");
         }
+        //find match
         const pokeType = await Pokemon.find({typesEffectiveAgainst});
+        //response
         success(res,pokeType);
     } catch (err) {
         error(res,err);
@@ -80,7 +87,7 @@ exports.sortByName = async (req,res) => {
     }
 };
 
-//toDo:Test due to type changes
+//toDo:Test due to type changes in pokeTeam model
 //*Add Pokemon to team
 exports.addToTeam = async (req,res) => {
     try {
@@ -108,15 +115,13 @@ exports.addToTeam = async (req,res) => {
         let strong = pokemon.typesEffectiveAgainst;
         // let testContainer = [];
 
-        if(primary === pokeTeam.teamTypes){
-            console.log('not added');
-        } else {
+        //*Update teamTypes, typesTeamIsWeakTo, typesTeamIsStrongAgainst
+        //!Currently duplicating if adding similar or same member
+        if(primary !== pokeTeam.teamTypes){
             pokeTeam.teamTypes.push(primary);
         }
         if(secondary !== pokeTeam.teamTypes && secondary !== null){
             pokeTeam.teamTypes.push(secondary);
-        } else{
-            console.log('not added');
         }
         weak.map((type) => {
             if(type !== pokeTeam.typesTeamIsWeakTo){
@@ -128,10 +133,10 @@ exports.addToTeam = async (req,res) => {
                 pokeTeam.typesTeamIsStrongAgainst.push(type);
             }
     })
-
+        //update db
         pokeTeam.members.push(pokemon);
         await pokeTeam.save();
-
+        //response
         success(res,pokeTeam);
 
     } catch (err) {
@@ -142,12 +147,16 @@ exports.addToTeam = async (req,res) => {
 //*Delete Pokemon From Team
 exports.deleteFromTeam = async (req,res) => {
     try {
+        //test route
         console.log('delete pokemon from team route');
+        //req params
         const {userId, teamId, pokemonId} = req.params;
         const user = await User.findById(userId);
         const pokeTeam = await PokeTeam.findById(teamId);
-        const pokemon = await Pokemon.findById(pokemonId);
-        
+        //could replace with:
+        //const deletePokemon = await Pokemon.findOneAndDelete(pokemonId);
+        const pokemon = await Pokemon.findOne(pokemonId);
+        //error handling
         if(!user){
             return incomplete(res,"No user found");
         }
@@ -158,9 +167,12 @@ exports.deleteFromTeam = async (req,res) => {
             return incomplete(res,"No pokemon found");
         }
 
+        //toDo: Update teamTypes, typesTeamIsWeakTo, typesTeamIsStrongAgainst
+
+        //update db
         pokeTeam.members.pull(pokemon);
         pokeTeam.save();
-
+        //response
         success(res, "Member Deleted");
 
     } catch (err) {
@@ -172,11 +184,12 @@ exports.deleteFromTeam = async (req,res) => {
 //*Duplicate Selected Pokemon Within Team
 exports.duplicatePokemon = async (req,res) => {
     try {
+        //req params
         const {userId,teamId,pokemonId} = req.params;
         const user = await User.findById(userId);
         const team = await PokeTeam.findById(teamId);
         const duplicatedPokemon = await Pokemon.findById(pokemonId);
-
+        //error handling
         if(!user){
             return incomplete(res,"No user found");
         }
@@ -186,40 +199,31 @@ exports.duplicatePokemon = async (req,res) => {
         if(!duplicatedPokemon){
             return incomplete(res,'No pokemon found');
         }
-
+        //update db
         team.members.push(duplicatedPokemon);
         await team.save();
-
+        //response
         success(res,team);
     } catch (err) {
         error(res,err);
     }
 };
 
-// /* //ToDo: Test -> disregard comment if it works
-// route will add pokemon to team by finding pokemon by the pokemon's assigned number
-// random number generator will be implemented in the front end
-//     -click on "add random" button
-//     -onClick run randomNumberGenerator function
-//     function randomNumberGenerator(){
-//         return Math.floor(Math.random()*151)+1;
-//     }
-//     const randomNumber  = randomNumberGenerator();
-//     -pass randomly generated number as the requested number parameter for the route
-// */
 //*Add Random Pokemon to Team
 exports.addOneRandom = async (req,res) => {
     try {
+        //req params
         const {userId, teamId} = req.params;
         const user = await User.findById(userId);
         const pokeTeam = await PokeTeam.findById(teamId);
+        //error handling
         if(!user){
             return incomplete(res,"No user found");
         }
         if(!pokeTeam){
             return incomplete(res,"No team found");
         }
-        
+        //RNG Function
         function randomNumberGenerator(){
             return Math.floor(Math.random()*151)+1;
         }
@@ -227,17 +231,18 @@ exports.addOneRandom = async (req,res) => {
         const randomNumber = randomNumberGenerator();
 
         let number = randomNumber
-
+        //find random pokemon 
         const pokemon = await Pokemon.findOne({number});
-
+        //error handling
         if(!pokemon){
             return incomplete(res,"No pokemon found");
         }
 
+        //toDo: Update teamTypes, typesTeamIsWeakTo, typesTeamIsStrongAgainst
 
+        //update db -> add pokemon to member array in pokeTeam -> save pokeTeam
         pokeTeam.members.push(pokemon);
         await pokeTeam.save();
-
         //client response
         success(res,pokeTeam);
     } catch (err) {

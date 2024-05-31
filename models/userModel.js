@@ -2,8 +2,6 @@
 const mongoose = require('mongoose');
 const PokemonTeamSchema = require('./pokeTeamsModel');
 
-////toDo Test in Postman, add JOI validation, add poketeams under user schema
-
 //*user model used in userController: username, email, password, pokeTeams
 const UserSchema = new mongoose.Schema({
     username: {

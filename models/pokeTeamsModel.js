@@ -21,6 +21,7 @@ const PokemonTeamSchema = new mongoose.Schema({
     },
     //members making up the team whose model is linked from the Pokemon Schema
     members: [{type: mongoose.Schema.Types.Object, ref:PokemonSchema}],
+    //Arrays to be filled with properties from the team's members. Might utilize useState on the front end
     teamTypes:[String],
     typesTeamIsWeakTo:[String],
     typesTeamIsStrongAgainst:[String]

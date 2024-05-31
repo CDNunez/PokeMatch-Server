@@ -34,8 +34,6 @@ app.listen(PORT, () => console.log(`PokeMatch running on: ${IP}${PORT}`));
 //?App.Use
 //*User Route
 app.use('/user', userRoute);
-
-////toDo: test in Postman -> may need to change
 //*Poke Team Route
 app.use('/poketeam', teamRoute);
 //*Pokemon Route
