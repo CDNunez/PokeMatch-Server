@@ -71,14 +71,20 @@ exports.getAllTeams = async (req,res) => {
         }
 
         //find teams in db through model
+        //teams = object ids of poketeams tied to user model -> teams is an array
+        let teams = user.teams;
+        //allTeams is the array of teams to be displayed containing all the user's teams
+        let allTeams = [];
 
-        //could be replaced by:
-        //const allTeams = user.teams;
-
-        const allTeams = await PokeTeam.find();
+        //for loop to cycle through the user's teams
+        for(i=0;i<=teams.length;i++){
+            //cycles through object ids for teams tied to user
+            let teamsToAdd = await PokeTeam.findById(teams[i]);
+            //pushes the teams found to allTeams array
+            allTeams.push(teamsToAdd);
+        }
 
         //client response
-
         success(res,allTeams);
 
     } catch (err) {
@@ -101,6 +107,15 @@ exports.deleteAllTeams = async (req,res) => {
         //!Currently wipes db -- could be fixed by taking out deleteTeams
         //deletes all teams associated with user in db
         deleteTeams = await PokeTeam.deleteMany();
+
+        //toDo: test
+        //teams = object ids of all teams associated with current user
+        // let teams = user.teams;
+        //cycles through teams array; finds and deletes team within array
+        // for(let team of teams){
+        //     await PokeTeam.findByIdAndDelete(team);
+        // }
+
         //clears teams array of user in db
         user.teams = [];
         //updates user
@@ -127,6 +142,18 @@ exports.getOneTeam = async (req,res) => {
         }
         //find team associated with user by team id in db
         const getTeam = await PokeTeam.findById(teamId);
+
+        //toDo:test
+        // const teams = user.teams;
+        // let teamToDisplay= [];
+
+        // for(i=0;i<=teams.length;i++){
+        //      if(teams[i] == teamId){
+        //         const teamToAdd = await PokeTeam.findById(teams[i]);
+        //         teamToDisplay.push(teamToAdd);
+        //      }
+        // }
+
         //error handling
         if(!getTeam){
             return incomplete(res,"Team not found");
@@ -327,6 +354,27 @@ exports.createRandomTeam = async (req,res) => {
         
         user.teams.push(newTeam);
 
+        //poketeam's arrays to add info
+        let strongArray = newTeam.typesTeamIsStrongAgainst;
+        let weakArray = newTeam.typesTeamIsWeakTo;
+        let typeArray = newTeam.teamTypes;
+
+
+        //inner async function -> array filter
+        async function arrayFilterOne(array,value){
+            if(!array.includes(value)){
+                array.push(value);
+            }
+        }
+
+        async function arrayFilterTwo(array,newValueArray){
+            for(let value of newValueArray){
+                if(!array.includes(value)){
+                    array.push(value);
+                }
+            }
+        }
+
         //random number generator function
         function randomPokemonGenerator() {
             //generates random number
@@ -342,7 +390,17 @@ exports.createRandomTeam = async (req,res) => {
             let number = randomPokemonGenerator();
             //search db for pokemon utilizing randomly generated number
             const pokemon = await Pokemon.findOne({number});
-            //toDo: Update teamTypes, typesTeamIsWeakTo, typesTeamIsStrongAgainst
+            //Update teamTypes, typesTeamIsWeakTo, typesTeamIsStrongAgainst
+            //pokemon types to be added
+            let primary = pokemon.primaryType;
+            let secondary = pokemon.secondaryType;
+            let weak = pokemon.typesWeakTo;
+            let strong = pokemon.typesEffectiveAgainst;
+
+            await arrayFilterTwo(strongArray,strong);
+            await arrayFilterTwo(weakArray,weak);
+            await arrayFilterOne(typeArray,primary);
+            await arrayFilterOne(typeArray,secondary);
             //add pokemon to pokeTeam members array
             newTeam.members.push(pokemon);
         };
@@ -371,12 +429,20 @@ exports.getByType = async (req,res) => {
         if(!user){
             return incomplete(res,'No user found');
         }
-        const types = await PokeTeam.find({teamTypes});
-        if(!types){
-            return incomplete(res,"No teams found");
+        // const types = await PokeTeam.find({teamTypes});
+        // if(!types){
+        //     return incomplete(res,"No teams found");
+        // }
+
+        let teams = user.teams;
+        let userTeams = [];
+
+        for(i=0;i<=teams.length;i++){
+            let teamsToAdd = await PokeTeam.findById(teams[i]);
+            userTeams.push(teamsToAdd);
         }
         //respond to client
-        success(res,types);
+        success(res,userTeams);
     } catch (err) {
         error(res,err);
     }

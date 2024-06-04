@@ -108,36 +108,45 @@ exports.addToTeam = async (req,res) => {
             return incomplete(res,"Pokemon not found");
         };
 
-        //WIP
+        //*Update teamTypes, typesTeamIsWeakTo, typesTeamIsStrongAgainst
+
+        //pokemon types to be added
         let primary = pokemon.primaryType;
         let secondary = pokemon.secondaryType;
         let weak = pokemon.typesWeakTo;
         let strong = pokemon.typesEffectiveAgainst;
-        // let testContainer = [];
 
-        //*Update teamTypes, typesTeamIsWeakTo, typesTeamIsStrongAgainst
-        //!Currently duplicating if adding similar or same member
-        if(primary !== pokeTeam.teamTypes){
-            pokeTeam.teamTypes.push(primary);
+        //poketeam's arrays to add info
+        let strongArray = pokeTeam.typesTeamIsStrongAgainst;
+        let weakArray = pokeTeam.typesTeamIsWeakTo;
+        let typeArray = pokeTeam.teamTypes;
+
+    //*inner async function to filter types -> primary, secondary
+    async function arrayFilterOne(array,value){
+        if(!array.includes(value)){
+            array.push(value)
         }
-        if(secondary !== pokeTeam.teamTypes && secondary !== null){
-            pokeTeam.teamTypes.push(secondary);
+    }
+
+    //*inner async function to filter arrays ->strong,weak
+    async function arrayFilterTwo(array,newValueArray){
+        for (let value of newValueArray){
+            if(!array.includes(value)){
+               array.push(value);
+            }
         }
-        weak.map((type) => {
-            if(type !== pokeTeam.typesTeamIsWeakTo){
-                pokeTeam.typesTeamIsWeakTo.push(type);
-            }
-        });
-        strong.map((type)=>{
-            if(type !== pokeTeam.typesTeamIsStrongAgainst){
-                pokeTeam.typesTeamIsStrongAgainst.push(type);
-            }
-    })
-        //update db
-        pokeTeam.members.push(pokemon);
-        await pokeTeam.save();
-        //response
-        success(res,pokeTeam);
+    }
+    //*await filter function to add values to arrays
+    await arrayFilterTwo(strongArray,strong);
+    await arrayFilterTwo(weakArray,weak);
+    await arrayFilterOne(typeArray,primary);
+    await arrayFilterOne(typeArray,secondary);
+
+    //update db
+    pokeTeam.members.push(pokemon);
+    await pokeTeam.save();
+    //response
+    success(res,pokeTeam);
 
     } catch (err) {
         error(res,err);
@@ -238,7 +247,40 @@ exports.addOneRandom = async (req,res) => {
             return incomplete(res,"No pokemon found");
         }
 
-        //toDo: Update teamTypes, typesTeamIsWeakTo, typesTeamIsStrongAgainst
+        //Update teamTypes, typesTeamIsWeakTo, typesTeamIsStrongAgainst
+        //pokemon types to be added
+        //?these two are single values
+        let primary = pokemon.primaryType;
+        let secondary = pokemon.secondaryType;
+        //?these two are arrays
+        let weak = pokemon.typesWeakTo;
+        let strong = pokemon.typesEffectiveAgainst;
+       
+        //poketeam's arrays to add info to
+        let strongArray = pokeTeam.typesTeamIsStrongAgainst;
+        let weakArray = pokeTeam.typesTeamIsWeakTo;
+        let typeArray = pokeTeam.teamTypes;
+       
+        //*inner async function to filter types -> primary, secondary
+        async function arrayFilterOne(array,value){
+            if(!array.includes(value)){
+                array.push(value)
+            }
+        }
+       
+        //*inner async function to filter arrays ->strong,weak
+        async function arrayFilterTwo(array,newValueArray){
+            for (let value of newValueArray){
+                if(!array.includes(value)){
+                    array.push(value);
+                }
+            }
+        }
+        //*await filter function to add values to arrays
+        await arrayFilterTwo(strongArray,strong);
+        await arrayFilterTwo(weakArray,weak);
+        await arrayFilterOne(typeArray,primary);
+        await arrayFilterOne(typeArray,secondary);
 
         //update db -> add pokemon to member array in pokeTeam -> save pokeTeam
         pokeTeam.members.push(pokemon);
