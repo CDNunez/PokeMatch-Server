@@ -24,7 +24,8 @@ const PokemonTeamSchema = new mongoose.Schema({
     //Arrays to be filled with properties from the team's members. Might utilize useState on the front end
     teamTypes:[String],
     typesTeamIsWeakTo:[String],
-    typesTeamIsStrongAgainst:[String]
+    typesTeamIsStrongAgainst:[String],
+    owner_id:String,
 })
 
 //?Exports
