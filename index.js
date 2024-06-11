@@ -1,6 +1,7 @@
 //?Dependencies
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const app = express();
 
 //?Configurations
@@ -20,6 +21,7 @@ const pokeRoute = require('./routes/pokemonRoutes');
 //?Database Connection
 const db = require('./helpers/db');
 const loadGenOne = require('./database/PokeDex/GenOne/loadGenOne');
+const { required } = require('joi');
 
 db()
     .then(()=> {
@@ -32,6 +34,7 @@ app.use(express.json());
 app.listen(PORT, () => console.log(`PokeMatch running on: ${IP}${PORT}`));
 
 //?App.Use
+app.use(cors());
 //*User Route
 app.use('/user', userRoute);
 //*Poke Team Route
