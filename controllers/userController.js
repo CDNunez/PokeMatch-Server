@@ -40,6 +40,7 @@ exports.createUser = async (req,res) => {
 
         res.status(200).json({
             user:newUser,
+            message: 'User Created',
             token
         });
 

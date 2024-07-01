@@ -4,23 +4,23 @@ const pokemonController = require('../controllers/pokemonController');
 const validateSession = require('../helpers/auth');
 
 //* Get All Pokemon
-router.route('/pokemon')
+router.route('/')
     .get(pokemonController.getAllPokemon);
 
 //*Get Pokemon By Generation in game
-router.route('/pokemon/generation/:gen')
+router.route('/generation/:gen')
     .get(pokemonController.getByGeneration);
 
 //*Get All Pokemon By Type
-router.route('/pokemon/type/:primaryType')
+router.route('/type/:primaryType')
     .get(pokemonController.getByType);
 
 //*Get All Pokemon By Type Advantage
-router.route('/pokemon/advantage/:typesEffectiveAgainst')
+router.route('/advantage/:typesEffectiveAgainst')
     .get(pokemonController.getByAdvantage);
 
 //*Get By Name
-router.route('/pokemon/sortByName/:pokemonName')
+router.route('/sortByName/:pokemonName')
     .get(pokemonController.sortByName);
 
 //*Add Pokemon to team - Delete Pokemon From Team
