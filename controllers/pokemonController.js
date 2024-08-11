@@ -164,7 +164,8 @@ exports.deleteFromTeam = async (req,res) => {
         const pokeTeam = await PokeTeam.findById(teamId);
         //could replace with:
         //const deletePokemon = await Pokemon.findOneAndDelete(pokemonId);
-        const pokemon = await Pokemon.findOne(pokemonId);
+        //!if multiple then instead of deleting one, deletes many
+        const pokemon = await Pokemon.findById(pokemonId);
         //error handling
         if(!user){
             return incomplete(res,"No user found");
